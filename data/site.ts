@@ -46,31 +46,40 @@ export const aboutContent = {
 };
 
 export const contactContent = {
-  management: "TODO: confirm official source.",
-  booking: "TODO: confirm official source.",
-  press: "TODO: confirm official source.",
-  labelContact: "TODO: confirm official source.",
-  safeMessage: "Please contact the official management team through approved channels.",
+  management: "經紀人依凡",
+  booking: "經紀人依凡",
+  press: "經紀人依凡 / 華納音樂",
+  labelContact: "華納音樂",
+  email: "passion0728@gmail.com",
   sections: [
     {
       title: "Press / Media Inquiries",
       body: "For interviews, media materials, official photos, and press-related requests.",
+      contact: "經紀人依凡 / 華納音樂",
+      email: "passion0728@gmail.com",
     },
     {
       title: "Booking / Live Inquiries",
       body: "For concerts, festivals, campus shows, commercial performances, and live invitations.",
+      contact: "經紀人依凡",
+      email: "passion0728@gmail.com",
     },
     {
       title: "Partnership / Brand Collaboration",
       body: "For brand partnerships, campaigns, sponsorships, and creative collaborations.",
+      contact: "經紀人依凡",
+      email: "passion0728@gmail.com",
     },
     {
       title: "Label / Music Business",
       body: "For music licensing, label-related communication, and release-related inquiries.",
+      contact: "華納音樂",
     },
     {
       title: "General Contact",
       body: "For general official inquiries.",
+      contact: "經紀人依凡",
+      email: "passion0728@gmail.com",
     },
   ],
 };

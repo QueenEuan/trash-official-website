@@ -37,7 +37,13 @@ All listed external links are official or public source URLs currently wired int
 | `/press-kit` | Spotify | `https://open.spotify.com/artist/3KZMUYrA5eIfgZdIFRmNe4` | Active official link |
 | `/press-kit` | Apple Music | `https://music.apple.com/tw/artist/trash/1159018201` | Active official link |
 | `/press-kit` | Warner Music Taiwan | `https://www.warnermusic.com.tw/pages/-trash` | Active label link |
+| `/press-kit` | Email Press Contact | `mailto:passion0728@gmail.com` | Active public contact email |
 | `/contact` | Official website | `https://trashband.tw` | Active official link |
+| `/contact` | Email - Press / Media Inquiries | `mailto:passion0728@gmail.com` | Active public contact email |
+| `/contact` | Email - Booking / Live Inquiries | `mailto:passion0728@gmail.com` | Active public contact email |
+| `/contact` | Email - Partnership / Brand Collaboration | `mailto:passion0728@gmail.com` | Active public contact email |
+| `/contact` | Email - General Contact | `mailto:passion0728@gmail.com` | Active public contact email |
+| `/contact` | Email CTA | `mailto:passion0728@gmail.com` | Active public contact email |
 | `/contact` | YouTube | `https://www.youtube.com/channel/UCuAzL0PsEngYktHkjNtJKgg` | Active official link |
 | `/contact` | Instagram | `https://www.instagram.com/trashband/` | Active official link |
 | `/contact` | Facebook | `https://www.facebook.com/TrashBandTw/` | Active official link |
@@ -52,4 +58,4 @@ All listed external links are official or public source URLs currently wired int
 - Live milestone cards show primary source links, with an additional source only when one is already present in source data.
 - Media category cards intentionally link to the official YouTube channel until playlist URLs are confirmed.
 - Empty download states in the Press Kit are request-based cards, not external buttons.
-- v1.1 Contact page secondary links reuse confirmed official links only.
+- v1.1 Contact page uses confirmed public contact routing and `mailto:passion0728@gmail.com` where an email is provided.

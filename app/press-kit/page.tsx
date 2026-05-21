@@ -2,7 +2,7 @@ import { FallbackImage } from "@/components/FallbackImage";
 import { PressDownloadCard } from "@/components/PressDownloadCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { members } from "@/data/members";
-import { pressKit, siteProfile } from "@/data/site";
+import { contactContent, pressKit, siteProfile } from "@/data/site";
 import { isPublicSafe, publicList } from "@/lib/publicContent";
 
 export default function PressKitPage() {
@@ -84,8 +84,11 @@ export default function PressKitPage() {
       <section className="mt-14 archive-frame bg-[linear-gradient(135deg,rgba(127,16,24,0.42),rgba(0,0,0,0.95))] p-7">
         <h2 className="font-display text-3xl font-black uppercase text-white">Press Contact</h2>
         <p className="mt-4 max-w-2xl text-sm leading-6 text-zinc-400">
-          For press, booking, partnership, and media material requests, please contact the official management team through approved channels.
+          For press, booking, partnership, and media material requests, please contact 經紀人依凡 / 華納音樂.
         </p>
+        <a href={`mailto:${contactContent.email}`} className="btn-primary mt-6">
+          Email {contactContent.email}
+        </a>
       </section>
       {usageNotes.length > 0 && <section className="mt-8 border border-white/10 bg-zinc-950 p-6">
         <p className="kicker">Usage Notes</p>
