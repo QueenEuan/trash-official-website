@@ -84,7 +84,7 @@ export default function PressKitPage() {
       <section className="mt-14 archive-frame bg-[linear-gradient(135deg,rgba(127,16,24,0.42),rgba(0,0,0,0.95))] p-7">
         <h2 className="font-display text-3xl font-black uppercase text-white">Press Contact</h2>
         <p className="mt-4 max-w-2xl text-sm leading-6 text-zinc-400">
-          For press, booking, partnership, and media material requests, please contact 經紀人依凡 / 華納音樂.
+          For press, booking, partnership, and media material requests, please contact 經紀/依凡 / 華納音樂.
         </p>
         <a href={`mailto:${contactContent.email}`} className="btn-primary mt-6">
           Email {contactContent.email}

@@ -44,7 +44,7 @@ Generated after public-facing TODO visibility cleanup. No visual redesign was pe
 
 - Mobile homepage hero crop adjusted with mobile-specific object positioning while keeping tablet and desktop crop behavior intact.
 - Contact page expanded into an official inquiry hub for press/media, booking/live, partnership/brand collaboration, label/music business, and general official inquiries.
-- Contact page now uses confirmed public routing: 經紀人依凡, 華納音樂, and `passion0728@gmail.com` where appropriate.
+- Contact page now uses confirmed public routing: 經紀/依凡, 華納音樂, and `passion0728@gmail.com` where appropriate.
 - Contact page does not include a fake form.
 - About, History, Music, Live, and Press Kit copy received safe official-style enrichment without adding new unverified facts.
 - Contact secondary links use confirmed official links and are documented in `LINK_AUDIT.md`.
@@ -216,4 +216,4 @@ Primary public source and streaming links are documented in `LINK_AUDIT.md`. Uns
 | `/media` | Official video hub links to the TRASH YouTube channel by category with specific category copy. | Text-first category cards. | No fake video thumbnails used. | Launch-safe draft. | Add curated individual video URLs, playlist URLs, and MV credits. |
 | `/press` | Backward-compatible redirect only; not used by internal navigation. | No visual surface. | No asset dependency. | Launch-safe redirect. | Canonical route is `/press-kit`. |
 | `/press-kit` | Press kit structure complete; downloads simplified to request-based assets. | Suitable media/brand structure. | First-batch logo/hero assets integrated; press downloads remain request-based. | Launch-safe draft. | Add final files and confirm official contact channels. |
-| `/contact` | Expanded official inquiry hub covers press, booking, partnership, label/music business, and general inquiries with confirmed public routing. | Clean contact layout with official CTA. | No major image dependency. | Launch-ready. | Uses 經紀人依凡, 華納音樂, and `passion0728@gmail.com` where appropriate. |
+| `/contact` | Expanded official inquiry hub covers press, booking, partnership, label/music business, and general inquiries with confirmed public routing. | Clean contact layout with official CTA. | No major image dependency. | Launch-ready. | Uses 經紀/依凡, 華納音樂, and `passion0728@gmail.com` where appropriate. |

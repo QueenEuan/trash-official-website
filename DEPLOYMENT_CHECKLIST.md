@@ -112,7 +112,7 @@ git push -u origin main
 - Press Kit downloads are simplified to request-based press photos, logo package, and technical rider.
 - `/press` redirects to `/press-kit`.
 - Contact page loads.
-- Contact page shows the v1.1 official inquiry hub with confirmed public routing for 經紀人依凡, 華納音樂, and `passion0728@gmail.com`; no fake form is present.
+- Contact page shows the v1.1 official inquiry hub with confirmed public routing for 經紀/依凡, 華納音樂, and `passion0728@gmail.com`; no fake form is present.
 - Mobile navigation works on small screens.
 - Header and footer links use canonical routes.
 - Footer uses `Official Links` text and does not show public "coming soon" language.

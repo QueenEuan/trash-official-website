@@ -46,28 +46,28 @@ export const aboutContent = {
 };
 
 export const contactContent = {
-  management: "經紀人依凡",
-  booking: "經紀人依凡",
-  press: "經紀人依凡 / 華納音樂",
+  management: "經紀/依凡",
+  booking: "經紀/依凡",
+  press: "經紀/依凡 / 華納音樂",
   labelContact: "華納音樂",
   email: "passion0728@gmail.com",
   sections: [
     {
       title: "Press / Media Inquiries",
       body: "For interviews, media materials, official photos, and press-related requests.",
-      contact: "經紀人依凡 / 華納音樂",
+      contact: "經紀/依凡 / 華納音樂",
       email: "passion0728@gmail.com",
     },
     {
       title: "Booking / Live Inquiries",
       body: "For concerts, festivals, campus shows, commercial performances, and live invitations.",
-      contact: "經紀人依凡",
+      contact: "經紀/依凡",
       email: "passion0728@gmail.com",
     },
     {
       title: "Partnership / Brand Collaboration",
       body: "For brand partnerships, campaigns, sponsorships, and creative collaborations.",
-      contact: "經紀人依凡",
+      contact: "經紀/依凡",
       email: "passion0728@gmail.com",
     },
     {
@@ -78,7 +78,7 @@ export const contactContent = {
     {
       title: "General Contact",
       body: "For general official inquiries.",
-      contact: "經紀人依凡",
+      contact: "經紀/依凡",
       email: "passion0728@gmail.com",
     },
   ],

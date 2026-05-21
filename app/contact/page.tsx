@@ -45,7 +45,7 @@ export default function ContactPage() {
       <section className="mt-14 archive-frame bg-[linear-gradient(135deg,rgba(127,16,24,0.42),rgba(0,0,0,0.95))] p-7 md:p-10">
         <p className="kicker">Official TRASH Inquiries</p>
         <h2 className="mt-3 max-w-4xl font-display text-4xl font-black uppercase leading-none text-white md:text-6xl">
-          For official TRASH inquiries, please contact 經紀人依凡.
+          For official TRASH inquiries, please contact 經紀/依凡.
         </h2>
         <div className="mt-8 flex flex-wrap gap-3">
           <a href={`mailto:${contactEmail}`} className="btn-primary">
