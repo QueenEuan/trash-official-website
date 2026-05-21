@@ -112,6 +112,7 @@ git push -u origin main
 - Press Kit downloads are simplified to request-based press photos, logo package, and technical rider.
 - `/press` redirects to `/press-kit`.
 - Contact page loads.
+- Contact page shows the v1.1 official inquiry hub and does not expose unconfirmed private emails or a fake form.
 - Mobile navigation works on small screens.
 - Header and footer links use canonical routes.
 - Footer uses `Official Links` text and does not show public "coming soon" language.
@@ -125,6 +126,7 @@ git push -u origin main
 - External public links open in a new tab with `rel="noopener noreferrer"`.
 - No visible source or streaming button should render without an `href`.
 - Final pre-launch freeze audit is documented in `PRE_LAUNCH_AUDIT.md`.
+- v1.1 mobile hero crop and content polish pass should be verified with lint and production build in an environment with dependencies installed.
 
 ## Remaining Content Before Public Launch
 

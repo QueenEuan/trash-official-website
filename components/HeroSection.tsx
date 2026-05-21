@@ -13,7 +13,7 @@ export function HeroSection() {
         fill
         priority
         sizes="100vw"
-        className="absolute inset-0 object-cover object-[58%_34%] opacity-80 md:object-[center_34%] lg:object-[center_34%]"
+        className="absolute inset-0 object-cover object-[50%_30%] opacity-80 sm:object-[52%_32%] md:object-[center_34%] lg:object-[center_34%]"
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.98),rgba(0,0,0,0.68),rgba(0,0,0,0.94)),radial-gradient(circle_at_72%_18%,rgba(127,16,24,0.52),transparent_38%),linear-gradient(180deg,transparent_62%,#050505_100%)]" />
       <div className="absolute left-0 right-0 top-24 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />

@@ -40,6 +40,14 @@ Generated after public-facing TODO visibility cleanup. No visual redesign was pe
 - External anchor audit found all external anchors use `target="_blank"` and `rel="noopener noreferrer"`.
 - Metadata resolves to `https://trashband.tw`, including canonical URL, `og:url`, and absolute OG image.
 
+## v1.1 Content and Mobile Polish Status
+
+- Mobile homepage hero crop adjusted with mobile-specific object positioning while keeping tablet and desktop crop behavior intact.
+- Contact page expanded into an official inquiry hub for press/media, booking/live, partnership/brand collaboration, label/music business, and general official inquiries.
+- Contact page does not publish unconfirmed private emails and does not include a fake form.
+- About, History, Music, Live, and Press Kit copy received safe official-style enrichment without adding new unverified facts.
+- Contact secondary links use confirmed official links and are documented in `LINK_AUDIT.md`.
+
 ## 1. Pages Completed
 
 - Home (`/`)
@@ -70,7 +78,7 @@ These pages are now safe as official-draft archive pages because uncertain conte
 - Media: official YouTube hub uses category cards only; no fake video thumbnails or invented video URLs are shown.
 - Press Kit: structure is complete; downloads are simplified to request-based press photos, logo package, and technical rider.
 - Footer uses neutral `Official Links` labeling with no public "coming soon" language.
-- Contact: contact categories use safe public fallback copy instead of fake emails or internal notes.
+- Contact: expanded official inquiry hub uses safe public fallback copy, confirmed official links, and no fake form.
 
 ## 3. Pages Still Using Placeholder Images
 
@@ -207,4 +215,4 @@ Primary public source and streaming links are documented in `LINK_AUDIT.md`. Uns
 | `/media` | Official video hub links to the TRASH YouTube channel by category with specific category copy. | Text-first category cards. | No fake video thumbnails used. | Launch-safe draft. | Add curated individual video URLs, playlist URLs, and MV credits. |
 | `/press` | Backward-compatible redirect only; not used by internal navigation. | No visual surface. | No asset dependency. | Launch-safe redirect. | Canonical route is `/press-kit`. |
 | `/press-kit` | Press kit structure complete; downloads simplified to request-based assets. | Suitable media/brand structure. | First-batch logo/hero assets integrated; press downloads remain request-based. | Launch-safe draft. | Add final files and confirm official contact channels. |
-| `/contact` | Contact categories present with safe public fallback copy. | Clean contact layout. | No major image dependency. | Launch-safe draft. | Add approved management, booking, press, and label contacts. |
+| `/contact` | Expanded official inquiry hub covers press, booking, partnership, label/music business, and general inquiries with safe public fallback copy. | Clean contact layout with official CTA. | No major image dependency. | Launch-safe draft. | Add approved management, booking, press, and label contacts when confirmed. |

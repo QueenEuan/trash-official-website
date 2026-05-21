@@ -16,7 +16,7 @@ export default function PressKitPage() {
           <FallbackImage src={siteProfile.assets.logoWhite} fallbackSrc="/images/hero.svg" alt="TRASH official white logo" width={90} height={90} className="h-16 w-auto object-contain" />
           <p className="max-w-md text-right text-xs font-bold uppercase tracking-[0.16em] text-zinc-500">Official band materials</p>
         </div>
-        <SectionHeading eyebrow="Press Kit" title="Official materials for press, promoters, and partners." body={pressKit.tagline} />
+        <SectionHeading eyebrow="Press Kit" title="Official materials for press, promoters, and partners." body="A reliable reference hub for approved TRASH profile copy, official links, member information, recognition notes, and request-based media assets." />
         <div className="mt-8 grid gap-4 border-t border-white/10 pt-6 text-sm uppercase tracking-[0.16em] text-zinc-500 md:grid-cols-3">
           <p>Band: <span className="font-bold text-silver">{siteProfile.name}</span></p>
           <p>Base: <span className="font-bold text-silver">{siteProfile.origin}</span></p>
