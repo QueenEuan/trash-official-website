@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#050505"/><stop offset=".48" stop-color="#2a0507"/><stop offset="1" stop-color="#0a0a0a"/></linearGradient>
+    <radialGradient id="light" cx=".68" cy=".18" r=".52"><stop stop-color="#d6b05f" stop-opacity=".5"/><stop offset=".35" stop-color="#7f1d1d" stop-opacity=".35"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1800" height="1100" fill="url(#bg)"/>
+  <rect width="1800" height="1100" fill="url(#light)"/>
+  <g stroke="#f4f4f5" stroke-opacity=".12">
+    <path d="M120 790 C420 650 630 760 920 610 S1390 390 1700 520" fill="none" stroke-width="8"/>
+    <path d="M0 905 L1800 620" stroke-width="2"/>
+    <path d="M0 960 L1800 760" stroke-width="2"/>
+  </g>
+  <g transform="translate(1090 210)" opacity=".9">
+    <path d="M120 40 L395 710" stroke="#d6b05f" stroke-width="14"/>
+    <path d="M270 30 L30 725" stroke="#991b1b" stroke-width="22"/>
+    <circle cx="140" cy="130" r="54" fill="#111" stroke="#d6b05f" stroke-width="8"/>
+    <circle cx="266" cy="126" r="54" fill="#111" stroke="#d6b05f" stroke-width="8"/>
+  </g>
+  <text x="90" y="1000" fill="#fff" fill-opacity=".08" font-family="Arial Black, sans-serif" font-size="250">TRASH</text>
+</svg>
