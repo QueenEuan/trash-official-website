@@ -294,7 +294,7 @@ export function getSite(locale: Locale) {
       label: "華納音樂 / Warner Music Taiwan",
       genres: ["台灣搖滾", "華語搖滾", "另類搖滾", "英式搖滾", "油漬搖滾"],
       heroEyebrow: "台灣搖滾樂團 / 台北",
-      heroBody: "TRASH 於 2009 年 12 月在台北成團，將台灣搖滾、華語搖滾、另類搖滾、英式搖滾與油漬搖滾的能量，推向作品、記憶與現場舞台。",
+      heroBody: "TRASH 成立於 2009 年 12 月，以台灣搖滾為核心，融合華語搖滾、另類搖滾、英式搖滾與 Grunge 能量，將愛、失去、記憶與現場舞台化為屬於這個世代的聲音。",
       seo: {
         ...siteProfile.seo,
         description: "TRASH 台灣搖滾樂團官方網站與資料庫，收錄音樂作品、成員、歷史、演出里程碑、最新消息、影音與媒體資料。",

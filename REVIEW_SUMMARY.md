@@ -72,6 +72,15 @@ Generated after public-facing TODO visibility cleanup. No visual redesign was pe
 - `I18N_AUDIT.md` documents route coverage, redirect behavior, hreflang status, and remaining native-language review items.
 - `ZH_LOCALIZATION_AUDIT.md` documents the Traditional Chinese localization pass and remaining Chinese editorial review items.
 
+## v1.3 Header and Hero Polish Status
+
+- Desktop main navigation now uses slightly larger, stronger typography with more deliberate spacing.
+- The language switcher is visually separated from the primary navigation and styled as a secondary grouped control with a clearer active language state.
+- The Press Kit CTA remains in the header with reduced visual weight and improved spacing from the language control.
+- Homepage hero spacing was refined between the eyebrow, title, paragraph, and CTA buttons without changing the hero crop, overlays, or routing behavior.
+- The current chapter metadata card has improved spacing and typography, with key values protected from awkward wrapping.
+- Chinese homepage hero copy was refined for a more natural official tone while preserving the same factual meaning.
+
 ## 1. Pages Completed
 
 - Home (`/`)

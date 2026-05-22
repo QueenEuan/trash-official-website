@@ -22,17 +22,17 @@ export function HeroSection({ locale = defaultLocale }: { locale?: Locale }) {
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.98),rgba(0,0,0,0.68),rgba(0,0,0,0.94)),radial-gradient(circle_at_72%_18%,rgba(127,16,24,0.52),transparent_38%),linear-gradient(180deg,transparent_62%,#050505_100%)]" />
       <div className="absolute left-0 right-0 top-24 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
-      <div className="relative mx-auto grid min-h-[90vh] max-w-7xl content-end gap-9 px-4 pb-12 pt-28 md:px-5 md:pb-16 lg:grid-cols-[1fr_360px] lg:items-end">
+      <div className="relative mx-auto grid min-h-[90vh] max-w-7xl content-end gap-10 px-4 pb-12 pt-28 md:px-5 md:pb-16 lg:grid-cols-[1fr_380px] lg:items-end">
         <div className="max-w-5xl">
           <p className="kicker">{siteProfile.heroEyebrow}</p>
-          <h1 className="mt-5 text-balance font-display text-7xl font-black uppercase leading-[0.78] text-white sm:text-8xl lg:text-[11rem]">
+          <h1 className="mt-7 text-balance font-display text-7xl font-black uppercase leading-[0.78] text-white sm:text-8xl lg:text-[11rem]">
             TRASH
           </h1>
-          <div className="metal-rule mt-7 max-w-lg" />
-          <p className="mt-7 max-w-3xl text-pretty text-lg leading-8 text-zinc-300 md:text-2xl">
+          <div className="metal-rule mt-8 max-w-lg" />
+          <p className="mt-8 max-w-3xl text-pretty text-lg leading-8 text-zinc-300 md:text-2xl md:leading-10">
             {siteProfile.heroBody}
           </p>
-          <div className="mt-9 flex flex-wrap gap-4">
+          <div className="mt-10 flex flex-wrap gap-3 sm:gap-5">
             <LocalizedLink className="btn-primary" href="/music/the-last-train-of-happiness">
               {copy.ui.latestRelease} <ArrowRight size={18} />
             </LocalizedLink>
@@ -41,21 +41,21 @@ export function HeroSection({ locale = defaultLocale }: { locale?: Locale }) {
             </LocalizedLink>
           </div>
         </div>
-        <aside className="archive-frame p-5 lg:mb-3">
+        <aside className="archive-frame p-6 lg:mb-3">
           <p className="kicker">{copy.ui.currentChapter}</p>
-          <p className="mt-4 font-display text-4xl font-black uppercase leading-none text-white">幸福的末班車</p>
-          <dl className="mt-6 grid grid-cols-3 gap-3 border-t border-white/10 pt-5">
+          <p className="mt-5 font-display text-4xl font-black uppercase leading-none text-white md:text-[2.65rem]">幸福的末班車</p>
+          <dl className="mt-7 grid grid-cols-1 gap-4 border-t border-white/10 pt-6 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
             <div>
               <dt className="text-[0.64rem] font-bold uppercase tracking-[0.16em] text-zinc-500">{copy.ui.formed}</dt>
-              <dd className="mt-1 text-lg font-black text-silver">{siteProfile.founded}</dd>
+              <dd className="mt-2 whitespace-nowrap text-base font-black text-silver md:text-lg">{siteProfile.founded}</dd>
             </div>
             <div>
               <dt className="text-[0.64rem] font-bold uppercase tracking-[0.16em] text-zinc-500">{copy.ui.award}</dt>
-              <dd className="mt-1 text-lg font-black text-silver">2025</dd>
+              <dd className="mt-2 whitespace-nowrap text-base font-black text-silver md:text-lg">2025</dd>
             </div>
             <div>
               <dt className="text-[0.64rem] font-bold uppercase tracking-[0.16em] text-zinc-500">{copy.ui.base}</dt>
-              <dd className="mt-1 text-lg font-black text-silver">{siteProfile.origin}</dd>
+              <dd className="mt-2 whitespace-nowrap text-base font-black text-silver md:text-lg">{siteProfile.origin}</dd>
             </div>
           </dl>
         </aside>
