@@ -11,7 +11,7 @@ export function AlbumCard({ album, locale = defaultLocale }: { album: Album; loc
   const yearLabel = isUnconfirmedValue(album.year) ? typeLabel : `${typeLabel} / ${album.year}`;
 
   return (
-    <LocalizedLink href={`/music/${album.slug}`} className="group grid gap-5 border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.045),rgba(0,0,0,0.2))] p-4 transition hover:-translate-y-1 hover:border-gold/70 md:grid-cols-[190px_1fr]">
+    <LocalizedLink href={`/music/${album.slug}`} locale={locale} className="group grid gap-5 border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.045),rgba(0,0,0,0.2))] p-4 transition hover:-translate-y-1 hover:border-gold/70 md:grid-cols-[190px_1fr]">
       <div className="relative aspect-square overflow-hidden bg-zinc-900 shadow-[0_24px_70px_rgba(0,0,0,0.45)]">
         <FallbackImage src={album.cover} fallbackSrc={album.fallbackCover} alt={`${album.title} 專輯封面`} fill className="object-cover transition duration-500 group-hover:scale-105" />
       </div>

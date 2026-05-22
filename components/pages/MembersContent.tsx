@@ -10,9 +10,8 @@ export function MembersContent({ locale = defaultLocale }: { locale?: Locale }) 
     <div className="page-shell">
       <SectionHeading eyebrow={copy.members.eyebrow} title={copy.members.title} body={copy.members.body} />
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {members.map((member) => <MemberCard key={member.slug} member={member} />)}
+        {members.map((member) => <MemberCard key={member.slug} member={member} locale={locale} />)}
       </div>
     </div>
   );
 }
-

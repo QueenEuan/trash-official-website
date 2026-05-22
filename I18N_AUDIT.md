@@ -57,14 +57,18 @@ Date: 2026-05-22
 
 ## Language Switcher Behavior
 
-- Header switcher includes `中文`, `EN`, `日本語`, and `한국어`.
-- Mobile navigation includes the same switcher.
+- Desktop header now uses a compact active-locale dropdown instead of an inline four-language list.
+- The trigger displays the active locale only: `中文`, `EN`, `日本語`, or `한국어`.
+- The dropdown menu contains `中文`, `English`, `日本語`, and `한국어`.
+- Mobile navigation uses the same compact selector to avoid crowding.
 - Switching language preserves the current clean path where an equivalent route exists.
 - Examples:
   - `/music/the-last-train-of-happiness` → `/en/music/the-last-train-of-happiness`
   - `/en/contact` → `/ja/contact`
   - `/ko/news/golden-melody-best-band` → `/news/golden-melody-best-band`
 - Chinese switcher targets clean unprefixed routes, not `/zh`.
+- The selector uses a button trigger with `aria-haspopup="menu"` and `aria-expanded`, closes after selection, and closes on Escape/outside click.
+- Homepage, member, album, news, Press Kit, Contact, and hero CTA links now pass explicit locale context where needed so static output keeps localized hrefs before hydration.
 
 ## Metadata / hreflang Status
 
@@ -100,7 +104,15 @@ Date: 2026-05-22
   - `passion0728@gmail.com`
 - External official links, source links, streaming links, YouTube links, and `mailto:` links are reused across locales.
 - No new facts, dates, credits, contacts, awards, setlists, or private information were introduced for localization.
-- Untranslated archive-level content safely falls back to approved source content rather than internal notes.
+- Japanese and Korean shared UI now includes localized navigation, hero labels, CTA buttons, section labels, footer labels, media cards, live labels, album/release labels, and contact/press labels.
+- Archive-level facts remain source-safe; proper nouns, platform names, and official release titles are preserved where appropriate.
+
+## Header / Hero Layout Status
+
+- Desktop navigation width was tightened with shorter Traditional Chinese labels and no-wrap navigation items.
+- The Press Kit CTA remains separate from the language selector and is protected from wrapping.
+- The homepage current-chapter metadata card now uses a vertical editorial layout instead of a cramped three-column grid.
+- Locale-specific chapter metadata is active for Traditional Chinese, English, Japanese, and Korean.
 
 ## Verification Status
 
@@ -120,7 +132,7 @@ Date: 2026-05-22
 ## Remaining Native-Language Review Items
 
 - Traditional Chinese received a full visible-copy localization pass across canonical routes. See `ZH_LOCALIZATION_AUDIT.md`.
-- Japanese and Korean should receive native-speaker editorial review before a full international launch.
-- Current Japanese/Korean copy is a safe first-pass localization and avoids unconfirmed details.
-- Some archive details intentionally fall back to existing approved Traditional Chinese / English source copy until full translation review is complete.
+- Japanese and Korean should still receive native-speaker editorial review before a full international launch.
+- Current Japanese/Korean visible UI has been expanded beyond first-pass fallback and avoids unconfirmed details.
+- Some long-form archive details may still use official title/proper-noun conventions rather than fully localized title translations.
 - Future page-level SEO titles can be expanded beyond the current site-level title strategy once final localized SEO strategy is approved.

@@ -10,7 +10,7 @@ Traditional Chinese is the primary canonical locale and remains on clean unprefi
 
 | Route | Status |
 |---|---|
-| `/` | Chinese hero, CTAs, latest release, news, media, milestones, members, live, and CTA copy active |
+| `/` | Chinese hero, CTAs, latest release, news, media, milestones, members, live, compact header labels, and CTA copy active |
 | `/about` | Chinese official bio, long bio, press-ready description, and profile labels active |
 | `/members` | Chinese page heading, role labels, member intros, and shared card copy active |
 | `/members/marz23` | Chinese role, bio, instruments, and highlights active |
@@ -46,9 +46,10 @@ Traditional Chinese is the primary canonical locale and remains on clean unprefi
 
 ## English Strings Translated
 
-- Navigation: About, Members, History, Music, Live, News, Media, Press Kit, Contact.
+- Navigation: About, Members, History, Music, Live, News, Media, Press Kit, Contact. Header labels are intentionally shortened to 關於、成員、歷史、作品、演出、消息、影音、媒體、聯絡 for layout integrity.
 - Shared UI: Latest Release, View Album, Watch Videos, Read Source, Additional Source, Original Source, Official Links, Open Channel, Past, Album, Tracks, Release Date, Awards, Milestones, Available upon request, Contact.
 - Home page narrative, CTAs, latest release copy, timeline copy, member copy, live copy, and footer description.
+- Homepage current-chapter metadata card labels and values are Chinese and now use a vertical editorial layout.
 - About and History official narrative copy.
 - Member roles and instrument labels.
 - Album type labels, streaming button labels, release info labels, and album summaries.

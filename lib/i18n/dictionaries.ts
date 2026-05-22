@@ -25,14 +25,14 @@ type Dictionary = {
 
 const zh: Dictionary = {
   nav: {
-    about: "關於 TRASH",
+    about: "關於",
     members: "成員",
-    history: "樂團歷史",
+    history: "歷史",
     music: "作品",
     live: "演出",
-    news: "最新消息",
+    news: "消息",
     media: "影音",
-    pressKit: "媒體資料",
+    pressKit: "媒體",
     contact: "聯絡",
     press: "媒體資料",
   },
@@ -72,6 +72,21 @@ const en: Dictionary = {
 
 const ja: Dictionary = {
   ...en,
+  nav: {
+    about: "概要",
+    members: "メンバー",
+    history: "ヒストリー",
+    music: "作品",
+    live: "ライブ",
+    news: "ニュース",
+    media: "映像",
+    pressKit: "プレスキット",
+    contact: "お問い合わせ",
+    press: "プレスキット",
+  },
+  footer: {
+    officialLinks: "公式リンク",
+  },
   seo: {
     title: "TRASH Official",
     titleTemplate: "%s | TRASH Official",
@@ -81,6 +96,21 @@ const ja: Dictionary = {
 
 const ko: Dictionary = {
   ...en,
+  nav: {
+    about: "소개",
+    members: "멤버",
+    history: "히스토리",
+    music: "음악",
+    live: "공연",
+    news: "소식",
+    media: "영상",
+    pressKit: "프레스 킷",
+    contact: "문의",
+    press: "프레스 킷",
+  },
+  footer: {
+    officialLinks: "공식 링크",
+  },
   seo: {
     title: "TRASH Official",
     titleTemplate: "%s | TRASH Official",

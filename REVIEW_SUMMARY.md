@@ -81,6 +81,14 @@ Generated after public-facing TODO visibility cleanup. No visual redesign was pe
 - The current chapter metadata card has improved spacing and typography, with key values protected from awkward wrapping.
 - Chinese homepage hero copy was refined for a more natural official tone while preserving the same factual meaning.
 
+## v1.4 Multilingual Header and Hero Layout Status
+
+- Desktop language switching now uses a compact active-locale dropdown instead of an inline four-language list, reducing header crowding on English and Japanese routes.
+- Header navigation is protected from wrapping, with shorter Traditional Chinese header labels and no-wrap Press Kit CTA behavior.
+- Mobile navigation keeps a compact language selector without crowding the horizontal nav.
+- Homepage current-chapter metadata now uses a vertical editorial layout across Traditional Chinese, English, Japanese, and Korean, removing the previous cramped three-column values.
+- Japanese and Korean shared UI localization was expanded across navigation, hero labels, CTA buttons, footer labels, media cards, live labels, release labels, Press Kit, and Contact copy.
+
 ## 1. Pages Completed
 
 - Home (`/`)

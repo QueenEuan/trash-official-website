@@ -1,10 +1,11 @@
 import { LocalizedLink } from "@/components/i18n/LocalizedLink";
 import type { Member } from "@/data/members";
 import { FallbackImage } from "@/components/FallbackImage";
+import { defaultLocale, type Locale } from "@/lib/i18n/config";
 
-export function MemberCard({ member }: { member: Member }) {
+export function MemberCard({ member, locale = defaultLocale }: { member: Member; locale?: Locale }) {
   return (
-    <LocalizedLink href={`/members/${member.slug}`} className="group relative block overflow-hidden border border-white/10 bg-black transition hover:-translate-y-1 hover:border-gold/70">
+    <LocalizedLink href={`/members/${member.slug}`} locale={locale} className="group relative block overflow-hidden border border-white/10 bg-black transition hover:-translate-y-1 hover:border-gold/70">
       <span className="absolute left-4 top-4 z-10 text-[0.62rem] font-black uppercase tracking-[0.18em] text-gold">{member.role}</span>
       <div className="relative aspect-[4/5] overflow-hidden bg-zinc-900">
         <FallbackImage src={member.image} fallbackSrc={member.fallbackImage} alt={member.imageAlt} fill sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" className="object-cover object-center transition duration-500 group-hover:scale-105" />

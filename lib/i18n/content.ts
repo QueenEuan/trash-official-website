@@ -104,13 +104,69 @@ pageCopy.en = {
 };
 pageCopy.ja = {
   ...pageCopy.en,
-  about: { ...pageCopy.en.about, title: "TRASH：台北から始まったロックバンドの歩み。" },
-  contact: { ...pageCopy.en.contact, body: "取材、出演、ブランド、音楽ビジネス、その他公式のお問い合わせは、以下の公開窓口をご利用ください。", ctaTitle: "TRASHへの公式お問い合わせは、經紀/依凡までご連絡ください。" },
+  home: {
+    latestRelease: "最新リリース",
+    enterReleaseArchive: "アルバムを見る",
+    newsroom: "ニュース",
+    latestNews: "公式アップデート",
+    media: "映像",
+    featuredVideos: "注目映像",
+    mediaBody: "公式ミュージックビデオ、ライブ映像、舞台裏、リリース映像をTRASHの映像アーカイブとして集約。",
+    milestones: "マイルストーン",
+    bandHistory: "バンドの歩み",
+    bandHistoryBody: "インディペンデントなステージから歸零、11:11、Holy Trip!、幸福的末班車、アリーナ公演、Golden Melody Awardsでの評価まで、TRASHの歩みをたどる公式アーカイブ。",
+    members: "メンバー",
+    theBand: "現在のラインナップ",
+    live: "ライブ",
+    upcomingShows: "マイルストーン公演",
+    pressBooking: "プレス / ブッキング",
+    pressCta: "公式プロフィール、メディア素材、出演依頼、連絡窓口。",
+    pressKit: "プレスキット",
+    contact: "お問い合わせ",
+  },
+  about: { eyebrow: "概要", title: "TRASH：台北から始まったロックバンドの歩み。", longBio: "ロングバイオ", pressReady: "プレス向け紹介文", officialProfile: "公式プロフィール", origin: "出身地", founded: "結成", label: "レーベル", genre: "ジャンル", members: "メンバー" },
+  members: { eyebrow: "メンバー", title: "現在のラインナップ", body: "TRASHの現メンバー：阿夜 / Marz23、頤原 / Euan、博文 / TTeng、魁剛 / Kuei gun。", instruments: "担当", highlights: "ハイライト" },
+  history: { eyebrow: "ヒストリー", title: "タイムライン", body: "台北での結成、インディペンデントな活動、主要作品、Warner Music Taiwan期、アリーナの節目、Golden Melodyでの評価まで、TRASHの歩みを整理した公式タイムライン。" },
+  music: { eyebrow: "作品", title: "ディスコグラフィー", body: "2012年のセルフタイトル作から歸零、11:11、Never Die、Holy Trip!、15周年期の幸福的末班車までを整理したTRASH公式作品アーカイブ。" },
+  live: { eyebrow: "ライブ", title: "ライブアーカイブ", body: "15周年の章における重要なアリーナ公演、台北アリーナ初登場と高雄アリーナの節目を公式ライブアーカイブとして記録。" },
+  news: { eyebrow: "ニュース", title: "公式アップデート", body: "TRASH公式アーカイブから、受賞、リリース、ライブの節目、メディア関連ニュースを掲載。", moreNews: "その他のニュース" },
+  media: { eyebrow: "映像", title: "公式 YouTube 映像ハブ", body: "公式ミュージックビデオ、ライブ映像、舞台裏、リリースコンテンツはTRASHのYouTube公式チャンネルから視聴できます。", button: "YouTube公式チャンネルへ" },
+  press: { eyebrow: "プレスキット", title: "メディア、プロモーター、パートナー向けの公式資料。", body: "TRASHの公式プロフィール、公式リンク、メンバー情報、受賞情報、リクエスト制のメディア素材をまとめた資料ページ。", materials: "公式バンド資料", bio: "公式バイオ", links: "公式リンク", downloads: "素材リクエスト", awards: "受賞 / 評価", members: "メンバー", contact: "プレス連絡先", contactBody: "取材、出演、提携、メディア素材のご相談は、經紀/依凡 / 華納音樂までご連絡ください。", email: "Email", band: "バンド", base: "拠点", label: "レーベル", usageNotes: "使用ガイド" },
+  contact: { eyebrow: "お問い合わせ", title: "公式お問い合わせ窓口。", body: "取材、出演、ブランド、音楽ビジネス、その他公式のお問い合わせは、以下の公開窓口をご利用ください。", ctaEyebrow: "TRASH公式お問い合わせ", ctaTitle: "TRASHへの公式お問い合わせは、經紀/依凡までご連絡ください。", contact: "連絡先：", email: "Email：" },
+  ui: { tracks: "曲", viewAlbum: "アルバムを見る", listenNow: "聴く", albumNotes: "アルバムノート", releaseInfo: "リリース情報", year: "年", type: "タイプ", trackCount: "曲数", date: "日付", releaseDate: "リリース日", credits: "クレジット", streaming: "ストリーミング", tracklist: "曲目", discography: "ディスコグラフィー", source: "出典を見る", additionalSource: "追加出典", originalSource: "元記事を見る", readSource: "出典を見る", past: "終了", currentChapter: "現在のチャプター", formed: "結成", award: "受賞", base: "拠点", latestRelease: "最新作を聴く", watchVideos: "映像を見る", openChannel: "チャンネルへ", openYouTubeChannel: "YouTube公式チャンネルへ", officialYouTubeHub: "公式 YouTube 映像ハブ", album: "アルバム", ep: "EP", milestone: "マイルストーン", live: "ライブ", awards: "受賞" },
 };
 pageCopy.ko = {
   ...pageCopy.en,
-  about: { ...pageCopy.en.about, title: "TRASH: 타이베이에서 시작된 록 밴드의 여정." },
-  contact: { ...pageCopy.en.contact, body: "프레스, 공연, 브랜드 협업, 음악 비즈니스 및 일반 공식 문의는 아래 공개 연락 경로를 이용해 주세요.", ctaTitle: "TRASH 공식 문의는 經紀/依凡에게 연락해 주세요." },
+  home: {
+    latestRelease: "최신 릴리스",
+    enterReleaseArchive: "앨범 보기",
+    newsroom: "뉴스",
+    latestNews: "공식 업데이트",
+    media: "영상",
+    featuredVideos: "주요 영상",
+    mediaBody: "공식 뮤직비디오, 라이브 영상, 비하인드, 릴리스 콘텐츠를 TRASH 영상 아카이브로 모았습니다.",
+    milestones: "마일스톤",
+    bandHistory: "밴드 히스토리",
+    bandHistoryBody: "초기 인디 무대부터 歸零, 11:11, Holy Trip!, 幸福的末班車, 아레나 공연, Golden Melody Awards의 인정까지 TRASH의 여정을 정리한 공식 아카이브.",
+    members: "멤버",
+    theBand: "현재 라인업",
+    live: "공연",
+    upcomingShows: "마일스톤 공연",
+    pressBooking: "프레스 / 부킹",
+    pressCta: "공식 프로필, 미디어 자료, 공연 문의, 연락 창구.",
+    pressKit: "프레스 킷",
+    contact: "문의",
+  },
+  about: { eyebrow: "소개", title: "TRASH: 타이베이에서 시작된 록 밴드의 여정.", longBio: "상세 소개", pressReady: "프레스용 소개", officialProfile: "공식 프로필", origin: "출신", founded: "결성", label: "레이블", genre: "장르", members: "멤버" },
+  members: { eyebrow: "멤버", title: "현재 라인업", body: "TRASH 현 멤버: 阿夜 / Marz23, 頤原 / Euan, 博文 / TTeng, 魁剛 / Kuei gun.", instruments: "포지션", highlights: "하이라이트" },
+  history: { eyebrow: "히스토리", title: "타임라인", body: "타이베이 결성, 인디 시기, 주요 릴리스, Warner Music Taiwan 단계, 아레나 마일스톤, Golden Melody의 인정까지 TRASH의 15년 이상 여정을 정리한 공식 타임라인." },
+  music: { eyebrow: "음악", title: "디스코그래피", body: "2012년 셀프 타이틀 앨범부터 歸零, 11:11, Never Die, Holy Trip!, 15주년 시기의 幸福的末班車까지 정리한 TRASH 공식 릴리스 아카이브." },
+  live: { eyebrow: "공연", title: "공연 아카이브", body: "15주년 챕터의 주요 아레나 공연, Taipei Arena 데뷔와 Kaohsiung Arena 챕터를 공식 라이브 아카이브의 핵심 지점으로 기록합니다." },
+  news: { eyebrow: "소식", title: "공식 업데이트", body: "TRASH 공식 아카이브의 수상, 릴리스, 공연 마일스톤, 미디어 관련 소식을 모았습니다.", moreNews: "더 많은 소식" },
+  media: { eyebrow: "영상", title: "공식 YouTube 영상 허브", body: "공식 뮤직비디오, 라이브 영상, 비하인드, 릴리스 콘텐츠는 TRASH YouTube 공식 채널에서 확인할 수 있습니다.", button: "YouTube 공식 채널로 이동" },
+  press: { eyebrow: "프레스 킷", title: "미디어, 프로모터, 파트너를 위한 공식 자료.", body: "TRASH 공식 프로필, 공식 링크, 멤버 정보, 수상 기록, 요청 기반 미디어 자료를 정리한 자료 페이지입니다.", materials: "공식 밴드 자료", bio: "공식 소개", links: "공식 링크", downloads: "자료 요청", awards: "수상 / 인정", members: "멤버", contact: "프레스 연락처", contactBody: "프레스, 부킹, 파트너십, 미디어 자료 요청은 經紀/依凡 / 華納音樂으로 연락해 주세요.", email: "Email", band: "밴드", base: "거점", label: "레이블", usageNotes: "사용 안내" },
+  contact: { eyebrow: "문의", title: "공식 문의 창구.", body: "프레스, 공연, 브랜드 협업, 음악 비즈니스 및 일반 공식 문의는 아래 공개 연락 경로를 이용해 주세요.", ctaEyebrow: "TRASH 공식 문의", ctaTitle: "TRASH 공식 문의는 經紀/依凡에게 연락해 주세요.", contact: "연락처:", email: "Email:" },
+  ui: { tracks: "곡", viewAlbum: "앨범 보기", listenNow: "듣기", albumNotes: "앨범 노트", releaseInfo: "릴리스 정보", year: "연도", type: "유형", trackCount: "트랙 수", date: "날짜", releaseDate: "발매일", credits: "크레딧", streaming: "스트리밍", tracklist: "트랙리스트", discography: "디스코그래피", source: "출처 보기", additionalSource: "추가 출처", originalSource: "원문 보기", readSource: "출처 보기", past: "종료", currentChapter: "현재 챕터", formed: "결성", award: "수상", base: "거점", latestRelease: "최신작 듣기", watchVideos: "영상 보기", openChannel: "채널로 이동", openYouTubeChannel: "YouTube 공식 채널로 이동", officialYouTubeHub: "공식 YouTube 영상 허브", album: "앨범", ep: "EP", milestone: "마일스톤", live: "공연", awards: "수상" },
 };
 
 const aboutTranslations = {
@@ -195,10 +251,10 @@ const albumText: Record<string, Partial<Record<Locale, Partial<Album>>>> = {
 };
 
 const memberText: Record<string, Partial<Record<Locale, Partial<Member>>>> = {
-  marz23: { zh: { role: "主唱 / 吉他", intro: "阿夜 / Marz23 位於 TRASH 的核心位置，擔任主唱、吉他與重要創作聲音。", bio: "阿夜 / Marz23 位於 TRASH 的核心位置，以主唱與吉他連結樂團直接的情緒、歌曲敘事與現場演出的衝擊力。", instruments: ["主唱", "吉他"], highlights: ["TRASH 現任成員", "主唱 / 吉他"] }, ja: { intro: "阿夜 / Marz23はTRASHのボーカル／ギターとしてバンドの中心に立つ。", bio: "阿夜 / Marz23はTRASHのボーカル／ギターとして、バンドの感情の直線性とライブの強度をつなぐ存在。" }, ko: { intro: "阿夜 / Marz23는 TRASH의 보컬/기타로 밴드의 중심에 선다.", bio: "阿夜 / Marz23는 TRASH의 보컬/기타로 밴드의 감정적 직선성과 라이브 에너지를 연결한다." } },
-  euan: { zh: { role: "吉他", intro: "頤原 / Euan 形塑 TRASH 的吉他聲響，讓樂團保有旋律邊緣、空間感與舞台張力。", bio: "頤原 / Euan 以吉他架構 TRASH 的旋律輪廓、聲響空間與現場壓力，是樂團聲音辨識度的重要支點。", instruments: ["吉他"], highlights: ["TRASH 現任成員", "吉他"] }, ja: { intro: "頤原 / EuanはTRASHのギターサウンドを形づくる。", bio: "頤原 / EuanはTRASHのメロディックな輪郭、空間性、ライブでの圧力をギターで支える。" }, ko: { intro: "頤原 / Euan은 TRASH의 기타 사운드를 형성한다.", bio: "頤原 / Euan은 기타로 TRASH의 멜로디, 공간감, 라이브의 압력을 만든다." } },
-  tteng: { zh: { role: "貝斯", intro: "博文 / TTeng 以貝斯支撐 TRASH 的低頻重量、律動推進與節奏組衝擊。", bio: "博文 / TTeng 以貝斯線條穩住 TRASH 的重心，讓歌曲在重量、動態與現場推進之間保持張力。", instruments: ["貝斯"], highlights: ["TRASH 現任成員", "貝斯"] }, ja: { intro: "博文 / TTengはベースでTRASHの重心を支える。", bio: "博文 / TTengはベースラインでバンドの重量感、動き、リズムセクションの推進力を支える。" }, ko: { intro: "博文 / TTeng은 베이스로 TRASH의 중심을 지탱한다.", bio: "博文 / TTeng은 베이스 라인으로 밴드의 무게, 움직임, 리듬 섹션의 힘을 만든다." } },
-  "kuei-gun": { zh: { role: "鼓手", intro: "魁剛 / Kuei gun 以鼓組推動 TRASH 的身體感、速度與現場能量。", bio: "魁剛 / Kuei gun 以鼓組承擔歌曲的身體性、現場推進力與動態起伏，讓 TRASH 的舞台能量持續向前。", instruments: ["鼓手"], highlights: ["TRASH 現任成員", "鼓手"] }, ja: { intro: "魁剛 / Kuei gunはドラムでTRASHを前へ押し出す。", bio: "魁剛 / Kuei gunはドラムで楽曲の身体性、ライブの推進力、ダイナミクスを担う。" }, ko: { intro: "魁剛 / Kuei gun은 드럼으로 TRASH를 밀어붙인다.", bio: "魁剛 / Kuei gun은 드럼으로 곡의 물리적 에너지와 라이브의 추진력을 만든다." } },
+  marz23: { zh: { role: "主唱 / 吉他", intro: "阿夜 / Marz23 位於 TRASH 的核心位置，擔任主唱、吉他與重要創作聲音。", bio: "阿夜 / Marz23 位於 TRASH 的核心位置，以主唱與吉他連結樂團直接的情緒、歌曲敘事與現場演出的衝擊力。", instruments: ["主唱", "吉他"], highlights: ["TRASH 現任成員", "主唱 / 吉他"] }, ja: { role: "ボーカル / ギター", intro: "阿夜 / Marz23はTRASHのボーカル／ギターとしてバンドの中心に立つ。", bio: "阿夜 / Marz23はTRASHのボーカル／ギターとして、バンドの感情の直線性とライブの強度をつなぐ存在。", instruments: ["ボーカル", "ギター"], highlights: ["TRASH 現メンバー", "ボーカル / ギター"] }, ko: { role: "보컬 / 기타", intro: "阿夜 / Marz23는 TRASH의 보컬/기타로 밴드의 중심에 선다.", bio: "阿夜 / Marz23는 TRASH의 보컬/기타로 밴드의 감정적 직선성과 라이브 에너지를 연결한다.", instruments: ["보컬", "기타"], highlights: ["TRASH 현 멤버", "보컬 / 기타"] } },
+  euan: { zh: { role: "吉他", intro: "頤原 / Euan 形塑 TRASH 的吉他聲響，讓樂團保有旋律邊緣、空間感與舞台張力。", bio: "頤原 / Euan 以吉他架構 TRASH 的旋律輪廓、聲響空間與現場壓力，是樂團聲音辨識度的重要支點。", instruments: ["吉他"], highlights: ["TRASH 現任成員", "吉他"] }, ja: { role: "ギター", intro: "頤原 / EuanはTRASHのギターサウンドを形づくる。", bio: "頤原 / EuanはTRASHのメロディックな輪郭、空間性、ライブでの圧力をギターで支える。", instruments: ["ギター"], highlights: ["TRASH 現メンバー", "ギター"] }, ko: { role: "기타", intro: "頤原 / Euan은 TRASH의 기타 사운드를 형성한다.", bio: "頤原 / Euan은 기타로 TRASH의 멜로디, 공간감, 라이브의 압력을 만든다.", instruments: ["기타"], highlights: ["TRASH 현 멤버", "기타"] } },
+  tteng: { zh: { role: "貝斯", intro: "博文 / TTeng 以貝斯支撐 TRASH 的低頻重量、律動推進與節奏組衝擊。", bio: "博文 / TTeng 以貝斯線條穩住 TRASH 的重心，讓歌曲在重量、動態與現場推進之間保持張力。", instruments: ["貝斯"], highlights: ["TRASH 現任成員", "貝斯"] }, ja: { role: "ベース", intro: "博文 / TTengはベースでTRASHの重心を支える。", bio: "博文 / TTengはベースラインでバンドの重量感、動き、リズムセクションの推進力を支える。", instruments: ["ベース"], highlights: ["TRASH 現メンバー", "ベース"] }, ko: { role: "베이스", intro: "博文 / TTeng은 베이스로 TRASH의 중심을 지탱한다.", bio: "博文 / TTeng은 베이스 라인으로 밴드의 무게, 움직임, 리듬 섹션의 힘을 만든다.", instruments: ["베이스"], highlights: ["TRASH 현 멤버", "베이스"] } },
+  "kuei-gun": { zh: { role: "鼓手", intro: "魁剛 / Kuei gun 以鼓組推動 TRASH 的身體感、速度與現場能量。", bio: "魁剛 / Kuei gun 以鼓組承擔歌曲的身體性、現場推進力與動態起伏，讓 TRASH 的舞台能量持續向前。", instruments: ["鼓手"], highlights: ["TRASH 現任成員", "鼓手"] }, ja: { role: "ドラム", intro: "魁剛 / Kuei gunはドラムでTRASHを前へ押し出す。", bio: "魁剛 / Kuei gunはドラムで楽曲の身体性、ライブの推進力、ダイナミクスを担う。", instruments: ["ドラム"], highlights: ["TRASH 現メンバー", "ドラム"] }, ko: { role: "드럼", intro: "魁剛 / Kuei gun은 드럼으로 TRASH를 밀어붙인다.", bio: "魁剛 / Kuei gun은 드럼으로 곡의 물리적 에너지와 라이브의 추진력을 만든다.", instruments: ["드럼"], highlights: ["TRASH 현 멤버", "드럼"] } },
 };
 
 const timelineZh: Record<string, Partial<TimelineEvent>> = {
@@ -215,11 +271,53 @@ const timelineZh: Record<string, Partial<TimelineEvent>> = {
   "2025-Golden Melody Awards Best Band": { title: "金曲獎最佳樂團", description: "TRASH 於 2025 年獲得金曲獎最佳樂團，成為樂團長期作品與現場故事中的重要肯定。", tag: "獎項" },
 };
 
+const timelineJa: Record<string, Partial<TimelineEvent>> = {
+  "2009-Formation": { title: "結成", description: "TRASHは2009年12月に台北で結成され、リハーサル、ライブハウス、インディペンデントなステージから物語を始めた。", tag: "始まり" },
+  "2012-First Album / Gongliao Ocean Music Festival": { title: "初アルバム / Gongliao Ocean Music Festival", description: "セルフタイトルの初アルバムを発表し、Gongliao Ocean Music Festivalに関連する評価を通じて初期の存在感を高めた。", tag: "初期アーカイブ" },
+  "2014/2015-Reset / 歸零 and Golden Melody Awards Nomination": { title: "歸零 / Reset と Golden Melody Awards ノミネート", description: "歸零 / Resetは初期作品の重要な節目となり、Golden Melody Awardsでの評価へとつながった。", tag: "評価" },
+  "2017-11:11 / Japan Recording Period": { title: "11:11 と日本レコーディング期", description: "11:11はTRASHの録音表現を広げた重要な制作期として、公式アーカイブに記録されている。", tag: "録音" },
+  "2019-Warner Music Phase": { title: "Warner Music Taiwan期", description: "TRASHはWarner Music Taiwan期に入り、より広い発信基盤の上でバンドのライブ感とギターサウンドを保ち続けた。", tag: "レーベル" },
+  "2020-Never Die": { title: "Never Die", description: "Never DieはTRASHの作品アーカイブにおけるコンパクトなリリース章であり、次の段階への推進力を残した。", tag: "作品" },
+  "2021-Holy Trip!": { title: "Holy Trip!", description: "Holy Trip!はTRASHのアルバム表現をさらに広げ、メロディ、重量感、ディストーションを大きな物語へ接続した。", tag: "作品" },
+  "2024-The Last Train of Happiness / 幸福的末班車": { title: "幸福的末班車", description: "幸福的末班車は15周年期の中心作品として、バンドの歩み、新たなステージの記憶、後の評価をつないだ。", tag: "作品" },
+  "2024-Taipei Arena": { title: "台北アリーナ", description: "TRASHは15周年公演を台北アリーナへ進め、バンドにとって重要な会場マイルストーンを刻んだ。", tag: "会場" },
+  "2025-Kaohsiung Arena": { title: "高雄アリーナ", description: "15周年公演の章は高雄アリーナへ広がり、台北から南へと会場の物語をつないだ。", tag: "会場" },
+  "2025-Golden Melody Awards Best Band": { title: "Golden Melody Awards Best Band", description: "TRASHは2025年にGolden Melody Awards Best Bandを受賞し、長年の作品とライブの歩みに大きな評価を得た。", tag: "受賞" },
+};
+
+const timelineKo: Record<string, Partial<TimelineEvent>> = {
+  "2009-Formation": { title: "결성", description: "TRASH는 2009년 12월 타이베이에서 결성되어 합주실, 공연장, 인디 무대에서 밴드의 출발점을 만들었다.", tag: "시작" },
+  "2012-First Album / Gongliao Ocean Music Festival": { title: "첫 앨범 / Gongliao Ocean Music Festival", description: "셀프 타이틀 첫 앨범을 발표하고 Gongliao Ocean Music Festival 관련 인정을 통해 초기 존재감을 쌓았다.", tag: "초기 아카이브" },
+  "2014/2015-Reset / 歸零 and Golden Melody Awards Nomination": { title: "歸零 / Reset 과 Golden Melody Awards 노미네이트", description: "歸零 / Reset은 초기 작품의 중요한 지점이 되었고 Golden Melody Awards의 인정으로 이어졌다.", tag: "평가" },
+  "2017-11:11 / Japan Recording Period": { title: "11:11 과 일본 녹음기", description: "11:11은 TRASH의 녹음 언어를 확장한 주요 제작 시기로 공식 아카이브에 기록되어 있다.", tag: "녹음" },
+  "2019-Warner Music Phase": { title: "Warner Music Taiwan 단계", description: "TRASH는 Warner Music Taiwan 단계에 들어서며 더 넓은 플랫폼 위에서도 라이브 에너지와 기타 중심의 정체성을 유지했다.", tag: "레이블" },
+  "2020-Never Die": { title: "Never Die", description: "Never Die는 TRASH 작품 아카이브의 짧고 집중된 릴리스 챕터로 다음 단계의 추진력을 남겼다.", tag: "작품" },
+  "2021-Holy Trip!": { title: "Holy Trip!", description: "Holy Trip!는 TRASH의 앨범 서사를 넓히며 멜로디, 무게감, 디스토션을 더 큰 이야기로 연결했다.", tag: "작품" },
+  "2024-The Last Train of Happiness / 幸福的末班車": { title: "幸福的末班車", description: "幸福的末班車는 15주년 시기의 중심 작품으로 밴드의 여정과 새로운 무대 기억, 이후의 인정을 연결했다.", tag: "작품" },
+  "2024-Taipei Arena": { title: "Taipei Arena", description: "TRASH는 15주년 공연을 Taipei Arena로 확장하며 중요한 공연장 마일스톤을 만들었다.", tag: "공연장" },
+  "2025-Kaohsiung Arena": { title: "Kaohsiung Arena", description: "15주년 공연 챕터는 Kaohsiung Arena로 이어지며 타이베이에서 남부로 확장되었다.", tag: "공연장" },
+  "2025-Golden Melody Awards Best Band": { title: "Golden Melody Awards Best Band", description: "TRASH는 2025년 Golden Melody Awards Best Band를 수상하며 오랜 작품과 라이브 여정에 대한 중요한 인정을 받았다.", tag: "수상" },
+};
+
 const videoZh: Record<string, Partial<Video>> = {
   "official-music-videos": { title: "官方音樂錄影帶", category: "Official Music Videos", description: "觀看官方音樂錄影帶與視覺發行作品。", dateLabel: "YouTube 官方頻道" },
   "live-sessions": { title: "現場演出", category: "Live Sessions", description: "瀏覽精選現場演出與演出企劃內容。", dateLabel: "YouTube 官方頻道" },
   "behind-the-scenes": { title: "幕後花絮", category: "Behind The Scenes", description: "跟著 TRASH 進入錄音、巡演與製作現場。", dateLabel: "YouTube 官方頻道" },
   releases: { title: "發行作品", category: "Releases", description: "瀏覽官方音源與發行上架內容。", dateLabel: "YouTube 官方頻道" },
+};
+
+const videoJa: Record<string, Partial<Video>> = {
+  "official-music-videos": { title: "公式ミュージックビデオ", description: "公式ミュージックビデオと映像作品を見る。", dateLabel: "YouTube公式チャンネル" },
+  "live-sessions": { title: "ライブ映像", description: "ライブ演奏とセッション映像をチェック。", dateLabel: "YouTube公式チャンネル" },
+  "behind-the-scenes": { title: "舞台裏", description: "スタジオ、ツアー、制作の裏側を追う。", dateLabel: "YouTube公式チャンネル" },
+  releases: { title: "リリース", description: "公式音源とリリース映像を見る。", dateLabel: "YouTube公式チャンネル" },
+};
+
+const videoKo: Record<string, Partial<Video>> = {
+  "official-music-videos": { title: "공식 뮤직비디오", description: "공식 뮤직비디오와 비주얼 릴리스를 확인하세요.", dateLabel: "YouTube 공식 채널" },
+  "live-sessions": { title: "라이브 영상", description: "라이브 퍼포먼스와 세션 콘텐츠를 살펴보세요.", dateLabel: "YouTube 공식 채널" },
+  "behind-the-scenes": { title: "비하인드", description: "스튜디오, 투어, 제작 과정을 따라갑니다.", dateLabel: "YouTube 공식 채널" },
+  releases: { title: "릴리스", description: "공식 음원과 릴리스 업로드를 확인하세요.", dateLabel: "YouTube 공식 채널" },
 };
 
 const showZh: Record<string, Partial<Show>> = {
@@ -233,6 +331,40 @@ const showZh: Record<string, Partial<Show>> = {
     milestoneLabel: "高雄巨蛋篇章",
     description: "《幸福的末班車》十五週年篇章延伸至南部的重要場館節點，讓樂團的場館故事從台北持續前進到高雄。",
     country: "台灣",
+    status: "Past",
+  },
+};
+
+const showJa: Record<string, Partial<Show>> = {
+  "2024-12-14": {
+    milestoneLabel: "台北アリーナ初登場",
+    description: "TRASH初の台北アリーナ公演として、15周年のライブストーリーをアリーナ規模へ押し上げた節目。",
+    city: "台北",
+    country: "台湾",
+    status: "Past",
+  },
+  "2025-05-03": {
+    milestoneLabel: "高雄アリーナ編",
+    description: "The Last Train of Happinessの15周年章を南部へ広げた高雄アリーナの重要な節目。",
+    city: "高雄",
+    country: "台湾",
+    status: "Past",
+  },
+};
+
+const showKo: Record<string, Partial<Show>> = {
+  "2024-12-14": {
+    milestoneLabel: "Taipei Arena 데뷔",
+    description: "TRASH의 첫 Taipei Arena 챕터로, 15주년 라이브 여정을 아레나 규모로 확장한 이정표.",
+    city: "타이베이",
+    country: "대만",
+    status: "Past",
+  },
+  "2025-05-03": {
+    milestoneLabel: "Kaohsiung Arena 챕터",
+    description: "The Last Train of Happiness의 15주년 챕터를 남부로 확장한 Kaohsiung Arena의 주요 이정표.",
+    city: "가오슝",
+    country: "대만",
     status: "Past",
   },
 };
@@ -277,6 +409,86 @@ const contactZh = {
   ],
 };
 
+const pressKitJa = {
+  ...pressKit,
+  tagline: "台北発の台湾ロックバンド。",
+  officialBio: "TRASHは2009年12月に台北で結成された台湾のロックバンド。Warner Music Taiwanに所属し、インディペンデントなステージのルーツ、広がり続ける作品群、15周年のアリーナマイルストーン、Golden Melodyでの評価を公式アーカイブとして記録している。",
+  longBio: "TRASHは2009年12月に台北で結成され、インディペンデントなロックシーンから現代台湾ロックを代表する存在へと成長した。メディア、プロモーター、ブランドパートナー向けに、このページでは公式プロフィール、公式リンク、現メンバー情報、素材リクエストの状態をまとめている。",
+  awards: [
+    "2025年 Golden Melody Awards Best Band。",
+    "過去作品に関連するGolden Melody Awardsノミネート。",
+    "Gongliao Ocean Music Festival関連の評価。",
+    "TODO: confirm official source for exact award names, years, categories, and citation links.",
+  ],
+  links: pressKit.links.map((link) => ({
+    ...link,
+    label: link.label === "Official website" ? "公式サイト" : link.label,
+    note: link.note === "Official website." ? "TRASH公式サイト。" : link.note === "Official YouTube channel." ? "TRASH YouTube公式チャンネル。" : link.note === "Official Instagram." ? "TRASH公式Instagram。" : link.note === "Official Facebook." ? "TRASH公式Facebook。" : link.note === "Official Spotify artist page." ? "TRASH Spotifyアーティストページ。" : link.note === "Official Apple Music artist page." ? "TRASH Apple Musicアーティストページ。" : link.note === "Label artist page." ? "レーベルのアーティストページ。" : link.note,
+  })),
+  downloads: [
+    { title: "プレス写真", description: "リクエスト制", href: "" },
+    { title: "ロゴパッケージ", description: "リクエスト制", href: "" },
+    { title: "テクニカルライダー", description: "リクエスト制", href: "" },
+  ],
+  usageNotes: [
+    "写真は承認された範囲と指定クレジットに従って使用してください。",
+    "ロゴの変形や改変はできません。",
+    "事実情報を含むプレスコピーは、確認なしに編集しないでください。",
+    "TODO: confirm official usage terms and legal language.",
+  ],
+};
+
+const pressKitKo = {
+  ...pressKit,
+  tagline: "타이베이 출신 대만 록 밴드.",
+  officialBio: "TRASH는 2009년 12월 타이베이에서 결성된 대만 록 밴드이며 Warner Music Taiwan 소속이다. 공식 아카이브는 인디 무대의 뿌리, 확장되는 디스코그래피, 15주년 아레나 마일스톤, Golden Melody의 인정을 기록한다.",
+  longBio: "TRASH는 2009년 12월 타이베이에서 결성되어 인디 록 신에서 현대 대만 록의 주요 밴드로 성장했다. 미디어, 프로모터, 브랜드 파트너를 위해 이 페이지는 공식 프로필, 공식 링크, 현재 멤버 정보, 요청 기반 자료 상태를 정리한다.",
+  awards: [
+    "2025 Golden Melody Awards Best Band.",
+    "이전 작품과 연결된 Golden Melody Awards 노미네이트.",
+    "Gongliao Ocean Music Festival 관련 인정.",
+    "TODO: confirm official source for exact award names, years, categories, and citation links.",
+  ],
+  links: pressKit.links.map((link) => ({
+    ...link,
+    label: link.label === "Official website" ? "공식 웹사이트" : link.label,
+    note: link.note === "Official website." ? "TRASH 공식 웹사이트." : link.note === "Official YouTube channel." ? "TRASH YouTube 공식 채널." : link.note === "Official Instagram." ? "TRASH 공식 Instagram." : link.note === "Official Facebook." ? "TRASH 공식 Facebook." : link.note === "Official Spotify artist page." ? "TRASH Spotify 아티스트 페이지." : link.note === "Official Apple Music artist page." ? "TRASH Apple Music 아티스트 페이지." : link.note === "Label artist page." ? "레이블 아티스트 페이지." : link.note,
+  })),
+  downloads: [
+    { title: "프레스 사진", description: "요청 시 제공", href: "" },
+    { title: "로고 패키지", description: "요청 시 제공", href: "" },
+    { title: "테크니컬 라이더", description: "요청 시 제공", href: "" },
+  ],
+  usageNotes: [
+    "사진은 승인된 범위와 지정 크레딧에 따라 사용해야 합니다.",
+    "로고는 변형하거나 수정할 수 없습니다.",
+    "사실 정보가 포함된 프레스 카피는 확인 없이 수정하지 않아야 합니다.",
+    "TODO: confirm official usage terms and legal language.",
+  ],
+};
+
+const contactJa = {
+  ...contactContent,
+  sections: [
+    { title: "メディア / 取材依頼", body: "インタビュー、メディア資料、公式写真、プレス関連のご相談。", contact: "經紀/依凡 / 華納音樂", email: "passion0728@gmail.com" },
+    { title: "出演 / ライブ依頼", body: "コンサート、フェス、キャンパス、商業イベント、ライブ出演のご相談。", contact: "經紀/依凡", email: "passion0728@gmail.com" },
+    { title: "ブランド / パートナーシップ", body: "ブランド提携、キャンペーン、スポンサーシップ、クリエイティブコラボレーション。", contact: "經紀/依凡", email: "passion0728@gmail.com" },
+    { title: "レーベル / 音楽ビジネス", body: "音楽ライセンス、レーベル関連、リリースに関する連絡。", contact: "華納音樂" },
+    { title: "一般お問い合わせ", body: "その他TRASH公式に関するお問い合わせ。", contact: "經紀/依凡", email: "passion0728@gmail.com" },
+  ],
+};
+
+const contactKo = {
+  ...contactContent,
+  sections: [
+    { title: "미디어 / 인터뷰 문의", body: "인터뷰, 미디어 자료, 공식 사진, 프레스 관련 요청.", contact: "經紀/依凡 / 華納音樂", email: "passion0728@gmail.com" },
+    { title: "공연 / 라이브 문의", body: "콘서트, 페스티벌, 캠퍼스, 상업 공연 및 라이브 초청.", contact: "經紀/依凡", email: "passion0728@gmail.com" },
+    { title: "브랜드 / 파트너십", body: "브랜드 파트너십, 캠페인, 스폰서십, 크리에이티브 협업.", contact: "經紀/依凡", email: "passion0728@gmail.com" },
+    { title: "레이블 / 음악 비즈니스", body: "음악 라이선싱, 레이블 관련 커뮤니케이션, 릴리스 관련 문의.", contact: "華納音樂" },
+    { title: "일반 문의", body: "기타 TRASH 공식 관련 문의.", contact: "經紀/依凡", email: "passion0728@gmail.com" },
+  ],
+};
+
 export function getPageCopy(locale: Locale) {
   return pageCopy[locale] ?? pageCopy[defaultLocale];
 }
@@ -301,17 +513,39 @@ export function getSite(locale: Locale) {
       },
     };
   }
-  if (locale === "ja") return { ...siteProfile, heroBody: "2009年12月に台北で結成されたTRASHは、台湾ロック、Mandopop rock、Alternative Rock、Britpop、Grungeを、記憶に残るライブの力へと変えてきた。" };
-  if (locale === "ko") return { ...siteProfile, heroBody: "2009년 12월 타이베이에서 결성된 TRASH는 대만 록, Mandopop rock, Alternative Rock, Britpop, Grunge를 강렬한 라이브 에너지로 연결해 왔다." };
+  if (locale === "ja") {
+    return {
+      ...siteProfile,
+      origin: "台北・台湾",
+      founded: "2009年12月",
+      heroEyebrow: "台湾ロックバンド / 台北",
+      heroBody: "2009年12月に台北で結成されたTRASHは、台湾ロック、Mandopop rock、Alternative Rock、Britpop、Grungeを、記憶に残るライブの力へと変えてきた。",
+    };
+  }
+  if (locale === "ko") {
+    return {
+      ...siteProfile,
+      origin: "타이베이・대만",
+      founded: "2009년 12월",
+      heroEyebrow: "대만 록 밴드 / 타이베이",
+      heroBody: "2009년 12월 타이베이에서 결성된 TRASH는 대만 록, Mandopop rock, Alternative Rock, Britpop, Grunge를 강렬한 라이브 에너지로 연결해 왔다.",
+    };
+  }
   return siteProfile;
 }
 
 export function getContact(locale: Locale = defaultLocale) {
-  return locale === "zh" ? contactZh : contactContent;
+  if (locale === "zh") return contactZh;
+  if (locale === "ja") return contactJa;
+  if (locale === "ko") return contactKo;
+  return contactContent;
 }
 
 export function getPressKit(locale: Locale = defaultLocale) {
-  return locale === "zh" ? pressKitZh : pressKit;
+  if (locale === "zh") return pressKitZh;
+  if (locale === "ja") return pressKitJa;
+  if (locale === "ko") return pressKitKo;
+  return pressKit;
 }
 
 export function getAlbums(locale: Locale): Album[] {
@@ -324,14 +558,15 @@ export function getMembers(locale: Locale): Member[] {
 
 export function getTimeline(locale: Locale): TimelineEvent[] {
   if (locale === "zh") return timeline.map((event) => ({ ...event, ...(timelineZh[`${event.year}-${event.title}`] ?? {}) }));
-  if (locale !== "ja" && locale !== "ko") return timeline;
-  return timeline.map((event) => ({ ...event }));
+  if (locale === "ja") return timeline.map((event) => ({ ...event, ...(timelineJa[`${event.year}-${event.title}`] ?? {}) }));
+  if (locale === "ko") return timeline.map((event) => ({ ...event, ...(timelineKo[`${event.year}-${event.title}`] ?? {}) }));
+  return timeline;
 }
 
 export function getShows(locale: Locale): Show[] {
   if (locale === "zh") return shows.map((show) => ({ ...show, ...(showZh[show.date] ?? {}) }));
-  if (locale === "ja") return shows.map((show) => ({ ...show, description: show.date === "2024-12-14" ? "TRASH初の台北アリーナ公演として、15周年のライブストーリーをアリーナ規模へ押し上げた節目。" : "The Last Train of Happinessの15周年章を南部へ広げた高雄アリーナの重要な節目。" }));
-  if (locale === "ko") return shows.map((show) => ({ ...show, description: show.date === "2024-12-14" ? "TRASH의 첫 Taipei Arena 챕터로, 15주년 라이브 여정을 아레나 규모로 확장한 이정표." : "The Last Train of Happiness의 15주년 챕터를 남부로 확장한 Kaohsiung Arena의 주요 이정표." }));
+  if (locale === "ja") return shows.map((show) => ({ ...show, ...(showJa[show.date] ?? {}) }));
+  if (locale === "ko") return shows.map((show) => ({ ...show, ...(showKo[show.date] ?? {}) }));
   return shows;
 }
 
@@ -342,8 +577,8 @@ export function getNews(locale: Locale): NewsItem[] {
 
 export function getVideos(locale: Locale): Video[] {
   if (locale === "zh") return videos.map((video) => ({ ...video, ...(videoZh[video.slug] ?? {}) }));
-  if (locale === "ja") return videos.map((video) => ({ ...video, description: video.slug === "official-music-videos" ? "公式ミュージックビデオと映像作品を見る。" : video.slug === "live-sessions" ? "ライブ演奏とセッション映像をチェック。" : video.slug === "behind-the-scenes" ? "スタジオ、ツアー、制作の裏側を追う。" : "公式音源とリリース映像を見る。" }));
-  if (locale === "ko") return videos.map((video) => ({ ...video, description: video.slug === "official-music-videos" ? "공식 뮤직비디오와 비주얼 릴리스를 확인하세요." : video.slug === "live-sessions" ? "라이브 퍼포먼스와 세션 콘텐츠를 살펴보세요." : video.slug === "behind-the-scenes" ? "스튜디오, 투어, 제작 과정을 따라갑니다." : "공식 음원과 릴리스 업로드를 확인하세요." }));
+  if (locale === "ja") return videos.map((video) => ({ ...video, ...(videoJa[video.slug] ?? {}) }));
+  if (locale === "ko") return videos.map((video) => ({ ...video, ...(videoKo[video.slug] ?? {}) }));
   return videos;
 }
 
@@ -353,35 +588,84 @@ export function getAlbumTypeLabel(type: Album["type"], locale: Locale) {
     if (type === "Single") return "單曲";
     if (type === "Live") return "現場作品";
   }
+  if (locale === "ja") {
+    if (type === "Album") return "アルバム";
+    if (type === "Single") return "シングル";
+    if (type === "Live") return "ライブ作品";
+  }
+  if (locale === "ko") {
+    if (type === "Album") return "앨범";
+    if (type === "Single") return "싱글";
+    if (type === "Live") return "라이브 작품";
+  }
   return type;
 }
 
 export function getNewsCategoryLabel(category: NewsItem["category"], locale: Locale) {
-  if (locale !== "zh") return category;
-  const labels: Record<NewsItem["category"], string> = {
+  const zhLabels: Record<NewsItem["category"], string> = {
     Awards: "獎項",
     Live: "演出",
     Release: "發行",
     Press: "媒體",
     Archive: "公告",
   };
-  return labels[category];
+  const jaLabels: Record<NewsItem["category"], string> = {
+    Awards: "受賞",
+    Live: "ライブ",
+    Release: "リリース",
+    Press: "メディア",
+    Archive: "アーカイブ",
+  };
+  const koLabels: Record<NewsItem["category"], string> = {
+    Awards: "수상",
+    Live: "공연",
+    Release: "릴리스",
+    Press: "미디어",
+    Archive: "아카이브",
+  };
+  if (locale === "zh") return zhLabels[category];
+  if (locale === "ja") return jaLabels[category];
+  if (locale === "ko") return koLabels[category];
+  return category;
 }
 
 export function getShowTypeLabel(type: Show["type"], locale: Locale) {
-  if (locale !== "zh") return type;
-  const labels: Record<Show["type"], string> = {
+  const zhLabels: Record<Show["type"], string> = {
     milestone: "里程碑",
     tour: "巡演",
     festival: "音樂祭",
     archive: "演出紀錄",
   };
-  return labels[type];
+  const jaLabels: Record<Show["type"], string> = {
+    milestone: "マイルストーン",
+    tour: "ツアー",
+    festival: "フェス",
+    archive: "ライブ記録",
+  };
+  const koLabels: Record<Show["type"], string> = {
+    milestone: "마일스톤",
+    tour: "투어",
+    festival: "페스티벌",
+    archive: "공연 기록",
+  };
+  if (locale === "zh") return zhLabels[type];
+  if (locale === "ja") return jaLabels[type];
+  if (locale === "ko") return koLabels[type];
+  return type;
 }
 
 export function getStreamingLabel(label: string, locale: Locale) {
-  if (locale !== "zh") return label;
-  if (label === "Spotify") return "前往 Spotify 聆聽";
-  if (label === "Apple Music") return "前往 Apple Music 聆聽";
+  if (locale === "zh") {
+    if (label === "Spotify") return "前往 Spotify 聆聽";
+    if (label === "Apple Music") return "前往 Apple Music 聆聽";
+  }
+  if (locale === "ja") {
+    if (label === "Spotify") return "Spotifyで聴く";
+    if (label === "Apple Music") return "Apple Musicで聴く";
+  }
+  if (locale === "ko") {
+    if (label === "Spotify") return "Spotify에서 듣기";
+    if (label === "Apple Music") return "Apple Music에서 듣기";
+  }
   return label;
 }

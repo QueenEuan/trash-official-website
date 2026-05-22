@@ -35,21 +35,21 @@ export function SiteHeader() {
           </span>
           <span className="font-display text-2xl font-black text-white md:text-3xl">TRASH</span>
         </LocalizedLink>
-        <nav className="hidden items-center gap-6 text-[0.74rem] font-extrabold uppercase tracking-[0.17em] text-zinc-300 xl:flex">
+        <nav className="hidden min-w-0 flex-1 items-center justify-end gap-4 text-[0.72rem] font-extrabold uppercase tracking-[0.15em] text-zinc-300 xl:flex 2xl:gap-5">
           {navKeys.map(([key, href]) => (
-            <LocalizedLink key={href} href={href} className="transition hover:text-gold">
+            <LocalizedLink key={href} href={href} className="whitespace-nowrap transition hover:text-gold">
               {dictionary.nav[key]}
             </LocalizedLink>
           ))}
           <LanguageSwitcher />
         </nav>
-        <LocalizedLink href="/press-kit" className="btn-primary hidden min-h-10 px-4 py-2 text-[0.68rem] sm:inline-flex">
+        <LocalizedLink href="/press-kit" className="btn-primary hidden min-h-10 shrink-0 whitespace-nowrap px-4 py-2 text-[0.68rem] sm:inline-flex">
           {dictionary.nav.press}
         </LocalizedLink>
       </div>
       <nav className="scrollbar-none flex gap-5 overflow-x-auto border-t border-white/10 px-4 py-3 text-[0.7rem] font-extrabold uppercase tracking-[0.15em] text-zinc-400 xl:hidden">
         {navKeys.map(([key, href]) => (
-          <LocalizedLink key={href} href={href} className="shrink-0 transition hover:text-gold">
+          <LocalizedLink key={href} href={href} className="shrink-0 whitespace-nowrap transition hover:text-gold">
             {dictionary.nav[key]}
           </LocalizedLink>
         ))}

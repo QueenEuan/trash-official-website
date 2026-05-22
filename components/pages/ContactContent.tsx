@@ -10,7 +10,7 @@ export function ContactContent({ locale = defaultLocale }: { locale?: Locale }) 
   const contactContent = getContact(locale);
   const contactEmail = contactContent.email;
   const pressKit = getPressKit(locale);
-  const officialLinks = pressKit.links.filter((link) => ["官方網站", "Official website", "YouTube", "Instagram", "Facebook"].includes(link.label));
+  const officialLinks = pressKit.links.filter((link) => ["官方網站", "Official website", "公式サイト", "공식 웹사이트", "YouTube", "Instagram", "Facebook"].includes(link.label));
 
   return (
     <div className="page-shell">

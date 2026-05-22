@@ -35,9 +35,9 @@ export function HomeContent({ locale = defaultLocale }: { locale?: Locale }) {
                 <p key={highlight} className="text-xs font-black uppercase tracking-[0.12em] text-zinc-400">{highlight}</p>
               ))}
             </div>
-            <LocalizedLink href={`/music/${latestAlbum.slug}`} className="btn-primary mt-8">{copy.home.enterReleaseArchive}</LocalizedLink>
+            <LocalizedLink href={`/music/${latestAlbum.slug}`} locale={locale} className="btn-primary mt-8">{copy.home.enterReleaseArchive}</LocalizedLink>
           </div>
-          <LocalizedLink href={`/music/${latestAlbum.slug}`} className="group archive-frame grid gap-5 p-4 md:grid-cols-[minmax(220px,360px)_1fr] md:p-5">
+          <LocalizedLink href={`/music/${latestAlbum.slug}`} locale={locale} className="group archive-frame grid gap-5 p-4 md:grid-cols-[minmax(220px,360px)_1fr] md:p-5">
             <div className="relative aspect-square overflow-hidden bg-zinc-900 shadow-[0_26px_80px_rgba(0,0,0,0.52)]">
               <FallbackImage src={latestAlbum.cover} fallbackSrc={latestAlbum.fallbackCover} alt={`${latestAlbum.title} 專輯封面`} fill className="object-cover transition duration-500 group-hover:scale-105" />
             </div>
@@ -74,7 +74,7 @@ export function HomeContent({ locale = defaultLocale }: { locale?: Locale }) {
       <section className="page-shell">
         <SectionHeading eyebrow={copy.home.members} title={copy.home.theBand} />
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {localizedMembers.map((member) => <MemberCard key={member.slug} member={member} />)}
+          {localizedMembers.map((member) => <MemberCard key={member.slug} member={member} locale={locale} />)}
         </div>
       </section>
       <section className="section-band">
@@ -90,8 +90,8 @@ export function HomeContent({ locale = defaultLocale }: { locale?: Locale }) {
           <p className="kicker">{copy.home.pressBooking}</p>
           <h2 className="mt-3 max-w-4xl font-display text-4xl font-black uppercase leading-none text-white md:text-6xl">{copy.home.pressCta}</h2>
           <div className="mt-8 flex flex-wrap gap-4">
-            <LocalizedLink href="/press-kit" className="btn-primary">{copy.home.pressKit}</LocalizedLink>
-            <LocalizedLink href="/contact" className="btn-secondary">{copy.home.contact}</LocalizedLink>
+            <LocalizedLink href="/press-kit" locale={locale} className="btn-primary">{copy.home.pressKit}</LocalizedLink>
+            <LocalizedLink href="/contact" locale={locale} className="btn-secondary">{copy.home.contact}</LocalizedLink>
           </div>
         </div>
       </section>

@@ -17,7 +17,7 @@ export function NewsCard({ item, locale = defaultLocale }: { item: NewsItem; loc
           <p className="mt-2 text-xs font-bold uppercase tracking-[0.18em] text-gold">{category}</p>
         </div>
         <div>
-          <LocalizedLink href={`/news/${item.slug}`} className="group">
+          <LocalizedLink href={`/news/${item.slug}`} locale={locale} className="group">
             <h3 className="text-pretty font-display text-3xl font-black uppercase leading-tight text-white transition group-hover:text-gold md:text-4xl">{item.title}</h3>
           </LocalizedLink>
           <p className="mt-3 text-sm leading-6 text-zinc-400">{item.excerpt}</p>
