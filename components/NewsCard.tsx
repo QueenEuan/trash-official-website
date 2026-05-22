@@ -1,8 +1,11 @@
-import Link from "next/link";
+import { LocalizedLink } from "@/components/i18n/LocalizedLink";
 import type { NewsItem } from "@/data/news";
 import { publicDateLabel } from "@/lib/publicContent";
+import { defaultLocale, type Locale } from "@/lib/i18n/config";
+import { getPageCopy } from "@/lib/i18n/content";
 
-export function NewsCard({ item }: { item: NewsItem }) {
+export function NewsCard({ item, locale = defaultLocale }: { item: NewsItem; locale?: Locale }) {
+  const copy = getPageCopy(locale);
   const dateLabel = publicDateLabel(item.dateLabel);
 
   return (
@@ -13,12 +16,12 @@ export function NewsCard({ item }: { item: NewsItem }) {
           <p className="mt-2 text-xs font-bold uppercase tracking-[0.18em] text-gold">{item.category}</p>
         </div>
         <div>
-          <Link href={`/news/${item.slug}`} className="group">
+          <LocalizedLink href={`/news/${item.slug}`} className="group">
             <h3 className="text-pretty font-display text-3xl font-black uppercase leading-tight text-white transition group-hover:text-gold md:text-4xl">{item.title}</h3>
-          </Link>
+          </LocalizedLink>
           <p className="mt-3 text-sm leading-6 text-zinc-400">{item.excerpt}</p>
         </div>
-        {item.sourceUrl && <a href={item.sourceUrl} target="_blank" rel="noopener noreferrer" className="btn-muted md:justify-self-end">Read Source</a>}
+        {item.sourceUrl && <a href={item.sourceUrl} target="_blank" rel="noopener noreferrer" className="btn-muted md:justify-self-end">{copy.ui.readSource}</a>}
       </div>
     </article>
   );

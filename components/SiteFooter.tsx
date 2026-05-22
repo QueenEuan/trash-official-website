@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { FallbackImage } from "@/components/FallbackImage";
+import { LocalizedLink } from "@/components/i18n/LocalizedLink";
 import { Mail } from "lucide-react";
 import { siteProfile } from "@/data/site";
 
@@ -16,7 +16,7 @@ export function SiteFooter() {
         </div>
         <div className="flex flex-wrap items-center gap-3">
           <span className="border border-white/10 px-3 py-2 text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">Official Links</span>
-          <Link className="icon-btn" href="/contact" aria-label="Contact"><Mail size={18} /></Link>
+          <LocalizedLink className="icon-btn" href="/contact" aria-label="Contact"><Mail size={18} /></LocalizedLink>
         </div>
       </div>
       <div className="border-t border-white/10 px-5 py-5 text-center text-xs uppercase tracking-[0.18em] text-zinc-600">

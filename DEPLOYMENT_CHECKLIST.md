@@ -18,6 +18,14 @@
 - Backward-compatible redirects remain active:
   - `/members/marz` redirects to `/members/marz23`
   - `/press` redirects to `/press-kit`
+- Four-language route architecture is active with Traditional Chinese as clean canonical:
+  - `/`
+  - `/en`
+  - `/ja`
+  - `/ko`
+- `/zh` and `/zh/...` redirect to the equivalent unprefixed Traditional Chinese canonical route.
+- First-pass i18n copy is active. Traditional Chinese is the source language; English uses approved existing official copy; Japanese and Korean use safe first-pass translations where available with source-language fallback for untranslated archive content.
+- `/` is the Traditional Chinese homepage and does not redirect to `/zh`.
 
 ## Vercel Deployment Steps
 
@@ -115,18 +123,25 @@ git push -u origin main
 - Contact page shows the v1.1 official inquiry hub with confirmed public routing for 經紀/依凡, 華納音樂, and `passion0728@gmail.com`; no fake form is present.
 - Mobile navigation works on small screens.
 - Header and footer links use canonical routes.
+- Header includes language switcher links for `中文`, `EN`, `日本語`, and `한국어`; mobile navigation includes the same switcher.
+- Language switching preserves the current page path where an equivalent localized route exists.
+- `/zh` routes redirect to clean Traditional Chinese canonicals.
+- Locale-prefixed routes load for English, Japanese, and Korean Home, About, Members, History, Music, Live, News, Media, Press Kit, and Contact.
+- Locale-prefixed detail routes load for English, Japanese, and Korean member, album, and news detail pages.
 - Footer uses `Official Links` text and does not show public "coming soon" language.
 - Logo renders from normalized PNG filenames.
 - Hero image loads and crops correctly on desktop and mobile.
 - OG preview uses `https://trashband.tw/images/og/trash-og.jpg`.
 - Page source includes canonical URL for `https://trashband.tw`.
 - Page source includes `og:url` for `https://trashband.tw`.
+- Page source includes hreflang alternates for `zh-TW`, `en`, `ja`, `ko`, and `x-default`.
 - No visible public-facing TODO / placeholder / internal review text appears.
 - External source and streaming links are documented in `LINK_AUDIT.md`.
 - External public links open in a new tab with `rel="noopener noreferrer"`.
 - No visible source or streaming button should render without an `href`.
 - Final pre-launch freeze audit is documented in `PRE_LAUNCH_AUDIT.md`.
 - v1.1 mobile hero crop and content polish pass should be verified with lint and production build in an environment with dependencies installed.
+- i18n launch-readiness audit is documented in `I18N_AUDIT.md`.
 
 ## Remaining Content Before Public Launch
 

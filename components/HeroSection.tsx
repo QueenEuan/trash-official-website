@@ -1,9 +1,13 @@
-import Link from "next/link";
 import { ArrowRight, Play } from "lucide-react";
-import { siteProfile } from "@/data/site";
+import { LocalizedLink } from "@/components/i18n/LocalizedLink";
 import { FallbackImage } from "@/components/FallbackImage";
+import { defaultLocale, type Locale } from "@/lib/i18n/config";
+import { getPageCopy, getSite } from "@/lib/i18n/content";
 
-export function HeroSection() {
+export function HeroSection({ locale = defaultLocale }: { locale?: Locale }) {
+  const siteProfile = getSite(locale);
+  const copy = getPageCopy(locale);
+
   return (
     <section className="relative min-h-[90vh] overflow-hidden border-b border-white/10">
       <FallbackImage
@@ -28,28 +32,28 @@ export function HeroSection() {
             {siteProfile.heroBody}
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
-            <Link className="btn-primary" href="/music/the-last-train-of-happiness">
-              Latest Release <ArrowRight size={18} />
-            </Link>
-            <Link className="btn-secondary" href="/media">
-              <Play size={18} /> Watch Videos
-            </Link>
+            <LocalizedLink className="btn-primary" href="/music/the-last-train-of-happiness">
+              {copy.ui.latestRelease} <ArrowRight size={18} />
+            </LocalizedLink>
+            <LocalizedLink className="btn-secondary" href="/media">
+              <Play size={18} /> {copy.ui.watchVideos}
+            </LocalizedLink>
           </div>
         </div>
         <aside className="archive-frame p-5 lg:mb-3">
-          <p className="kicker">Current Chapter</p>
+          <p className="kicker">{copy.ui.currentChapter}</p>
           <p className="mt-4 font-display text-4xl font-black uppercase leading-none text-white">幸福的末班車</p>
           <dl className="mt-6 grid grid-cols-3 gap-3 border-t border-white/10 pt-5">
             <div>
-              <dt className="text-[0.64rem] font-bold uppercase tracking-[0.16em] text-zinc-500">Formed</dt>
+              <dt className="text-[0.64rem] font-bold uppercase tracking-[0.16em] text-zinc-500">{copy.ui.formed}</dt>
               <dd className="mt-1 text-lg font-black text-silver">{siteProfile.founded}</dd>
             </div>
             <div>
-              <dt className="text-[0.64rem] font-bold uppercase tracking-[0.16em] text-zinc-500">Award</dt>
+              <dt className="text-[0.64rem] font-bold uppercase tracking-[0.16em] text-zinc-500">{copy.ui.award}</dt>
               <dd className="mt-1 text-lg font-black text-silver">2025</dd>
             </div>
             <div>
-              <dt className="text-[0.64rem] font-bold uppercase tracking-[0.16em] text-zinc-500">Base</dt>
+              <dt className="text-[0.64rem] font-bold uppercase tracking-[0.16em] text-zinc-500">{copy.ui.base}</dt>
               <dd className="mt-1 text-lg font-black text-silver">{siteProfile.origin}</dd>
             </div>
           </dl>

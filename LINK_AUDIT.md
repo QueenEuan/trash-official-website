@@ -50,6 +50,8 @@ All listed external links are official or public source URLs currently wired int
 
 ## Notes
 
+- Four-language i18n routes reuse the same external links and mailto links across clean Traditional Chinese routes plus `/en`, `/ja`, and `/ko`.
+- `/zh` routes are redirect-only and are not canonical public URLs.
 - Final pre-launch source-link freeze completed after a fresh production build.
 - Public HTML was scanned for empty hrefs and source/streaming labels without anchors.
 - All external anchors in built HTML were checked for `target="_blank"` and `rel="noopener noreferrer"`.

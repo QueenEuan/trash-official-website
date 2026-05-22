@@ -1,7 +1,10 @@
 import { ArrowUpRight } from "lucide-react";
 import type { Video } from "@/data/videos";
+import { defaultLocale, type Locale } from "@/lib/i18n/config";
+import { getPageCopy } from "@/lib/i18n/content";
 
-export function VideoCard({ video }: { video: Video }) {
+export function VideoCard({ video, locale = defaultLocale }: { video: Video; locale?: Locale }) {
+  const copy = getPageCopy(locale);
   const content = (
     <div className="archive-frame flex min-h-56 flex-col justify-between p-6 transition group-hover:-translate-y-1 group-hover:border-gold">
       <div>
@@ -10,7 +13,7 @@ export function VideoCard({ video }: { video: Video }) {
         <p className="mt-5 text-sm leading-6 text-zinc-400">{video.description}</p>
       </div>
       <span className="mt-8 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.18em] text-zinc-500 transition group-hover:text-gold">
-        Open Channel <ArrowUpRight size={16} />
+        {copy.ui.openChannel} <ArrowUpRight size={16} />
       </span>
     </div>
   );

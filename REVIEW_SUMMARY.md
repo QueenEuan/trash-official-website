@@ -49,6 +49,27 @@ Generated after public-facing TODO visibility cleanup. No visual redesign was pe
 - About, History, Music, Live, and Press Kit copy received safe official-style enrichment without adding new unverified facts.
 - Contact secondary links use confirmed official links and are documented in `LINK_AUDIT.md`.
 
+## v1.2 i18n Architecture Status
+
+- Traditional Chinese is now canonical on clean unprefixed routes; `/zh` routes redirect to the equivalent clean Traditional Chinese URL.
+- Locale route roots are implemented for `/en`, `/ja`, and `/ko`.
+- Major public pages support locale prefixes for English, Japanese, and Korean, including members, album detail pages, and news detail pages.
+- First-pass translations are wired through localized content helpers. Traditional Chinese remains the source language, English currently mirrors approved official copy, and Japanese/Korean include safe first-pass translations for core page copy, About, member bios, live/media descriptions, and key album notes.
+- Existing unprefixed deep routes remain the canonical Traditional Chinese public routes.
+- `/` remains the Traditional Chinese homepage and no longer redirects to `/zh`.
+- `/zh` and `/zh/...` redirect to equivalent unprefixed Traditional Chinese routes through `proxy.ts`.
+- Legacy redirects remain active:
+  - `/press` redirects to `/press-kit`
+  - `/members/marz` redirects to `/members/marz23`
+- Locale aliases are also available:
+  - `/[locale]/press` redirects to `/[locale]/press-kit`
+  - `/[locale]/members/marz` redirects to `/[locale]/members/marz23`
+- Header includes a language switcher for `中文`, `EN`, `日本語`, and `한국어`; mobile navigation includes the same switcher.
+- Language switching preserves the current page path where a localized equivalent exists; Chinese targets clean unprefixed routes.
+- Shared dictionaries and localized content helpers are in `lib/i18n/`; untranslated sections safely fall back to the current Traditional Chinese / existing official copy.
+- Locale metadata includes locale-specific canonical URLs plus `zh-TW`, `en`, `ja`, `ko`, and `x-default` alternate links.
+- `I18N_AUDIT.md` documents route coverage, redirect behavior, hreflang status, and remaining native-language review items.
+
 ## 1. Pages Completed
 
 - Home (`/`)
