@@ -1,16 +1,16 @@
 import { BriefcaseBusiness, Handshake, Mail, Megaphone, Music2 } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
-import { pressKit } from "@/data/site";
 import { defaultLocale, type Locale } from "@/lib/i18n/config";
-import { getContact, getPageCopy } from "@/lib/i18n/content";
+import { getContact, getPageCopy, getPressKit } from "@/lib/i18n/content";
 
 const contactIcons = [Megaphone, Music2, Handshake, BriefcaseBusiness, Mail];
 
 export function ContactContent({ locale = defaultLocale }: { locale?: Locale }) {
   const copy = getPageCopy(locale);
-  const contactContent = getContact();
+  const contactContent = getContact(locale);
   const contactEmail = contactContent.email;
-  const officialLinks = pressKit.links.filter((link) => ["Official website", "YouTube", "Instagram", "Facebook"].includes(link.label));
+  const pressKit = getPressKit(locale);
+  const officialLinks = pressKit.links.filter((link) => ["官方網站", "Official website", "YouTube", "Instagram", "Facebook"].includes(link.label));
 
   return (
     <div className="page-shell">
@@ -53,7 +53,7 @@ export function ContactContent({ locale = defaultLocale }: { locale?: Locale }) 
         </h2>
         <div className="mt-8 flex flex-wrap gap-3">
           <a href={`mailto:${contactEmail}`} className="btn-primary">
-            Email {contactEmail}
+            {copy.contact.email} {contactEmail}
           </a>
           {officialLinks.map((link) => (
             <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" className="btn-secondary">
@@ -65,4 +65,3 @@ export function ContactContent({ locale = defaultLocale }: { locale?: Locale }) 
     </div>
   );
 }
-

@@ -84,7 +84,7 @@ Date: 2026-05-22
 - Open Graph URL follows the canonical URL for the current locale.
 - Open Graph image is absolute across locales:
   - `https://trashband.tw/images/og/trash-og.jpg`
-- Open Graph title remains `TRASH Official`; descriptions are localized where first-pass SEO copy exists.
+- Open Graph title and description are localized where first-pass SEO copy exists. Traditional Chinese canonical routes now use `TRASH 官方網站`.
 
 ## Content Safety Status
 
@@ -119,7 +119,8 @@ Date: 2026-05-22
 
 ## Remaining Native-Language Review Items
 
+- Traditional Chinese received a full visible-copy localization pass across canonical routes. See `ZH_LOCALIZATION_AUDIT.md`.
 - Japanese and Korean should receive native-speaker editorial review before a full international launch.
 - Current Japanese/Korean copy is a safe first-pass localization and avoids unconfirmed details.
 - Some archive details intentionally fall back to existing approved Traditional Chinese / English source copy until full translation review is complete.
-- Future page-level SEO titles can be expanded beyond the current site-level `TRASH Official` title once final localized SEO strategy is approved.
+- Future page-level SEO titles can be expanded beyond the current site-level title strategy once final localized SEO strategy is approved.

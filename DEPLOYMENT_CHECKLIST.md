@@ -25,6 +25,7 @@
   - `/ko`
 - `/zh` and `/zh/...` redirect to the equivalent unprefixed Traditional Chinese canonical route.
 - First-pass i18n copy is active. Traditional Chinese is the source language; English uses approved existing official copy; Japanese and Korean use safe first-pass translations where available with source-language fallback for untranslated archive content.
+- Traditional Chinese canonical routes have completed a visible-copy localization pass and should no longer mirror the English UI on public pages.
 - `/` is the Traditional Chinese homepage and does not redirect to `/zh`.
 
 ## Vercel Deployment Steps
@@ -142,6 +143,7 @@ git push -u origin main
 - Final pre-launch freeze audit is documented in `PRE_LAUNCH_AUDIT.md`.
 - v1.1 mobile hero crop and content polish pass should be verified with lint and production build in an environment with dependencies installed.
 - i18n launch-readiness audit is documented in `I18N_AUDIT.md`.
+- Traditional Chinese localization audit is documented in `ZH_LOCALIZATION_AUDIT.md`.
 
 ## Remaining Content Before Public Launch
 

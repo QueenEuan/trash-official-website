@@ -7,13 +7,14 @@ import { getPageCopy, getSite } from "@/lib/i18n/content";
 export function HeroSection({ locale = defaultLocale }: { locale?: Locale }) {
   const siteProfile = getSite(locale);
   const copy = getPageCopy(locale);
+  const heroAlt = locale === "zh" ? "TRASH 官方主視覺照片" : "TRASH official hero image";
 
   return (
     <section className="relative min-h-[90vh] overflow-hidden border-b border-white/10">
       <FallbackImage
         src={siteProfile.assets.hero}
         fallbackSrc={siteProfile.assets.fallbackHero}
-        alt="TRASH official hero image"
+        alt={heroAlt}
         fill
         priority
         sizes="100vw"

@@ -7,18 +7,19 @@ import { getContact, getMembers, getPageCopy, getPressKit, getSite } from "@/lib
 
 export function PressKitContent({ locale = defaultLocale }: { locale?: Locale }) {
   const copy = getPageCopy(locale);
-  const pressKit = getPressKit();
+  const pressKit = getPressKit(locale);
   const siteProfile = getSite(locale);
-  const contactContent = getContact();
+  const contactContent = getContact(locale);
   const members = getMembers(locale);
   const awards = publicList(pressKit.awards);
   const usageNotes = publicList(pressKit.usageNotes);
+  const logoAlt = locale === "zh" ? "TRASH 官方白色 Logo" : "TRASH official white logo";
 
   return (
     <div className="page-shell">
       <section className="archive-frame p-7 md:p-10">
         <div className="mb-8 flex items-center justify-between gap-5 border-b border-white/10 pb-6">
-          <FallbackImage src={siteProfile.assets.logoWhite} fallbackSrc="/images/hero.svg" alt="TRASH official white logo" width={90} height={90} className="h-16 w-auto object-contain" />
+          <FallbackImage src={siteProfile.assets.logoWhite} fallbackSrc="/images/hero.svg" alt={logoAlt} width={90} height={90} className="h-16 w-auto object-contain" />
           <p className="max-w-md text-right text-xs font-bold uppercase tracking-[0.16em] text-zinc-500">{copy.press.materials}</p>
         </div>
         <SectionHeading eyebrow={copy.press.eyebrow} title={copy.press.title} body={copy.press.body} />
@@ -104,4 +105,3 @@ export function PressKitContent({ locale = defaultLocale }: { locale?: Locale })
     </div>
   );
 }
-

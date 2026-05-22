@@ -2,18 +2,19 @@ import { ArrowUpRight } from "lucide-react";
 import type { Show } from "@/data/shows";
 import { isUnconfirmedValue, publicDateLabel } from "@/lib/publicContent";
 import { defaultLocale, type Locale } from "@/lib/i18n/config";
-import { getPageCopy } from "@/lib/i18n/content";
+import { getPageCopy, getShowTypeLabel } from "@/lib/i18n/content";
 
 export function ShowCard({ show, locale = defaultLocale }: { show: Show; locale?: Locale }) {
   const copy = getPageCopy(locale);
   const status = isUnconfirmedValue(show.status) ? "Archive" : show.status === "Past" ? copy.ui.past : show.status;
   const dateLabel = publicDateLabel(show.dateLabel, show.venue);
   const sourceUrl = show.sourceUrl || show.href;
+  const typeLabel = getShowTypeLabel(show.type, locale);
 
   return (
     <article className="archive-frame grid gap-6 p-6 md:grid-cols-[180px_1fr_auto] md:items-start md:p-7">
       <div className="border-b border-white/10 pb-5 md:border-b-0 md:border-r md:pb-0 md:pr-6">
-        <p className="kicker">{show.type}</p>
+        <p className="kicker">{typeLabel}</p>
         <p className="mt-3 font-display text-5xl font-black uppercase leading-none text-white">{dateLabel}</p>
         {show.time && <p className="mt-3 text-sm font-bold text-gold">{show.time}</p>}
       </div>

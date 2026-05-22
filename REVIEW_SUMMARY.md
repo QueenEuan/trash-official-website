@@ -54,6 +54,7 @@ Generated after public-facing TODO visibility cleanup. No visual redesign was pe
 - Traditional Chinese is now canonical on clean unprefixed routes; `/zh` routes redirect to the equivalent clean Traditional Chinese URL.
 - Locale route roots are implemented for `/en`, `/ja`, and `/ko`.
 - Major public pages support locale prefixes for English, Japanese, and Korean, including members, album detail pages, and news detail pages.
+- Traditional Chinese canonical routes now have a dedicated localization pass across navigation, shared UI, page copy, metadata, member roles, album labels, news categories, live labels, media copy, Press Kit copy, and Contact copy.
 - First-pass translations are wired through localized content helpers. Traditional Chinese remains the source language, English currently mirrors approved official copy, and Japanese/Korean include safe first-pass translations for core page copy, About, member bios, live/media descriptions, and key album notes.
 - Existing unprefixed deep routes remain the canonical Traditional Chinese public routes.
 - `/` remains the Traditional Chinese homepage and no longer redirects to `/zh`.
@@ -69,6 +70,7 @@ Generated after public-facing TODO visibility cleanup. No visual redesign was pe
 - Shared dictionaries and localized content helpers are in `lib/i18n/`; untranslated sections safely fall back to the current Traditional Chinese / existing official copy.
 - Locale metadata includes locale-specific canonical URLs plus `zh-TW`, `en`, `ja`, `ko`, and `x-default` alternate links.
 - `I18N_AUDIT.md` documents route coverage, redirect behavior, hreflang status, and remaining native-language review items.
+- `ZH_LOCALIZATION_AUDIT.md` documents the Traditional Chinese localization pass and remaining Chinese editorial review items.
 
 ## 1. Pages Completed
 

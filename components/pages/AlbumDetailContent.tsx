@@ -3,7 +3,7 @@ import { AlbumCard } from "@/components/AlbumCard";
 import { FallbackImage } from "@/components/FallbackImage";
 import { isPublicSafe, isUnconfirmedValue, publicDateLabel, publicList, publicText } from "@/lib/publicContent";
 import { defaultLocale, type Locale } from "@/lib/i18n/config";
-import { getAlbums, getPageCopy } from "@/lib/i18n/content";
+import { getAlbumTypeLabel, getAlbums, getPageCopy, getStreamingLabel } from "@/lib/i18n/content";
 
 
 export async function AlbumDetailContent({ params, locale = defaultLocale }: { params: Promise<{ slug: string }>; locale?: Locale }) {
@@ -18,17 +18,18 @@ export async function AlbumDetailContent({ params, locale = defaultLocale }: { p
   const links = album.links.filter((link) => link.href);
   const tracks = album.tracks.filter((track) => isPublicSafe(track.title));
   const releaseDate = publicDateLabel(album.releaseLabel);
-  const releaseMeta = [album.type, releaseDate].filter(Boolean).join(" / ");
+  const albumType = getAlbumTypeLabel(album.type, locale);
+  const releaseMeta = [albumType, releaseDate].filter(Boolean).join(" / ");
   const year = isUnconfirmedValue(album.year) ? "" : String(album.year);
 
   return (
     <div className="page-shell">
       <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
         <div className="relative aspect-square overflow-hidden border border-white/10 bg-zinc-900 shadow-[0_28px_90px_rgba(0,0,0,0.55)]">
-          <FallbackImage src={album.cover} fallbackSrc={album.fallbackCover} alt={`${album.title} album cover artwork`} fill className="object-cover" />
+          <FallbackImage src={album.cover} fallbackSrc={album.fallbackCover} alt={`${album.title} 專輯封面`} fill className="object-cover" />
         </div>
         <div className="self-end">
-          <p className="kicker">{releaseMeta || album.type}</p>
+          <p className="kicker">{releaseMeta || albumType}</p>
           <h1 className="mt-4 font-display text-6xl font-black uppercase leading-[0.88] text-white md:text-8xl">{album.title}</h1>
           {album.titleEn && <p className="mt-3 text-2xl font-bold text-gold">{album.titleEn}</p>}
           <div className="metal-rule mt-6 max-w-sm" />
@@ -53,7 +54,7 @@ export async function AlbumDetailContent({ params, locale = defaultLocale }: { p
           <h2 className="kicker">{copy.ui.releaseInfo}</h2>
           <dl className="mt-5 space-y-4">
             {year && <div><dt className="text-xs uppercase tracking-[0.16em] text-zinc-500">{copy.ui.year}</dt><dd className="mt-1 text-xl font-bold text-white">{year}</dd></div>}
-            <div><dt className="text-xs uppercase tracking-[0.16em] text-zinc-500">{copy.ui.type}</dt><dd className="mt-1 text-xl font-bold text-white">{album.type}</dd></div>
+            <div><dt className="text-xs uppercase tracking-[0.16em] text-zinc-500">{copy.ui.type}</dt><dd className="mt-1 text-xl font-bold text-white">{albumType}</dd></div>
             <div><dt className="text-xs uppercase tracking-[0.16em] text-zinc-500">{copy.ui.trackCount}</dt><dd className="mt-1 text-xl font-bold text-white">{album.trackCount}</dd></div>
             {releaseDate && <div><dt className="text-xs uppercase tracking-[0.16em] text-zinc-500">{copy.ui.date}</dt><dd className="mt-1 text-xl font-bold text-white">{releaseDate}</dd></div>}
           </dl>
@@ -64,7 +65,7 @@ export async function AlbumDetailContent({ params, locale = defaultLocale }: { p
           {links.length > 0 && <div className="mt-7 border-t border-white/10 pt-6">
             <h3 className="kicker">{copy.ui.streaming}</h3>
             <div className="mt-4 flex flex-wrap gap-3">
-              {links.map((link) => <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" className="btn-secondary">{link.label}</a>)}
+              {links.map((link) => <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" className="btn-secondary">{getStreamingLabel(link.label, locale)}</a>)}
             </div>
           </div>}
         </aside>

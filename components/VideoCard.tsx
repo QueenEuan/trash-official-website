@@ -8,7 +8,7 @@ export function VideoCard({ video, locale = defaultLocale }: { video: Video; loc
   const content = (
     <div className="archive-frame flex min-h-56 flex-col justify-between p-6 transition group-hover:-translate-y-1 group-hover:border-gold">
       <div>
-        <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">Official YouTube Hub</p>
+        <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">{copy.ui.officialYouTubeHub}</p>
         <h3 className="mt-4 font-display text-4xl font-black uppercase leading-none text-white">{video.title}</h3>
         <p className="mt-5 text-sm leading-6 text-zinc-400">{video.description}</p>
       </div>

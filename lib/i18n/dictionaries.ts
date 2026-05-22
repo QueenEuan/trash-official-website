@@ -25,6 +25,30 @@ type Dictionary = {
 
 const zh: Dictionary = {
   nav: {
+    about: "關於 TRASH",
+    members: "成員",
+    history: "樂團歷史",
+    music: "作品",
+    live: "演出",
+    news: "最新消息",
+    media: "影音",
+    pressKit: "媒體資料",
+    contact: "聯絡",
+    press: "媒體資料",
+  },
+  footer: {
+    officialLinks: "官方連結",
+  },
+  seo: {
+    title: "TRASH 官方網站",
+    titleTemplate: "%s | TRASH Official",
+    description: "TRASH 台灣搖滾樂團官方網站與資料庫，收錄音樂作品、成員、歷史、現場里程碑、新聞、影像與媒體資料。",
+  },
+};
+
+const en: Dictionary = {
+  ...zh,
+  nav: {
     about: "About",
     members: "Members",
     history: "History",
@@ -42,21 +66,12 @@ const zh: Dictionary = {
   seo: {
     title: "TRASH Official",
     titleTemplate: "%s | TRASH Official",
-    description: "TRASH 台灣搖滾樂團官方網站與資料庫，收錄音樂作品、成員、歷史、現場里程碑、新聞、影像與媒體資料。",
-  },
-};
-
-const en: Dictionary = {
-  ...zh,
-  seo: {
-    title: "TRASH Official",
-    titleTemplate: "%s | TRASH Official",
     description: "Official website and archive for Taiwanese rock band TRASH, featuring music, members, history, live milestones, news, videos, and press materials.",
   },
 };
 
 const ja: Dictionary = {
-  ...zh,
+  ...en,
   seo: {
     title: "TRASH Official",
     titleTemplate: "%s | TRASH Official",
@@ -65,7 +80,7 @@ const ja: Dictionary = {
 };
 
 const ko: Dictionary = {
-  ...zh,
+  ...en,
   seo: {
     title: "TRASH Official",
     titleTemplate: "%s | TRASH Official",

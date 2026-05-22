@@ -7,6 +7,7 @@ export function localizedMetadata(localeParam: string, pathname: string): Metada
   const locale = getLocale(localeParam);
   const dictionary = getDictionary(locale);
   const absoluteOgImage = new URL(siteProfile.seo.ogImage, siteProfile.seo.metadataBase).toString();
+  const ogImageAlt = locale === "zh" ? "TRASH 官方網站預覽圖" : "TRASH official website preview image";
   const languageAlternates = Object.fromEntries(
     locales.map((item) => [hrefLangs[item], localizePath(pathname, item as Locale)]),
   );
@@ -31,7 +32,7 @@ export function localizedMetadata(localeParam: string, pathname: string): Metada
       images: [
         {
           url: absoluteOgImage,
-          alt: "TRASH official website preview image",
+          alt: ogImageAlt,
         },
       ],
       type: "website",

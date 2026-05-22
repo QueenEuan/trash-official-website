@@ -9,7 +9,7 @@ import { publicList, publicDateLabel } from "@/lib/publicContent";
 import { FallbackImage } from "@/components/FallbackImage";
 import { LocalizedLink } from "@/components/i18n/LocalizedLink";
 import { defaultLocale, type Locale } from "@/lib/i18n/config";
-import { getAlbums, getMembers, getNews, getPageCopy, getShows, getTimeline, getVideos } from "@/lib/i18n/content";
+import { getAlbumTypeLabel, getAlbums, getMembers, getNews, getPageCopy, getShows, getTimeline, getVideos } from "@/lib/i18n/content";
 
 export function HomeContent({ locale = defaultLocale }: { locale?: Locale }) {
   const copy = getPageCopy(locale);
@@ -21,7 +21,7 @@ export function HomeContent({ locale = defaultLocale }: { locale?: Locale }) {
   const localizedShows = getShows(locale);
   const latestAlbum = localizedAlbums[0];
   const latestHighlights = publicList(latestAlbum.highlights).slice(0, 3);
-  const releaseMeta = [latestAlbum.type, publicDateLabel(latestAlbum.releaseLabel)].filter(Boolean).join(" / ");
+  const releaseMeta = [getAlbumTypeLabel(latestAlbum.type, locale), publicDateLabel(latestAlbum.releaseLabel)].filter(Boolean).join(" / ");
 
   return (
     <>
@@ -39,7 +39,7 @@ export function HomeContent({ locale = defaultLocale }: { locale?: Locale }) {
           </div>
           <LocalizedLink href={`/music/${latestAlbum.slug}`} className="group archive-frame grid gap-5 p-4 md:grid-cols-[minmax(220px,360px)_1fr] md:p-5">
             <div className="relative aspect-square overflow-hidden bg-zinc-900 shadow-[0_26px_80px_rgba(0,0,0,0.52)]">
-              <FallbackImage src={latestAlbum.cover} fallbackSrc={latestAlbum.fallbackCover} alt={`${latestAlbum.title} album cover artwork`} fill className="object-cover transition duration-500 group-hover:scale-105" />
+              <FallbackImage src={latestAlbum.cover} fallbackSrc={latestAlbum.fallbackCover} alt={`${latestAlbum.title} 專輯封面`} fill className="object-cover transition duration-500 group-hover:scale-105" />
             </div>
             <div className="flex flex-col justify-end p-1 md:p-4">
               <p className="kicker">{releaseMeta}</p>
@@ -98,4 +98,3 @@ export function HomeContent({ locale = defaultLocale }: { locale?: Locale }) {
     </>
   );
 }
-

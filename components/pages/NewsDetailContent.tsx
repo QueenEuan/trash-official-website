@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { NewsCard } from "@/components/NewsCard";
 import { publicDateLabel, publicList } from "@/lib/publicContent";
 import { defaultLocale, type Locale } from "@/lib/i18n/config";
-import { getNews, getPageCopy } from "@/lib/i18n/content";
+import { getNews, getNewsCategoryLabel, getPageCopy } from "@/lib/i18n/content";
 
 
 export async function NewsDetailContent({ params, locale = defaultLocale }: { params: Promise<{ slug: string }>; locale?: Locale }) {
@@ -12,7 +12,7 @@ export async function NewsDetailContent({ params, locale = defaultLocale }: { pa
   const item = localizedNews.find((entry) => entry.slug === slug);
   if (!item) notFound();
   const dateLabel = publicDateLabel(item.dateLabel);
-  const meta = [item.category, dateLabel].filter(Boolean).join(" / ");
+  const meta = [getNewsCategoryLabel(item.category, locale), dateLabel].filter(Boolean).join(" / ");
   const body = publicList(item.body);
 
   return (
