@@ -52,6 +52,8 @@ Date: 2026-05-22
 
 - Locale home routes are generated for `/en`, `/ja`, and `/ko`.
 - Locale index routes are generated for About, Members, History, Music, Live, News, Media, Press Kit, and Contact.
+- Locale Live Calendar routes are generated for `/en/live/calendar`, `/ja/live/calendar`, and `/ko/live/calendar`.
+- The Traditional Chinese Live Calendar canonical route is generated at `/live/calendar`.
 - Locale detail routes are generated for member detail pages, album detail pages, and news detail pages.
 - Traditional Chinese unprefixed routes remain generated for all current public pages and detail pages.
 
@@ -60,14 +62,16 @@ Date: 2026-05-22
 - Desktop header now uses a compact active-locale dropdown instead of an inline four-language list.
 - The trigger displays the active locale only: `中文`, `EN`, `日本語`, or `한국어`.
 - The dropdown menu contains `中文`, `English`, `日本語`, and `한국어`.
-- Mobile navigation uses the same compact selector to avoid crowding.
+- Mobile navigation now uses a real menu panel with a dedicated tappable language section for `中文`, `English`, `日本語`, and `한국어`.
 - Switching language preserves the current clean path where an equivalent route exists.
 - Examples:
   - `/music/the-last-train-of-happiness` → `/en/music/the-last-train-of-happiness`
   - `/en/contact` → `/ja/contact`
   - `/ko/news/golden-melody-best-band` → `/news/golden-melody-best-band`
+  - `/live/calendar` → `/en/live/calendar` → `/ja/live/calendar` → `/ko/live/calendar`
 - Chinese switcher targets clean unprefixed routes, not `/zh`.
 - The selector uses a button trigger with `aria-haspopup="menu"` and `aria-expanded`, closes after selection, and closes on Escape/outside click.
+- Mobile menu language options close the menu after selection.
 - Homepage, member, album, news, Press Kit, Contact, and hero CTA links now pass explicit locale context where needed so static output keeps localized hrefs before hydration.
 
 ## Metadata / hreflang Status
@@ -113,6 +117,18 @@ Date: 2026-05-22
 - The Press Kit CTA remains separate from the language selector and is protected from wrapping.
 - The homepage current-chapter metadata card now uses a vertical editorial layout instead of a cramped three-column grid.
 - Locale-specific chapter metadata is active for Traditional Chinese, English, Japanese, and Korean.
+
+## Live Calendar Status
+
+- Public multilingual Live Calendar v1 is active.
+- Calendar UI copy is localized for Traditional Chinese, English, Japanese, and Korean.
+- Calendar canonical URLs follow the locale strategy:
+  - `https://trashband.tw/live/calendar`
+  - `https://trashband.tw/en/live/calendar`
+  - `https://trashband.tw/ja/live/calendar`
+  - `https://trashband.tw/ko/live/calendar`
+- `x-default` points to the clean Traditional Chinese calendar route.
+- Event data is centralized in `data/events.ts`; the existing Live milestone cards derive from that same source through `data/shows.ts`.
 
 ## Verification Status
 

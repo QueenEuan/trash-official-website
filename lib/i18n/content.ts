@@ -1,4 +1,5 @@
 import { albums, type Album } from "@/data/albums";
+import { liveEvents, type LiveEvent, type LiveEventStatus, type LiveEventType } from "@/data/events";
 import { members, type Member } from "@/data/members";
 import { news, type NewsItem } from "@/data/news";
 import { pressKit, siteProfile, aboutContent, contactContent } from "@/data/site";
@@ -58,12 +59,12 @@ const pageCopy: Record<Locale, PageCopy> = {
     members: { eyebrow: "成員", title: "現在陣容", body: "TRASH 現任成員：阿夜 / Marz23、頤原 / Euan、博文 / TTeng、魁剛 / Kuei gun。", instruments: "樂器 / 位置", highlights: "重點資料" },
     history: { eyebrow: "樂團歷史", title: "時間軸", body: "以公開且可追溯的資料整理 TRASH 十五年以上的樂團軌跡：台北成團、獨立時期、關鍵作品、華納音樂階段、場館里程碑與金曲獎肯定。" },
     music: { eyebrow: "作品", title: "音樂作品", body: "TRASH 官方作品資料庫，整理從 2012 年同名專輯、《歸零》、《11:11》、《Never Die》、《Holy Trip!》，到十五週年《幸福的末班車》時期的主要發行。" },
-    live: { eyebrow: "演出", title: "演出紀錄", body: "整理 TRASH 十五週年篇章中的重要場館演出，包含台北小巨蛋首登場與高雄巨蛋篇章，作為官方演出資料庫中的關鍵節點。" },
+    live: { eyebrow: "演出", title: "演出紀錄", body: "整理 TRASH 十五週年篇章中的重要場館演出，包含台北小巨蛋首登場與高雄巨蛋篇章，作為官方演出資料庫中的關鍵節點。", calendarTitle: "演出行事曆", calendarBody: "查看 TRASH 即將登場與歷年重要演出。", calendarButton: "查看完整行事曆" },
     news: { eyebrow: "最新消息", title: "官方更新", body: "收錄 TRASH 官方資料庫中的獎項、發行、演出里程碑與媒體相關消息。", moreNews: "更多消息" },
     media: { eyebrow: "影音", title: "官方 YouTube 影音中心", body: "官方音樂錄影帶、現場演出、幕後花絮與發行作品，皆可由 TRASH YouTube 官方頻道延伸觀看。", button: "前往 YouTube 官方頻道" },
     press: { eyebrow: "媒體資料", title: "提供媒體、主辦與品牌合作方使用的官方資料。", body: "此頁整理 TRASH 官方簡介、官方連結、成員資訊、獎項紀錄與可來信索取的媒體素材。", materials: "官方樂團資料", bio: "官方簡介", links: "官方連結", downloads: "素材索取", awards: "獎項紀錄", members: "成員", contact: "媒體聯絡", contactBody: "媒體、演出、合作與素材需求，請聯絡 經紀/依凡 / 華納音樂。", email: "Email", band: "樂團", base: "據點", label: "唱片公司", usageNotes: "使用說明" },
     contact: { eyebrow: "聯絡", title: "官方聯絡窗口。", body: "媒體採訪、演出邀約、品牌合作、音樂商務與一般官方聯絡，請依下列分類洽詢。", ctaEyebrow: "TRASH 官方聯絡", ctaTitle: "TRASH 官方相關需求，請聯絡 經紀/依凡。", contact: "聯絡窗口：", email: "Email：" },
-    ui: { tracks: "首曲目", viewAlbum: "查看專輯", listenNow: "立即聆聽", albumNotes: "專輯說明", releaseInfo: "發行資訊", year: "年份", type: "類型", trackCount: "曲目數", date: "發行日期", releaseDate: "發行日期", credits: "製作名單", streaming: "串流平台", tracklist: "曲目", discography: "音樂作品", source: "查看來源", additionalSource: "更多來源", originalSource: "原始來源", readSource: "查看來源", past: "已結束", currentChapter: "當前篇章", formed: "成團", award: "獎項", base: "據點", latestRelease: "最新作品", watchVideos: "觀看影音", openChannel: "前往頻道", openYouTubeChannel: "前往 YouTube 官方頻道", officialYouTubeHub: "官方 YouTube 影音中心", album: "專輯", ep: "EP", milestone: "里程碑", live: "演出", awards: "獎項" },
+    ui: { tracks: "首曲目", viewAlbum: "查看專輯", listenNow: "立即聆聽", albumNotes: "專輯說明", releaseInfo: "發行資訊", year: "年份", type: "類型", trackCount: "曲目數", date: "日期", time: "時間", releaseDate: "發行日期", credits: "製作名單", streaming: "串流平台", tracklist: "曲目", discography: "音樂作品", source: "查看來源", additionalSource: "更多來源", originalSource: "原始來源", readSource: "查看來源", past: "已結束", currentChapter: "當前篇章", formed: "成團", award: "獎項", base: "地點", latestRelease: "最新作品", watchVideos: "觀看影音", openChannel: "前往頻道", openYouTubeChannel: "前往 YouTube 官方頻道", officialYouTubeHub: "官方 YouTube 影音中心", album: "專輯", ep: "EP", milestone: "里程碑", live: "演出", awards: "獎項", liveCalendar: "演出行事曆", upcomingShows: "即將演出", pastShows: "歷年演出", viewDetails: "查看詳情", tickets: "前往售票", soldOut: "售罄", cancelled: "取消", noUpcomingShows: "目前尚無已公布的近期演出，請關注官方最新消息。", noSelectedEvent: "選取有標記的日期查看演出資訊。", previousMonth: "上一個月", nextMonth: "下一個月", selectedDate: "選取日期" },
   },
   en: {} as PageCopy,
   ja: {} as PageCopy,
@@ -95,12 +96,12 @@ pageCopy.en = {
   members: { eyebrow: "Members", title: "The Band", body: "Current TRASH members: 阿夜 / Marz23, 頤原 / Euan, 博文 / TTeng, and 魁剛 / Kuei gun.", instruments: "Instruments", highlights: "Highlights" },
   history: { eyebrow: "History", title: "Timeline", body: "A source-aware chronology of TRASH’s 15-year arc: Taipei formation, independent momentum, key releases, Warner Music phase, arena milestones, and Golden Melody recognition." },
   music: { eyebrow: "Music", title: "Discography", body: "A structured archive of TRASH releases, from the 2012 self-titled album through 歸零, 11:11, Never Die, Holy Trip!, and the 15th-anniversary 幸福的末班車 era." },
-  live: { eyebrow: "Live", title: "Live Archive", body: "Arena milestones from the 15th-anniversary chapter, tracing the Taipei Arena debut and the Kaohsiung Arena continuation as key live markers in the official archive." },
+  live: { eyebrow: "Live", title: "Live Archive", body: "Arena milestones from the 15th-anniversary chapter, tracing the Taipei Arena debut and the Kaohsiung Arena continuation as key live markers in the official archive.", calendarTitle: "Live Calendar", calendarBody: "Explore upcoming appearances and selected live milestones from TRASH.", calendarButton: "View Full Calendar" },
   news: { eyebrow: "News", title: "Official Updates", body: "Selected announcements, release notes, live milestones, and media updates from the TRASH archive.", moreNews: "More News" },
   media: { eyebrow: "Media", title: "Official YouTube Hub", body: "Official music videos, live sessions, behind-the-scenes footage, and release content are collected through the TRASH YouTube channel.", button: "Official YouTube Channel" },
   press: { eyebrow: "Press Kit", title: "Official materials for press, promoters, and partners.", body: "A reliable reference hub for approved TRASH profile copy, official links, member information, recognition notes, and request-based media assets.", materials: "Official band materials", bio: "Official Bio", links: "Official Links", downloads: "Downloads", awards: "Awards / Recognition", members: "Members", contact: "Press Contact", contactBody: "For press, booking, partnership, and media material requests, please contact 經紀/依凡 / 華納音樂.", email: "Email", band: "Band", base: "Base", label: "Label", usageNotes: "Usage Notes" },
   contact: { eyebrow: "Contact", title: "Official inquiry hub.", body: "For press, booking, brand, music-business, and general official inquiries, please use the public contact routes listed below.", ctaEyebrow: "Official TRASH Inquiries", ctaTitle: "For official TRASH inquiries, please contact 經紀/依凡.", contact: "Contact:", email: "Email:" },
-  ui: { tracks: "tracks", viewAlbum: "View Album", listenNow: "Listen Now", albumNotes: "Album Notes", releaseInfo: "Release Info", year: "Year", type: "Type", trackCount: "Track Count", date: "Date", releaseDate: "Release Date", credits: "Credits", streaming: "Streaming", tracklist: "Tracklist", discography: "Discography", source: "Source", additionalSource: "Additional Source", originalSource: "Original Source", readSource: "Read Source", past: "Past", currentChapter: "Current Chapter", formed: "Formed", award: "Award", base: "Base", latestRelease: "Latest Release", watchVideos: "Watch Videos", openChannel: "Open Channel", openYouTubeChannel: "Open YouTube Channel", officialYouTubeHub: "Official YouTube Hub", album: "Album", ep: "EP", milestone: "Milestone", live: "Live", awards: "Awards" },
+  ui: { tracks: "tracks", viewAlbum: "View Album", listenNow: "Listen Now", albumNotes: "Album Notes", releaseInfo: "Release Info", year: "Year", type: "Type", trackCount: "Track Count", date: "Date", time: "Time", releaseDate: "Release Date", credits: "Credits", streaming: "Streaming", tracklist: "Tracklist", discography: "Discography", source: "Source", additionalSource: "Additional Source", originalSource: "Original Source", readSource: "Read Source", past: "Past", currentChapter: "Current Chapter", formed: "Formed", award: "Award", base: "Location", latestRelease: "Latest Release", watchVideos: "Watch Videos", openChannel: "Open Channel", openYouTubeChannel: "Open YouTube Channel", officialYouTubeHub: "Official YouTube Hub", album: "Album", ep: "EP", milestone: "Milestone", live: "Live", awards: "Awards", liveCalendar: "Live Calendar", upcomingShows: "Upcoming Shows", pastShows: "Past Shows", viewDetails: "View Details", tickets: "Tickets", soldOut: "Sold Out", cancelled: "Cancelled", noUpcomingShows: "No upcoming shows have been announced. Follow official updates for the latest information.", noSelectedEvent: "Select a marked date to view event information.", previousMonth: "Previous month", nextMonth: "Next month", selectedDate: "Selected date" },
 };
 pageCopy.ja = {
   ...pageCopy.en,
@@ -128,12 +129,12 @@ pageCopy.ja = {
   members: { eyebrow: "メンバー", title: "現在のラインナップ", body: "TRASHの現メンバー：阿夜 / Marz23、頤原 / Euan、博文 / TTeng、魁剛 / Kuei gun。", instruments: "担当", highlights: "ハイライト" },
   history: { eyebrow: "ヒストリー", title: "タイムライン", body: "台北での結成、インディペンデントな活動、主要作品、Warner Music Taiwan期、アリーナの節目、Golden Melodyでの評価まで、TRASHの歩みを整理した公式タイムライン。" },
   music: { eyebrow: "作品", title: "ディスコグラフィー", body: "2012年のセルフタイトル作から歸零、11:11、Never Die、Holy Trip!、15周年期の幸福的末班車までを整理したTRASH公式作品アーカイブ。" },
-  live: { eyebrow: "ライブ", title: "ライブアーカイブ", body: "15周年の章における重要なアリーナ公演、台北アリーナ初登場と高雄アリーナの節目を公式ライブアーカイブとして記録。" },
+  live: { eyebrow: "ライブ", title: "ライブアーカイブ", body: "15周年の章における重要なアリーナ公演、台北アリーナ初登場と高雄アリーナの節目を公式ライブアーカイブとして記録。", calendarTitle: "ライブカレンダー", calendarBody: "TRASHの今後の公演と主なライブ履歴をご覧いただけます。", calendarButton: "カレンダーを見る" },
   news: { eyebrow: "ニュース", title: "公式アップデート", body: "TRASH公式アーカイブから、受賞、リリース、ライブの節目、メディア関連ニュースを掲載。", moreNews: "その他のニュース" },
   media: { eyebrow: "映像", title: "公式 YouTube 映像ハブ", body: "公式ミュージックビデオ、ライブ映像、舞台裏、リリースコンテンツはTRASHのYouTube公式チャンネルから視聴できます。", button: "YouTube公式チャンネルへ" },
   press: { eyebrow: "プレスキット", title: "メディア、プロモーター、パートナー向けの公式資料。", body: "TRASHの公式プロフィール、公式リンク、メンバー情報、受賞情報、リクエスト制のメディア素材をまとめた資料ページ。", materials: "公式バンド資料", bio: "公式バイオ", links: "公式リンク", downloads: "素材リクエスト", awards: "受賞 / 評価", members: "メンバー", contact: "プレス連絡先", contactBody: "取材、出演、提携、メディア素材のご相談は、經紀/依凡 / 華納音樂までご連絡ください。", email: "Email", band: "バンド", base: "拠点", label: "レーベル", usageNotes: "使用ガイド" },
   contact: { eyebrow: "お問い合わせ", title: "公式お問い合わせ窓口。", body: "取材、出演、ブランド、音楽ビジネス、その他公式のお問い合わせは、以下の公開窓口をご利用ください。", ctaEyebrow: "TRASH公式お問い合わせ", ctaTitle: "TRASHへの公式お問い合わせは、經紀/依凡までご連絡ください。", contact: "連絡先：", email: "Email：" },
-  ui: { tracks: "曲", viewAlbum: "アルバムを見る", listenNow: "聴く", albumNotes: "アルバムノート", releaseInfo: "リリース情報", year: "年", type: "タイプ", trackCount: "曲数", date: "日付", releaseDate: "リリース日", credits: "クレジット", streaming: "ストリーミング", tracklist: "曲目", discography: "ディスコグラフィー", source: "出典を見る", additionalSource: "追加出典", originalSource: "元記事を見る", readSource: "出典を見る", past: "終了", currentChapter: "現在のチャプター", formed: "結成", award: "受賞", base: "拠点", latestRelease: "最新作を聴く", watchVideos: "映像を見る", openChannel: "チャンネルへ", openYouTubeChannel: "YouTube公式チャンネルへ", officialYouTubeHub: "公式 YouTube 映像ハブ", album: "アルバム", ep: "EP", milestone: "マイルストーン", live: "ライブ", awards: "受賞" },
+  ui: { tracks: "曲", viewAlbum: "アルバムを見る", listenNow: "聴く", albumNotes: "アルバムノート", releaseInfo: "リリース情報", year: "年", type: "タイプ", trackCount: "曲数", date: "日付", time: "時間", releaseDate: "リリース日", credits: "クレジット", streaming: "ストリーミング", tracklist: "曲目", discography: "ディスコグラフィー", source: "情報元", additionalSource: "追加出典", originalSource: "元記事を見る", readSource: "出典を見る", past: "終了", currentChapter: "現在のチャプター", formed: "結成", award: "受賞", base: "会場", latestRelease: "最新作を聴く", watchVideos: "映像を見る", openChannel: "チャンネルへ", openYouTubeChannel: "YouTube公式チャンネルへ", officialYouTubeHub: "公式 YouTube 映像ハブ", album: "アルバム", ep: "EP", milestone: "マイルストーン", live: "ライブ", awards: "受賞", liveCalendar: "ライブカレンダー", upcomingShows: "今後の公演", pastShows: "過去の公演", viewDetails: "詳細を見る", tickets: "チケット", soldOut: "完売", cancelled: "中止", noUpcomingShows: "現在発表されている今後の公演はありません。最新情報は公式発表をご確認ください。", noSelectedEvent: "マークされた日付を選択すると公演情報が表示されます。", previousMonth: "前の月", nextMonth: "次の月", selectedDate: "選択日" },
 };
 pageCopy.ko = {
   ...pageCopy.en,
@@ -161,12 +162,12 @@ pageCopy.ko = {
   members: { eyebrow: "멤버", title: "현재 라인업", body: "TRASH 현 멤버: 阿夜 / Marz23, 頤原 / Euan, 博文 / TTeng, 魁剛 / Kuei gun.", instruments: "포지션", highlights: "하이라이트" },
   history: { eyebrow: "히스토리", title: "타임라인", body: "타이베이 결성, 인디 시기, 주요 릴리스, Warner Music Taiwan 단계, 아레나 마일스톤, Golden Melody의 인정까지 TRASH의 15년 이상 여정을 정리한 공식 타임라인." },
   music: { eyebrow: "음악", title: "디스코그래피", body: "2012년 셀프 타이틀 앨범부터 歸零, 11:11, Never Die, Holy Trip!, 15주년 시기의 幸福的末班車까지 정리한 TRASH 공식 릴리스 아카이브." },
-  live: { eyebrow: "공연", title: "공연 아카이브", body: "15주년 챕터의 주요 아레나 공연, Taipei Arena 데뷔와 Kaohsiung Arena 챕터를 공식 라이브 아카이브의 핵심 지점으로 기록합니다." },
+  live: { eyebrow: "공연", title: "공연 아카이브", body: "15주년 챕터의 주요 아레나 공연, Taipei Arena 데뷔와 Kaohsiung Arena 챕터를 공식 라이브 아카이브의 핵심 지점으로 기록합니다.", calendarTitle: "공연 캘린더", calendarBody: "TRASH의 예정 공연과 주요 라이브 기록을 확인하세요.", calendarButton: "전체 일정 보기" },
   news: { eyebrow: "소식", title: "공식 업데이트", body: "TRASH 공식 아카이브의 수상, 릴리스, 공연 마일스톤, 미디어 관련 소식을 모았습니다.", moreNews: "더 많은 소식" },
   media: { eyebrow: "영상", title: "공식 YouTube 영상 허브", body: "공식 뮤직비디오, 라이브 영상, 비하인드, 릴리스 콘텐츠는 TRASH YouTube 공식 채널에서 확인할 수 있습니다.", button: "YouTube 공식 채널로 이동" },
   press: { eyebrow: "프레스 킷", title: "미디어, 프로모터, 파트너를 위한 공식 자료.", body: "TRASH 공식 프로필, 공식 링크, 멤버 정보, 수상 기록, 요청 기반 미디어 자료를 정리한 자료 페이지입니다.", materials: "공식 밴드 자료", bio: "공식 소개", links: "공식 링크", downloads: "자료 요청", awards: "수상 / 인정", members: "멤버", contact: "프레스 연락처", contactBody: "프레스, 부킹, 파트너십, 미디어 자료 요청은 經紀/依凡 / 華納音樂으로 연락해 주세요.", email: "Email", band: "밴드", base: "거점", label: "레이블", usageNotes: "사용 안내" },
   contact: { eyebrow: "문의", title: "공식 문의 창구.", body: "프레스, 공연, 브랜드 협업, 음악 비즈니스 및 일반 공식 문의는 아래 공개 연락 경로를 이용해 주세요.", ctaEyebrow: "TRASH 공식 문의", ctaTitle: "TRASH 공식 문의는 經紀/依凡에게 연락해 주세요.", contact: "연락처:", email: "Email:" },
-  ui: { tracks: "곡", viewAlbum: "앨범 보기", listenNow: "듣기", albumNotes: "앨범 노트", releaseInfo: "릴리스 정보", year: "연도", type: "유형", trackCount: "트랙 수", date: "날짜", releaseDate: "발매일", credits: "크레딧", streaming: "스트리밍", tracklist: "트랙리스트", discography: "디스코그래피", source: "출처 보기", additionalSource: "추가 출처", originalSource: "원문 보기", readSource: "출처 보기", past: "종료", currentChapter: "현재 챕터", formed: "결성", award: "수상", base: "거점", latestRelease: "최신작 듣기", watchVideos: "영상 보기", openChannel: "채널로 이동", openYouTubeChannel: "YouTube 공식 채널로 이동", officialYouTubeHub: "공식 YouTube 영상 허브", album: "앨범", ep: "EP", milestone: "마일스톤", live: "공연", awards: "수상" },
+  ui: { tracks: "곡", viewAlbum: "앨범 보기", listenNow: "듣기", albumNotes: "앨범 노트", releaseInfo: "릴리스 정보", year: "연도", type: "유형", trackCount: "트랙 수", date: "날짜", time: "시간", releaseDate: "발매일", credits: "크레딧", streaming: "스트리밍", tracklist: "트랙리스트", discography: "디스코그래피", source: "출처", additionalSource: "추가 출처", originalSource: "원문 보기", readSource: "출처 보기", past: "종료", currentChapter: "현재 챕터", formed: "결성", award: "수상", base: "장소", latestRelease: "최신작 듣기", watchVideos: "영상 보기", openChannel: "채널로 이동", openYouTubeChannel: "YouTube 공식 채널로 이동", officialYouTubeHub: "공식 YouTube 영상 허브", album: "앨범", ep: "EP", milestone: "마일스톤", live: "공연", awards: "수상", liveCalendar: "공연 캘린더", upcomingShows: "예정 공연", pastShows: "지난 공연", viewDetails: "상세 보기", tickets: "예매", soldOut: "매진", cancelled: "취소", noUpcomingShows: "현재 공개된 예정 공연이 없습니다. 최신 소식은 공식 채널을 확인해 주세요.", noSelectedEvent: "표시된 날짜를 선택하면 공연 정보를 볼 수 있습니다.", previousMonth: "이전 달", nextMonth: "다음 달", selectedDate: "선택한 날짜" },
 };
 
 const aboutTranslations = {
@@ -582,6 +583,21 @@ export function getVideos(locale: Locale): Video[] {
   return videos;
 }
 
+export type LocalizedLiveEvent = Omit<LiveEvent, "title" | "venue" | "city"> & {
+  title: string;
+  venue: string;
+  city: string;
+};
+
+export function getLiveEvents(locale: Locale): LocalizedLiveEvent[] {
+  return liveEvents.map((event) => ({
+    ...event,
+    title: event.title[locale] ?? event.title.zh,
+    venue: event.venue[locale] ?? event.venue.zh,
+    city: event.city[locale] ?? event.city.zh,
+  }));
+}
+
 export function getAlbumTypeLabel(type: Album["type"], locale: Locale) {
   if (locale === "zh") {
     if (type === "Album") return "專輯";
@@ -652,6 +668,45 @@ export function getShowTypeLabel(type: Show["type"], locale: Locale) {
   if (locale === "ja") return jaLabels[type];
   if (locale === "ko") return koLabels[type];
   return type;
+}
+
+export function getLiveEventTypeLabel(type: LiveEventType, locale: Locale) {
+  const zhLabels: Record<LiveEventType, string> = {
+    concert: "演唱會",
+    festival: "音樂祭",
+    campus: "校園",
+    commercial: "商演",
+    milestone: "里程碑",
+  };
+  const jaLabels: Record<LiveEventType, string> = {
+    concert: "ライブ",
+    festival: "フェス",
+    campus: "キャンパス",
+    commercial: "商業公演",
+    milestone: "マイルストーン",
+  };
+  const koLabels: Record<LiveEventType, string> = {
+    concert: "콘서트",
+    festival: "페스티벌",
+    campus: "캠퍼스",
+    commercial: "상업 공연",
+    milestone: "마일스톤",
+  };
+  if (locale === "zh") return zhLabels[type];
+  if (locale === "ja") return jaLabels[type];
+  if (locale === "ko") return koLabels[type];
+  return type.charAt(0).toUpperCase() + type.slice(1);
+}
+
+export function getLiveEventStatusLabel(status: LiveEventStatus, locale: Locale) {
+  const copy = getPageCopy(locale);
+  if (status === "past") return copy.ui.past;
+  if (status === "sold-out") return copy.ui.soldOut;
+  if (status === "cancelled") return copy.ui.cancelled;
+  if (locale === "zh") return "即將演出";
+  if (locale === "ja") return "今後の公演";
+  if (locale === "ko") return "예정 공연";
+  return "Upcoming";
 }
 
 export function getStreamingLabel(label: string, locale: Locale) {

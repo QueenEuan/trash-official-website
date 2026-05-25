@@ -17,6 +17,8 @@ All listed external links are official or public source URLs currently wired int
 | `/live` | Source - Taipei Arena Debut | `https://www.playmusic.tw/column_info.php?id=23654&type=news` | Active primary source |
 | `/live` | Source - Kaohsiung Arena Chapter | `https://www.kaoarena.com.tw/Home/CalendarDetail?id=99` | Active primary source |
 | `/live` | Additional Source - Kaohsiung Arena Chapter | `https://www.playmusic.tw/column_info.php?id=24681&type=news` | Active alternate source |
+| `/live/calendar` | Source - Taipei Arena Debut | `https://www.playmusic.tw/column_info.php?id=23654&type=news` | Active primary source |
+| `/live/calendar` | Source - Kaohsiung Arena Chapter | `https://www.kaoarena.com.tw/Home/CalendarDetail?id=99` | Active primary source |
 | `/music/the-last-train-of-happiness` | Spotify | `https://open.spotify.com/album/31u2uhLaDEmK5U8heLLIzD` | Active streaming link |
 | `/music/the-last-train-of-happiness` | Apple Music | `https://music.apple.com/tw/album/%E5%B9%B8%E7%A6%8F%E7%9A%84%E6%9C%AB%E7%8F%AD%E8%BB%8A/1764880687` | Active streaming link |
 | `/music/holy-trip` | Spotify | `https://open.spotify.com/album/4xI5LoEWLxoTm4DNa4fSUn` | Active streaming link |
@@ -58,6 +60,7 @@ All listed external links are official or public source URLs currently wired int
 - News listing pages show only primary source links.
 - News detail pages may show an additional source when one is already present in source data.
 - Live milestone cards show primary source links, with an additional source only when one is already present in source data.
+- Live Calendar event cards show source links only when a real `sourceUrl` exists and do not render ticket buttons unless a confirmed `ticketUrl` exists.
 - Media category cards intentionally link to the official YouTube channel until playlist URLs are confirmed.
 - Empty download states in the Press Kit are request-based cards, not external buttons.
 - v1.1 Contact page uses confirmed public contact routing and `mailto:passion0728@gmail.com` where an email is provided.

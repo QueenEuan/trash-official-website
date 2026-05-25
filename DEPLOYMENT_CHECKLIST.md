@@ -27,8 +27,12 @@
 - First-pass i18n copy is active. Traditional Chinese is the source language; English uses approved existing official copy; Japanese and Korean use expanded safe translations for shared UI, homepage, media, live, Press Kit, Contact, and key archive labels.
 - Traditional Chinese canonical routes have completed a visible-copy localization pass and should no longer mirror the English UI on public pages.
 - Header language switching uses a compact active-locale dropdown on desktop and mobile, preserving same-page locale switching without crowding the navigation.
+- Mobile language switching uses a tappable menu language section and closes the mobile menu after a locale is selected.
 - Key localized internal links pass explicit locale context so static output keeps `/en`, `/ja`, and `/ko` hrefs before client hydration.
 - Homepage current-chapter metadata uses a vertical editorial layout in all four locales and avoids the previous cramped three-column layout.
+- Public Live Calendar v1 is active at `/live/calendar`, `/en/live/calendar`, `/ja/live/calendar`, and `/ko/live/calendar`.
+- Live Calendar event data is maintained in `data/events.ts`; no admin UI, CMS, database, or fake editing interface is included.
+- Calendar v1 contains only confirmed arena milestone events and does not invent upcoming dates or ticket links.
 - `/` is the Traditional Chinese homepage and does not redirect to `/zh`.
 
 ## Vercel Deployment Steps
@@ -116,6 +120,9 @@ git push -u origin main
 - `/members/marz` redirects to `/members/marz23`.
 - Music index and album detail pages load.
 - Live page loads.
+- Live Calendar loads at `/live/calendar`.
+- Localized Live Calendar routes load for `/en/live/calendar`, `/ja/live/calendar`, and `/ko/live/calendar`.
+- Calendar month controls work, marked dates are tappable, event detail cards show only available data, and no fake ticket buttons appear.
 - News index and news detail pages load.
 - News pages use text-only official announcement entries when approved images are unavailable.
 - Media page loads.
@@ -126,6 +133,7 @@ git push -u origin main
 - Contact page loads.
 - Contact page shows the v1.1 official inquiry hub with confirmed public routing for 經紀/依凡, 華納音樂, and `passion0728@gmail.com`; no fake form is present.
 - Mobile navigation works on small screens.
+- Mobile language switching works through the menu at 375px, 390px, and 430px viewports.
 - Header and footer links use canonical routes.
 - Header includes a compact language selector for `中文`, `EN`, `日本語`, and `한국어`; mobile navigation includes the same selector.
 - Language switching preserves the current page path where an equivalent localized route exists.

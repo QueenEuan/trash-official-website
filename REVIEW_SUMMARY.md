@@ -89,6 +89,15 @@ Generated after public-facing TODO visibility cleanup. No visual redesign was pe
 - Homepage current-chapter metadata now uses a vertical editorial layout across Traditional Chinese, English, Japanese, and Korean, removing the previous cramped three-column values.
 - Japanese and Korean shared UI localization was expanded across navigation, hero labels, CTA buttons, footer labels, media cards, live labels, release labels, Press Kit, and Contact copy.
 
+## v1.3 Mobile Language and Live Calendar Status
+
+- Mobile language switching now lives inside a real mobile menu with tappable language options for 中文, English, 日本語, and 한국어.
+- Mobile language selection preserves the current route path and closes the mobile menu after selection.
+- Public multilingual Live Calendar routes are active at `/live/calendar`, `/en/live/calendar`, `/ja/live/calendar`, and `/ko/live/calendar`.
+- Performance dates are centralized in `data/events.ts`; existing Live milestone cards derive from that event source.
+- Calendar v1 includes the two confirmed arena milestone shows only. No upcoming shows or ticket links were invented.
+- `LIVE_CALENDAR_AUDIT.md` documents the calendar routes, event model, update workflow, localization support, and future improvements.
+
 ## 1. Pages Completed
 
 - Home (`/`)
@@ -99,6 +108,7 @@ Generated after public-facing TODO visibility cleanup. No visual redesign was pe
 - Music index (`/music`)
 - Album detail pages (`/music/the-last-train-of-happiness`, `/music/holy-trip`, `/music/never-die`, `/music/11-11`, `/music/reset`, `/music/trash-2012`)
 - Live (`/live`)
+- Live Calendar (`/live/calendar`)
 - News index (`/news`)
 - News detail pages (`/news/golden-melody-best-band`, `/news/the-last-train-of-happiness-album-era`, `/news/taipei-arena-15th-anniversary`, `/news/kaohsiung-arena-15th-anniversary`)
 - Media (`/media`)
