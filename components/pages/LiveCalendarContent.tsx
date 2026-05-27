@@ -46,18 +46,23 @@ function weekdayLabels(locale: Locale) {
   );
 }
 
+function latestEventDate(events: LocalizedLiveEvent[]) {
+  const latest = [...events].sort((a, b) => b.date.localeCompare(a.date))[0];
+  return latest?.date ?? null;
+}
+
 function EventCard({ event, locale }: { event: LocalizedLiveEvent; locale: Locale }) {
   const copy = getPageCopy(locale);
   const type = getLiveEventTypeLabel(event.type, locale);
   const status = getLiveEventStatusLabel(event.status, locale);
 
   return (
-    <article className="archive-frame p-5">
+    <article className="archive-frame p-4 sm:p-5">
       <div className="flex flex-wrap items-center gap-2">
         <span className="border border-gold/30 bg-gold/10 px-2.5 py-1 text-[0.62rem] font-black uppercase tracking-[0.16em] text-gold">{type}</span>
         <span className="border border-white/10 px-2.5 py-1 text-[0.62rem] font-black uppercase tracking-[0.16em] text-zinc-400">{status}</span>
       </div>
-      <h3 className="mt-5 text-pretty font-display text-3xl font-black uppercase leading-tight text-white">{event.title}</h3>
+      <h3 className="mt-5 break-words text-pretty font-display text-2xl font-black uppercase leading-tight text-white sm:text-3xl">{event.title}</h3>
       <dl className="mt-5 grid gap-3 text-sm leading-6 text-zinc-300">
         <div>
           <dt className="text-xs font-black uppercase tracking-[0.16em] text-zinc-500">{copy.ui.date}</dt>
@@ -90,11 +95,12 @@ function EventCard({ event, locale }: { event: LocalizedLiveEvent; locale: Local
   );
 }
 
-export function LiveCalendarContent({ events, locale = defaultLocale }: { events: LocalizedLiveEvent[]; locale?: Locale }) {
+export function LiveCalendarContent({ events, locale = defaultLocale, variant = "page" }: { events: LocalizedLiveEvent[]; locale?: Locale; variant?: "page" | "embedded" }) {
   const copy = getPageCopy(locale);
-  const today = new Date();
-  const [visibleMonth, setVisibleMonth] = useState(() => dateFromParts(today.getFullYear(), today.getMonth(), 1));
-  const [selectedDate, setSelectedDate] = useState<string | null>(null);
+  const initialDate = latestEventDate(events);
+  const initialMonth = initialDate ? new Date(`${initialDate}T00:00:00`) : new Date();
+  const [visibleMonth, setVisibleMonth] = useState(() => dateFromParts(initialMonth.getFullYear(), initialMonth.getMonth(), 1));
+  const [selectedDate, setSelectedDate] = useState<string | null>(initialDate);
   const sortedEvents = useMemo(() => [...events].sort((a, b) => a.date.localeCompare(b.date)), [events]);
   const eventsByDate = useMemo(() => {
     return sortedEvents.reduce<Record<string, LocalizedLiveEvent[]>>((map, event) => {
@@ -119,15 +125,15 @@ export function LiveCalendarContent({ events, locale = defaultLocale }: { events
   }
 
   return (
-    <div className="page-shell">
-      <SectionHeading eyebrow={copy.live.eyebrow} title={copy.ui.liveCalendar} body={copy.live.calendarBody} />
-      <div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,1fr)_380px] lg:items-start">
+    <div className={variant === "page" ? "page-shell" : "pb-[max(2rem,env(safe-area-inset-bottom))]"}>
+      {variant === "page" && <SectionHeading eyebrow={copy.live.eyebrow} title={copy.ui.liveCalendar} body={copy.live.calendarBody} />}
+      <div className={variant === "page" ? "mt-10 grid gap-8 lg:grid-cols-[minmax(0,1fr)_380px] lg:items-start" : "grid gap-6 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-start"}>
         <section className="archive-frame p-4 md:p-6">
           <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-5">
             <button type="button" onClick={() => shiftMonth(-1)} aria-label={copy.ui.previousMonth} className="icon-btn">
               <ChevronLeft size={18} />
             </button>
-            <h2 className="text-center font-display text-3xl font-black uppercase text-white md:text-5xl">{monthLabel(visibleMonth, locale)}</h2>
+            <h2 className="text-center font-display text-2xl font-black uppercase text-white sm:text-3xl md:text-5xl">{monthLabel(visibleMonth, locale)}</h2>
             <button type="button" onClick={() => shiftMonth(1)} aria-label={copy.ui.nextMonth} className="icon-btn">
               <ChevronRight size={18} />
             </button>
@@ -148,12 +154,12 @@ export function LiveCalendarContent({ events, locale = defaultLocale }: { events
                   disabled={!hasEvent}
                   aria-label={hasEvent ? `${copy.ui.selectedDate}: ${formatDate(key, locale)}` : formatDate(key, locale)}
                   className={[
-                    "relative min-h-12 border px-1 text-sm font-black transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:min-h-16 sm:text-base",
+                    "relative min-h-11 border px-1 text-sm font-black transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold min-[390px]:min-h-12 sm:min-h-16 sm:text-base",
                     active ? "border-gold bg-gold/15 text-gold" : hasEvent ? "border-red-900/60 bg-red-950/30 text-white hover:border-gold/70 hover:text-gold" : "border-white/5 bg-white/[0.015] text-zinc-700",
                   ].join(" ")}
                 >
                   {date.getDate()}
-                  {hasEvent && <span className="absolute bottom-1.5 left-1/2 h-1 w-5 -translate-x-1/2 bg-gold" />}
+                  {hasEvent && <span className="absolute bottom-1.5 left-1/2 h-1 w-4 -translate-x-1/2 bg-gold sm:w-5" />}
                 </button>
               );
             })}
@@ -176,7 +182,7 @@ export function LiveCalendarContent({ events, locale = defaultLocale }: { events
         </aside>
       </div>
 
-      <section className="mt-10">
+      <section className={variant === "page" ? "mt-10" : "mt-8"}>
         <p className="kicker">{copy.ui.pastShows}</p>
         <div className="mt-5 grid gap-5 md:grid-cols-2">
           {pastEvents.map((event) => <EventCard key={event.id} event={event} locale={locale} />)}

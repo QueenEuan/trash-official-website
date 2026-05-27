@@ -1,6 +1,6 @@
 # TRASH Live Calendar Audit
 
-Date: 2026-05-25
+Date: 2026-05-27
 
 ## Routes
 
@@ -10,6 +10,17 @@ Date: 2026-05-25
 | English | `/en/live/calendar` | Active localized route |
 | Japanese | `/ja/live/calendar` | Active localized route |
 | Korean | `/ko/live/calendar` | Active localized route |
+
+## Live Page Embedding
+
+- The calendar is now embedded directly on the public Live pages:
+  - `/live`
+  - `/en/live`
+  - `/ja/live`
+  - `/ko/live`
+- The embedded calendar appears immediately after the Live page introduction and before the milestone cards.
+- Standalone calendar routes remain available as full calendar views.
+- The default calendar month uses the latest confirmed archived performance date, May 2025, so the Kaohsiung Arena event marker is visible on first load.
 
 ## Event Data Model
 
@@ -56,6 +67,7 @@ No upcoming shows have been added because no confirmed public upcoming TRASH per
   - Chinese uses clean unprefixed canonical URLs.
   - English, Japanese, and Korean use `/en`, `/ja`, and `/ko`.
 - Language switching preserves `/live/calendar` across locales.
+- Mobile language switching is handled by the mobile navigation panel, not the desktop dropdown.
 
 ## Remaining Future Improvements
 
@@ -69,6 +81,7 @@ No upcoming shows have been added because no confirmed public upcoming TRASH per
 
 - `npm run lint`: pass
 - `npm run build`: pass
-- Production build generated `/live/calendar`, `/en/live/calendar`, `/ja/live/calendar`, and `/ko/live/calendar`.
+- Production build generated `/live`, `/en/live`, `/ja/live`, `/ko/live`, `/live/calendar`, `/en/live/calendar`, `/ja/live/calendar`, and `/ko/live/calendar`.
 - Public-output scans found no public TODO / placeholder / internal review / coming soon copy.
 - Empty href scan found no fake ticket links or empty public anchors.
+- Local 390px interaction automation was not available in this workspace because no browser automation runtime is installed; deployed mobile taps should still be manually verified after release.

@@ -43,7 +43,7 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
       className={
         compact
           ? "relative ml-1 flex shrink-0 items-center border-l border-white/15 pl-4"
-          : "relative hidden shrink-0 items-center border-l border-white/15 pl-5 xl:flex"
+          : "relative hidden shrink-0 items-center border-l border-white/15 pl-4 lg:flex xl:pl-5"
       }
       aria-label="Language switcher"
     >

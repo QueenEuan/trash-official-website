@@ -62,7 +62,8 @@ Date: 2026-05-22
 - Desktop header now uses a compact active-locale dropdown instead of an inline four-language list.
 - The trigger displays the active locale only: `中文`, `EN`, `日本語`, or `한국어`.
 - The dropdown menu contains `中文`, `English`, `日本語`, and `한국어`.
-- Mobile navigation now uses a real menu panel with a dedicated tappable language section for `中文`, `English`, `日本語`, and `한국어`.
+- Mobile navigation now uses a fixed full-width menu panel with a dedicated tappable language section for `中文`, `English`, `日本語`, and `한국어`.
+- The desktop horizontal navigation is desktop-only; it is not rendered as a clipped row on mobile breakpoints.
 - Switching language preserves the current clean path where an equivalent route exists.
 - Examples:
   - `/music/the-last-train-of-happiness` → `/en/music/the-last-train-of-happiness`
@@ -121,6 +122,8 @@ Date: 2026-05-22
 ## Live Calendar Status
 
 - Public multilingual Live Calendar v1 is active.
+- The calendar is embedded directly on `/live`, `/en/live`, `/ja/live`, and `/ko/live` before the milestone cards.
+- The embedded calendar defaults to the latest confirmed archived event month, May 2025, so the event marker is visible on first load.
 - Calendar UI copy is localized for Traditional Chinese, English, Japanese, and Korean.
 - Calendar canonical URLs follow the locale strategy:
   - `https://trashband.tw/live/calendar`

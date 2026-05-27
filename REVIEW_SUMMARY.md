@@ -93,6 +93,9 @@ Generated after public-facing TODO visibility cleanup. No visual redesign was pe
 
 - Mobile language switching now lives inside a real mobile menu with tappable language options for 中文, English, 日本語, and 한국어.
 - Mobile language selection preserves the current route path and closes the mobile menu after selection.
+- Mobile header rendering is separated from desktop navigation; the horizontal desktop nav is hidden below the desktop breakpoint.
+- The public Live Calendar is now visible directly on `/live`, `/en/live`, `/ja/live`, and `/ko/live`, before the milestone event cards.
+- The embedded calendar defaults to May 2025 so the confirmed Kaohsiung Arena marker is visible immediately.
 - Public multilingual Live Calendar routes are active at `/live/calendar`, `/en/live/calendar`, `/ja/live/calendar`, and `/ko/live/calendar`.
 - Performance dates are centralized in `data/events.ts`; existing Live milestone cards derive from that event source.
 - Calendar v1 includes the two confirmed arena milestone shows only. No upcoming shows or ticket links were invented.

@@ -26,13 +26,15 @@
 - `/zh` and `/zh/...` redirect to the equivalent unprefixed Traditional Chinese canonical route.
 - First-pass i18n copy is active. Traditional Chinese is the source language; English uses approved existing official copy; Japanese and Korean use expanded safe translations for shared UI, homepage, media, live, Press Kit, Contact, and key archive labels.
 - Traditional Chinese canonical routes have completed a visible-copy localization pass and should no longer mirror the English UI on public pages.
-- Header language switching uses a compact active-locale dropdown on desktop and mobile, preserving same-page locale switching without crowding the navigation.
-- Mobile language switching uses a tappable menu language section and closes the mobile menu after a locale is selected.
+- Header language switching uses a compact active-locale dropdown on desktop and a separate tappable language section inside the mobile menu.
+- Mobile header rendering is separated from desktop navigation; the desktop horizontal nav is hidden below the desktop breakpoint.
+- Mobile language switching preserves same-page locale paths and closes the mobile menu after a locale is selected.
 - Key localized internal links pass explicit locale context so static output keeps `/en`, `/ja`, and `/ko` hrefs before client hydration.
 - Homepage current-chapter metadata uses a vertical editorial layout in all four locales and avoids the previous cramped three-column layout.
-- Public Live Calendar v1 is active at `/live/calendar`, `/en/live/calendar`, `/ja/live/calendar`, and `/ko/live/calendar`.
+- Public Live Calendar v1 is embedded directly on `/live`, `/en/live`, `/ja/live`, and `/ko/live`, and remains available at `/live/calendar`, `/en/live/calendar`, `/ja/live/calendar`, and `/ko/live/calendar`.
 - Live Calendar event data is maintained in `data/events.ts`; no admin UI, CMS, database, or fake editing interface is included.
 - Calendar v1 contains only confirmed arena milestone events and does not invent upcoming dates or ticket links.
+- The embedded calendar defaults to May 2025 so the confirmed Kaohsiung Arena event marker is visible on first load.
 - `/` is the Traditional Chinese homepage and does not redirect to `/zh`.
 
 ## Vercel Deployment Steps
@@ -120,6 +122,7 @@ git push -u origin main
 - `/members/marz` redirects to `/members/marz23`.
 - Music index and album detail pages load.
 - Live page loads.
+- Live page shows the embedded calendar before the milestone cards on mobile and desktop.
 - Live Calendar loads at `/live/calendar`.
 - Localized Live Calendar routes load for `/en/live/calendar`, `/ja/live/calendar`, and `/ko/live/calendar`.
 - Calendar month controls work, marked dates are tappable, event detail cards show only available data, and no fake ticket buttons appear.
