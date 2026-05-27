@@ -9,7 +9,7 @@ import { getDictionary } from "@/lib/i18n/dictionaries";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const navKeys = [
   ["about", "/about"],
@@ -41,6 +41,17 @@ export function SiteHeader() {
   function closeMobileMenu() {
     setMobileMenu({ open: false, pathname });
   }
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [mobileOpen]);
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-black/88 backdrop-blur-xl">
@@ -76,7 +87,7 @@ export function SiteHeader() {
         </div>
       </div>
       {mobileOpen && (
-        <div id="mobile-navigation" className="fixed inset-x-0 top-[65px] z-[60] max-h-[calc(100dvh-65px)] overflow-y-auto border-y border-white/10 bg-black/95 px-4 pb-[max(2rem,env(safe-area-inset-bottom))] pt-5 shadow-[0_28px_90px_rgba(0,0,0,0.72)] backdrop-blur-xl md:top-[73px] md:max-h-[calc(100dvh-73px)] lg:hidden">
+        <div id="mobile-navigation" className="fixed inset-x-0 top-[65px] z-[60] max-h-[calc(100dvh-65px)] overflow-y-auto overscroll-contain border-y border-white/10 bg-[#030303]/[0.985] px-4 pb-[max(2rem,env(safe-area-inset-bottom))] pt-5 shadow-[0_28px_90px_rgba(0,0,0,0.86)] backdrop-blur-2xl md:top-[73px] md:max-h-[calc(100dvh-73px)] lg:hidden">
           <div className="mx-auto max-w-7xl">
             <nav className="grid grid-cols-2 gap-2 text-[0.76rem] font-extrabold uppercase tracking-[0.14em] text-zinc-300" aria-label="Mobile navigation">
               {navKeys.map(([key, href]) => (
