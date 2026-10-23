@@ -3,6 +3,8 @@ import { news } from "@/data/news";
 import { prefixedLocales } from "@/lib/i18n/config";
 import { localizedMetadata } from "@/lib/i18n/metadata";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return prefixedLocales.flatMap((locale) => news.map((item) => ({ locale, slug: item.slug })));
 }

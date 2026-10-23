@@ -25,8 +25,8 @@ export const siteProfile = {
     keywords: ["TRASH", "TRASH band", "Taiwanese rock", "Mandopop rock", "Marz23", "Warner Music Taiwan", "幸福的末班車", "Holy Trip", "歸零", "11:11"],
     ogImage: "/images/og/trash-og.jpg",
     ogImageTodo: "Official OG image integrated from first asset batch.",
-    metadataBase: "https://trashband.tw",
-    canonicalUrl: "https://trashband.tw",
+    metadataBase: "https://www.trashband.tw",
+    canonicalUrl: "https://www.trashband.tw",
   },
 };
 
@@ -102,7 +102,7 @@ export const pressKit = {
     "TODO: confirm official source for exact award names, years, categories, and citation links.",
   ],
   links: [
-    { label: "Official website", href: "https://trashband.tw", note: "Official website." },
+    { label: "Official website", href: "https://www.trashband.tw", note: "Official website." },
     { label: "YouTube", href: "https://www.youtube.com/channel/UCuAzL0PsEngYktHkjNtJKgg", note: "Official YouTube channel." },
     { label: "Instagram", href: "https://www.instagram.com/trashband/", note: "Official Instagram." },
     { label: "Facebook", href: "https://www.facebook.com/TrashBandTw/", note: "Official Facebook." },
