@@ -22,6 +22,12 @@ export const timeline: TimelineEvent[] = [
     todo: "TODO: confirm official source for award wording, album release date, and album credits.",
   },
   {
+    year: "2013",
+    title: "Euan Joins",
+    description: "頤原 / Euan joined TRASH in 2013 as guitar.",
+    tag: "Member",
+  },
+  {
     year: "2014/2015",
     title: "Reset / 歸零 and Golden Melody Awards Nomination",
     description: "歸零 / Reset becomes an important early release in the band’s catalog, carrying TRASH into Golden Melody Awards Best Band nomination recognition and a wider public conversation.",
