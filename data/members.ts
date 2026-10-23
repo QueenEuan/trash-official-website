@@ -12,6 +12,7 @@ export type Member = {
   instruments: string[];
   highlights: string[];
   notes: string[];
+  links?: { label: string; href: string }[];
 };
 
 export const members: Member[] = [
@@ -36,7 +37,11 @@ export const members: Member[] = [
     englishName: "Euan",
     role: "Guitar",
     intro: "頤原 / Euan shapes the guitar architecture of TRASH, giving the band its melodic edge and atmospheric lift.",
-    bio: "頤原 / Euan shapes the guitar architecture of TRASH, giving the band its melodic edge, atmospheric lift, and live-stage pressure.",
+    bio: "頤原 / Euan shapes the guitar architecture of TRASH, giving the band its melodic edge, atmospheric lift, and live-stage pressure. Joined TRASH in 2013 as guitarist.",
+    links: [
+      { label: "EUAN LIN", href: "https://euanlin.com" },
+      { label: "Queen.E", href: "https://queenetw.com" },
+    ],
     image: "/images/members/euan.jpg",
     fallbackImage: "/images/members/lin.svg",
     imageAlt: "頤原 / Euan official TRASH member portrait",

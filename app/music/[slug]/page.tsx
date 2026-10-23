@@ -2,6 +2,8 @@ import { albums } from "@/data/albums";
 import { AlbumDetailContent } from "@/components/pages/AlbumDetailContent";
 import { localizedMetadata } from "@/lib/i18n/metadata";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return albums.map((album) => ({ slug: album.slug }));
 }

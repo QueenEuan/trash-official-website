@@ -25,6 +25,15 @@ export async function MemberDetailContent({ params, locale = defaultLocale }: { 
           <h1 className="mt-4 font-display text-6xl font-black uppercase leading-none text-white md:text-8xl">{member.name}</h1>
           <p className="mt-3 text-2xl font-bold text-gold">{member.englishName}</p>
           <p className="mt-6 max-w-3xl text-xl leading-8 text-zinc-300">{member.bio}</p>
+          {member.links && member.links.length > 0 && (
+            <div className="mt-8 flex flex-wrap gap-3">
+              {member.links.map((link) => (
+                <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer" className="btn-secondary">
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          )}
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             <div>
               <h2 className="text-sm font-black uppercase tracking-[0.18em] text-gold">{copy.members.instruments}</h2>

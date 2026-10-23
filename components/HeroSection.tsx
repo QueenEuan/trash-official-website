@@ -46,7 +46,7 @@ const chapterMetadata: Record<Locale, { label: string; title: string; items: { l
 export function HeroSection({ locale = defaultLocale }: { locale?: Locale }) {
   const siteProfile = getSite(locale);
   const copy = getPageCopy(locale);
-  const chapter = chapterMetadata[locale];
+  const chapter = chapterMetadata[locale] ?? chapterMetadata[defaultLocale];
   const heroAlt = locale === "zh" ? "TRASH 官方主視覺照片" : "TRASH official hero image";
 
   return (

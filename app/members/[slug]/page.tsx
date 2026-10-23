@@ -2,6 +2,8 @@ import { members } from "@/data/members";
 import { MemberDetailContent } from "@/components/pages/MemberDetailContent";
 import { localizedMetadata } from "@/lib/i18n/metadata";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return members.map((member) => ({ slug: member.slug }));
 }

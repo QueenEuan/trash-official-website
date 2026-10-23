@@ -3,15 +3,14 @@ import "./globals.css";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { siteProfile } from "@/data/site";
-import { localizedMetadata } from "@/lib/i18n/metadata";
 
 export const metadata: Metadata = {
-  ...localizedMetadata("zh", "/"),
   metadataBase: new URL(siteProfile.seo.metadataBase),
   title: {
     default: siteProfile.seo.defaultTitle,
     template: siteProfile.seo.titleTemplate,
   },
+  description: siteProfile.seo.description,
   keywords: siteProfile.seo.keywords,
 };
 

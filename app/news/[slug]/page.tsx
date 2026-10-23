@@ -2,6 +2,8 @@ import { news } from "@/data/news";
 import { NewsDetailContent } from "@/components/pages/NewsDetailContent";
 import { localizedMetadata } from "@/lib/i18n/metadata";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return news.map((item) => ({ slug: item.slug }));
 }

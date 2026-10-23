@@ -3,6 +3,8 @@ import { albums } from "@/data/albums";
 import { prefixedLocales } from "@/lib/i18n/config";
 import { localizedMetadata } from "@/lib/i18n/metadata";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return prefixedLocales.flatMap((locale) => albums.map((album) => ({ locale, slug: album.slug })));
 }
