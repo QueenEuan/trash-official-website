@@ -24,7 +24,7 @@ export const timeline: TimelineEvent[] = [
   {
     year: "2013",
     title: "Euan Joins",
-    description: "頤原 / Euan joined TRASH in 2013 as guitar.",
+    description: "頤原 / Euan joined TRASH in 2013 as guitarist.",
     tag: "Member",
   },
   {
