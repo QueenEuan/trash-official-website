@@ -270,8 +270,8 @@ const timelineZh: Record<string, Partial<TimelineEvent>> = {
   "2009-Formation": { title: "成團", description: "TRASH 於 2009 年 12 月在台北成團，從團練、展演空間與獨立舞台累積出樂團故事的起點。", tag: "起點" },
   "2012-First Album / Gongliao Ocean Music Festival": { title: "首張專輯 / 貢寮海洋音樂祭", description: "TRASH 發行首張同名專輯，並在貢寮海洋音樂祭獲得肯定，開始在台灣現場圈建立能見度。", tag: "首張專輯" },
   "2013-Euan Joins": { title: "頤原加入", description: "頤原 / Euan 於 2013 年加入 TRASH，擔任吉他手。", tag: "成員" },
-  "2014/2015-Reset / 歸零 and Golden Melody Awards Nomination": { title: "《歸零》與金曲獎入圍肯定", description: "《歸零》是 TRASH 早期的重要作品，讓樂團首度入圍金曲獎最佳樂團，也被更多聽眾認識。", tag: "入圍" },
-  "2017-11:11 / Japan Recording Period": { title: "《11:11》與日本錄音時期", description: "《11:11》標記另一個重要創作階段，也是樂團赴日本錄音的時期。", tag: "錄音" },
+  "2014/2015-Reset / 歸零 and Golden Melody Awards Nomination": { title: "《歸零》與金曲獎入圍肯定", description: "《歸零》是 TRASH 早期的重要作品。2015 年，樂團以這張專輯入圍第 26 屆金曲獎最佳樂團與第 6 屆金音獎最佳現場演出。", tag: "入圍" },
+  "2017-11:11 / Japan Recording Period": { title: "《11:11》與日本錄音時期", description: "相隔三年推出的《11:11》標記另一個重要創作階段，也是樂團赴日本錄音的時期。同年 TRASH 受邀擔任金音獎頒獎典禮開場演出。", tag: "錄音" },
   "2019-Warner Music Phase": { title: "華納音樂階段", description: "TRASH 於 2019 年進入華納音樂階段，在更廣的平台上發行作品，同時維持以吉他、團體力量與現場衝擊為核心的樂團辨識度。", tag: "唱片" },
   "2020-Never Die": { title: "《Never Die》", description: "《Never Die》是收錄四首歌的 EP，延續樂團向下一階段前進的動能。", tag: "作品" },
   "2021-Holy Trip!": { title: "《Holy Trip!》", description: "《Holy Trip!》以完整專輯的篇幅，延續 TRASH 的旋律重量與失真聲響。", tag: "作品" },
@@ -279,6 +279,11 @@ const timelineZh: Record<string, Partial<TimelineEvent>> = {
   "2024-Taipei Arena": { title: "台北小巨蛋", description: "TRASH 將十五週年演唱會篇章帶上台北小巨蛋，把樂團紀念時刻推進成重要場館里程碑。", tag: "場館" },
   "2025-Kaohsiung Arena": { title: "高雄巨蛋", description: "TRASH 將十五週年演唱會篇章延伸至高雄巨蛋，讓場館篇章從台北繼續往南展開。", tag: "場館" },
   "2025-Golden Melody Awards Best Band": { title: "金曲獎最佳樂團", description: "TRASH 於 2025 年獲得金曲獎最佳樂團，成為樂團長期作品與現場故事中的重要肯定。", tag: "獎項" },
+  "2020-Golden Melody Awards Nomination": { title: "第 31 屆金曲獎最佳樂團入圍", description: "TRASH 入圍第 31 屆金曲獎最佳樂團。", tag: "入圍" },
+  "2022-Holy Trip! Tour": { title: "「Holy Trip!」巡迴", description: "2022 年《Holy Trip!》台北演唱會登場，「Holy Trip! 精神時光屋」亞洲巡迴一路唱到 2024 年。", tag: "巡迴" },
+  "2024-TRASH CAN! 15th Anniversary Documentary": { title: "《TRASH CAN!》15 週年影像紀實", description: "推出《TRASH CAN! : TRASH 15週年影像紀實》，回顧樂團走過的十五年。", tag: "影像" },
+  "2025-15th Anniversary Concert in Malaysia": { title: "15 週年演唱會馬來西亞場", description: "《幸福的末班車》15 週年演唱會前進馬來西亞。", tag: "演出" },
+  "2026-New Single: I don’t belong here": { title: "新單曲〈只剩後悔在等待〉", description: "金曲獎最佳樂團之後的第一首新作。四位成員前往沖繩宮古島創作，交出少見的抒情作品。", tag: "單曲" },
 };
 
 const timelineJa: Record<string, Partial<TimelineEvent>> = {
@@ -294,6 +299,11 @@ const timelineJa: Record<string, Partial<TimelineEvent>> = {
   "2024-Taipei Arena": { title: "台北アリーナ", description: "TRASHは15周年公演を台北アリーナへ進め、バンドにとって重要な会場マイルストーンを刻んだ。", tag: "会場" },
   "2025-Kaohsiung Arena": { title: "高雄アリーナ", description: "15周年公演の章は高雄アリーナへ広がり、台北から南へと会場の物語をつないだ。", tag: "会場" },
   "2025-Golden Melody Awards Best Band": { title: "Golden Melody Awards Best Band", description: "TRASHは2025年にGolden Melody Awards Best Bandを受賞し、長年の作品とライブの歩みに大きな評価を得た。", tag: "受賞" },
+  "2020-Golden Melody Awards Nomination": { title: "第31回金曲奨 最優秀バンド賞ノミネート", description: "第31回金曲奨の最優秀バンド賞にノミネート。", tag: "ノミネート" },
+  "2022-Holy Trip! Tour": { title: "「Holy Trip!」ツアー", description: "2022年に「Holy Trip!」台北公演を開催。アジアツアーは2024年まで続いた。", tag: "ツアー" },
+  "2024-TRASH CAN! 15th Anniversary Documentary": { title: "『TRASH CAN!』15周年映像記録", description: "バンドの15年を振り返る映像記録『TRASH CAN!』を発表。", tag: "映像" },
+  "2025-15th Anniversary Concert in Malaysia": { title: "15周年コンサート マレーシア公演", description: "15周年コンサートをマレーシアで開催。", tag: "ライブ" },
+  "2026-New Single: I don’t belong here": { title: "新曲「只剩後悔在等待」", description: "金曲奨最優秀バンド賞受賞後、初の新曲。沖縄・宮古島で制作されたバラード。", tag: "シングル" },
 };
 
 const timelineKo: Record<string, Partial<TimelineEvent>> = {
@@ -309,6 +319,11 @@ const timelineKo: Record<string, Partial<TimelineEvent>> = {
   "2024-Taipei Arena": { title: "Taipei Arena", description: "TRASH는 15주년 공연을 Taipei Arena로 확장하며 중요한 공연장 마일스톤을 만들었다.", tag: "공연장" },
   "2025-Kaohsiung Arena": { title: "Kaohsiung Arena", description: "15주년 공연 챕터는 Kaohsiung Arena로 이어지며 타이베이에서 남부로 확장되었다.", tag: "공연장" },
   "2025-Golden Melody Awards Best Band": { title: "Golden Melody Awards Best Band", description: "TRASH는 2025년 Golden Melody Awards Best Band를 수상하며 오랜 작품과 라이브 여정에 대한 중요한 인정을 받았다.", tag: "수상" },
+  "2020-Golden Melody Awards Nomination": { title: "제31회 금곡장 최우수 밴드상 후보", description: "제31회 금곡장 최우수 밴드상 후보에 올랐다.", tag: "후보" },
+  "2022-Holy Trip! Tour": { title: "「Holy Trip!」 투어", description: "2022년 「Holy Trip!」 타이베이 공연을 열었고, 아시아 투어는 2024년까지 이어졌다.", tag: "투어" },
+  "2024-TRASH CAN! 15th Anniversary Documentary": { title: "『TRASH CAN!』 15주년 영상 기록", description: "밴드의 15년을 돌아보는 영상 기록 『TRASH CAN!』을 공개했다.", tag: "영상" },
+  "2025-15th Anniversary Concert in Malaysia": { title: "15주년 콘서트 말레이시아 공연", description: "15주년 콘서트를 말레이시아에서 개최했다.", tag: "공연" },
+  "2026-New Single: I don’t belong here": { title: "신곡 「只剩後悔在等待」", description: "금곡장 최우수 밴드상 수상 이후 첫 신곡. 오키나와 미야코지마에서 작업한 발라드.", tag: "싱글" },
 };
 
 const videoZh: Record<string, Partial<Video>> = {

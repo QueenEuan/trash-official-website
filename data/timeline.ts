@@ -50,6 +50,12 @@ export const timeline: TimelineEvent[] = [
   },
   {
     year: "2020",
+    title: "Golden Melody Awards Nomination",
+    description: "TRASH is nominated for Best Band at the 31st Golden Melody Awards.",
+    tag: "Nomination",
+  },
+  {
+    year: "2020",
     title: "Never Die",
     description: "Never Die represents a compact release chapter in the discography, carrying the band’s forward motion into the next phase of the archive.",
     tag: "Album",
@@ -63,11 +69,23 @@ export const timeline: TimelineEvent[] = [
     todo: "TODO: confirm official source for release date, tracklist, credits, and award context.",
   },
   {
+    year: "2022",
+    title: "Holy Trip! Tour",
+    description: "The Holy Trip! Taipei concert takes place in 2022, and the Holy Trip! Asia tour runs through 2024.",
+    tag: "Tour",
+  },
+  {
     year: "2024",
     title: "The Last Train of Happiness / 幸福的末班車",
     description: "幸福的末班車 / The Last Train of Happiness becomes the core 15th-anniversary album era, connecting the band’s long road with a new chapter of memory, movement, and recognition.",
     tag: "Album",
     todo: "TODO: confirm official source for final English title, release date, credits, and tracklist.",
+  },
+  {
+    year: "2024",
+    title: "TRASH CAN! 15th Anniversary Documentary",
+    description: "TRASH releases TRASH CAN!, a visual record looking back on the band’s first 15 years.",
+    tag: "Film",
   },
   {
     year: "2024",
@@ -85,9 +103,21 @@ export const timeline: TimelineEvent[] = [
   },
   {
     year: "2025",
+    title: "15th Anniversary Concert in Malaysia",
+    description: "The 15th-anniversary concert travels to Malaysia.",
+    tag: "Live",
+  },
+  {
+    year: "2025",
     title: "Golden Melody Awards Best Band",
     description: "TRASH wins Best Band at the 2025 Golden Melody Awards, a major recognition point for the band’s long-running catalog and live-driven story.",
     tag: "Award",
     todo: "TODO: confirm official source for final category wording and award citation link.",
+  },
+  {
+    year: "2026",
+    title: "New Single: I don’t belong here",
+    description: "TRASH releases 只剩後悔在等待 / I don’t belong here, the band’s first new song since winning Best Band, written during a retreat on Miyako Island, Okinawa.",
+    tag: "Single",
   },
 ];
