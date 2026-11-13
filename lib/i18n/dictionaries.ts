@@ -42,7 +42,7 @@ const zh: Dictionary = {
   seo: {
     title: "TRASH 官方網站",
     titleTemplate: "%s | TRASH Official",
-    description: "TRASH 台灣搖滾樂團官方網站與資料庫，收錄音樂作品、成員、歷史、現場里程碑、新聞、影像與媒體資料。",
+    description: "TRASH 台灣搖滾樂團官方網站，收錄音樂作品、成員、歷史、現場里程碑、新聞、影像與媒體資料。",
   },
 };
 

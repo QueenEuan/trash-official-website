@@ -71,8 +71,8 @@ export function SiteHeader() {
           <LanguageSwitcher />
         </nav>
         <div className="flex items-center gap-3">
-          <LocalizedLink href="/press-kit" locale={locale} className="btn-primary hidden min-h-9 shrink-0 whitespace-nowrap px-3 py-2 text-[0.62rem] min-[360px]:inline-flex lg:min-h-10 lg:px-4 lg:text-[0.68rem]">
-            {dictionary.nav.press}
+          <LocalizedLink href="/music" locale={locale} className="btn-primary hidden min-h-9 shrink-0 whitespace-nowrap px-3 py-2 text-[0.62rem] min-[360px]:inline-flex lg:min-h-10 lg:px-4 lg:text-[0.68rem]">
+            {dictionary.nav.music}
           </LocalizedLink>
           <button
             type="button"

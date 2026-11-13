@@ -3,7 +3,8 @@
 :root {
   --background: #050505;
   --foreground: #f4f4f5;
-  --gold: #d6b05f;
+  /* Accent. Named "gold" for historical reasons; TRASH now uses a neutral off-white accent with red as the only colour. */
+  --gold: #e4e4e7;
   --silver: #b9bcc4;
   --blood: #7f1018;
   --font-display: Impact, "Arial Black", "Noto Sans TC", sans-serif;
@@ -32,10 +33,9 @@ body {
   margin: 0;
   background:
     linear-gradient(180deg, rgba(127, 16, 24, 0.2), transparent 30rem),
-    radial-gradient(circle at 76% 0%, rgba(214, 176, 95, 0.1), transparent 30rem),
     linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
     #050505;
-  background-size: auto, auto, 6rem 6rem, auto;
+  background-size: auto, 6rem 6rem, auto;
   color: var(--foreground);
 }
 
@@ -49,7 +49,7 @@ body {
 }
 
 .kicker {
-  color: var(--gold);
+  color: #f87171;
   font-size: 0.72rem;
   font-weight: 900;
   letter-spacing: 0.22em;
@@ -65,7 +65,7 @@ body {
 }
 
 .metal-rule {
-  background: linear-gradient(90deg, transparent, rgba(214, 176, 95, 0.8), rgba(185, 188, 196, 0.52), transparent);
+  background: linear-gradient(90deg, transparent, rgba(220, 38, 38, 0.9), rgba(255, 255, 255, 0.35), transparent);
   height: 1px;
 }
 
@@ -87,7 +87,7 @@ body {
 
 .btn-primary {
   background: linear-gradient(135deg, #991b1b, #5f0b12);
-  border: 1px solid rgba(214, 176, 95, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   color: white;
   padding: 0.85rem 1.15rem;
   box-shadow: 0 18px 48px rgba(127, 16, 24, 0.28);
@@ -113,9 +113,8 @@ body {
 
 .btn-muted {
   border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #71717a;
+  color: #a1a1aa;
   padding: 0.85rem 1.1rem;
-  pointer-events: none;
 }
 
 .icon-btn {
@@ -170,4 +169,9 @@ body {
     padding-bottom: 6.5rem;
     padding-top: 6.5rem;
   }
+}
+
+a.btn-muted:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: white;
 }

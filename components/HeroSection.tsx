@@ -6,8 +6,8 @@ import { getPageCopy, getSite } from "@/lib/i18n/content";
 
 const chapterMetadata: Record<Locale, { label: string; title: string; items: { label: string; value: string }[] }> = {
   zh: {
-    label: "當前篇章",
-    title: "幸福的末班車",
+    label: "最新單曲",
+    title: "只剩後悔在等待",
     items: [
       { label: "成立", value: "2009 年 12 月" },
       { label: "獎項", value: "2025 金曲獎最佳樂團" },
@@ -15,8 +15,8 @@ const chapterMetadata: Record<Locale, { label: string; title: string; items: { l
     ],
   },
   en: {
-    label: "Current Chapter",
-    title: "The Last Train of Happiness",
+    label: "Latest Single",
+    title: "I don’t belong here",
     items: [
       { label: "Formed", value: "December 2009" },
       { label: "Award", value: "2025 Golden Melody Awards — Best Band" },
@@ -24,8 +24,8 @@ const chapterMetadata: Record<Locale, { label: string; title: string; items: { l
     ],
   },
   ja: {
-    label: "現在のチャプター",
-    title: "幸福の最終列車",
+    label: "最新シングル",
+    title: "只剩後悔在等待",
     items: [
       { label: "結成", value: "2009年12月" },
       { label: "受賞", value: "2025 金曲奨 最優秀バンド賞" },
@@ -33,8 +33,8 @@ const chapterMetadata: Record<Locale, { label: string; title: string; items: { l
     ],
   },
   ko: {
-    label: "현재 챕터",
-    title: "행복의 막차",
+    label: "최신 싱글",
+    title: "只剩後悔在等待",
     items: [
       { label: "결성", value: "2009년 12월" },
       { label: "수상", value: "2025 골든 멜로디 어워즈 최우수 밴드상" },
@@ -58,10 +58,9 @@ export function HeroSection({ locale = defaultLocale }: { locale?: Locale }) {
         fill
         priority
         sizes="100vw"
-        className="absolute inset-0 object-cover object-[50%_30%] opacity-80 sm:object-[52%_32%] md:object-[center_26%] lg:object-[center_26%]"
+        className="absolute inset-0 object-cover object-[50%_30%] sm:object-[52%_32%] md:object-[center_26%] lg:object-[center_26%]"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.98),rgba(0,0,0,0.68),rgba(0,0,0,0.94)),radial-gradient(circle_at_72%_18%,rgba(127,16,24,0.52),transparent_38%),linear-gradient(180deg,transparent_62%,#050505_100%)]" />
-      <div className="absolute left-0 right-0 top-24 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_30%,rgba(5,5,5,0.82)_72%,#050505_100%),linear-gradient(90deg,rgba(0,0,0,0.78)_0%,rgba(0,0,0,0.3)_55%,rgba(0,0,0,0.1)_100%)]" />
       <div className="relative mx-auto grid min-h-[90vh] max-w-7xl content-end gap-10 px-4 pb-12 pt-28 md:px-5 md:pb-16 lg:grid-cols-[1fr_380px] lg:items-end">
         <div className="max-w-5xl">
           <p className="kicker">{siteProfile.heroEyebrow}</p>
@@ -73,11 +72,11 @@ export function HeroSection({ locale = defaultLocale }: { locale?: Locale }) {
             {siteProfile.heroBody}
           </p>
           <div className="mt-10 flex flex-wrap gap-3 sm:gap-5">
-            <LocalizedLink className="btn-primary" href="/music/the-last-train-of-happiness" locale={locale}>
-              {copy.ui.latestRelease} <ArrowRight size={18} />
-            </LocalizedLink>
-            <LocalizedLink className="btn-secondary" href="/media" locale={locale}>
+            <LocalizedLink className="btn-primary" href="/media" locale={locale}>
               <Play size={18} /> {copy.ui.watchVideos}
+            </LocalizedLink>
+            <LocalizedLink className="btn-secondary" href="/music" locale={locale}>
+              {copy.ui.discography} <ArrowRight size={18} />
             </LocalizedLink>
           </div>
         </div>
