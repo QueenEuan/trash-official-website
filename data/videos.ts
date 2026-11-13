@@ -10,7 +10,11 @@ export type Video = {
   duration: string;
   href: string;
   hrefTodo: string;
+  /** YouTube video ID (the part after `v=`). When set, the video is embedded on the site. */
+  youtubeId?: string;
 };
+
+export const youtubeChannelUrl = "https://www.youtube.com/channel/UCuAzL0PsEngYktHkjNtJKgg";
 
 export const videos: Video[] = [
   {

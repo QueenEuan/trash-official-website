@@ -37,7 +37,7 @@ export const timeline: TimelineEvent[] = [
   {
     year: "2017",
     title: "11:11 / Japan Recording Period",
-    description: "11:11 marks another major creative phase, expanding the band’s record-making language and connecting the archive to the Japan recording period noted in the launch content package.",
+    description: "11:11 marks another major creative phase, expanding the band’s record-making language during its Japan recording period.",
     tag: "Recording",
     todo: "TODO: confirm official source for Japan recording details, studio, dates, and release credits.",
   },
