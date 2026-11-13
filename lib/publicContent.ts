@@ -32,3 +32,10 @@ export function publicDateLabel(value?: string | null, fallback = "") {
 export function isUnconfirmedValue(value: unknown) {
   return value === "TODO";
 }
+
+/** True when `date` (YYYY-MM-DD) is no more than `days` days in the past. */
+export function isWithinDays(date: string | undefined, days: number) {
+  const time = Date.parse(date ?? "");
+  if (Number.isNaN(time)) return false;
+  return Date.now() - time <= days * 24 * 60 * 60 * 1000;
+}

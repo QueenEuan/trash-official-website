@@ -5,7 +5,8 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { ShowCard } from "@/components/ShowCard";
 import { Timeline } from "@/components/Timeline";
 import { VideoCard } from "@/components/VideoCard";
-import { publicList, publicDateLabel } from "@/lib/publicContent";
+import { isWithinDays, publicList, publicDateLabel } from "@/lib/publicContent";
+import { youtubeChannelUrl } from "@/data/videos";
 import { FallbackImage } from "@/components/FallbackImage";
 import { LocalizedLink } from "@/components/i18n/LocalizedLink";
 import { defaultLocale, type Locale } from "@/lib/i18n/config";
@@ -15,7 +16,8 @@ export function HomeContent({ locale = defaultLocale }: { locale?: Locale }) {
   const copy = getPageCopy(locale);
   const localizedAlbums = getAlbums(locale);
   const localizedNews = getNews(locale);
-  const localizedVideos = getVideos(locale);
+  const embeddedVideos = getVideos(locale).filter((video) => video.youtubeId);
+  const newsIsRecent = isWithinDays(localizedNews[0]?.date, 365);
   const localizedTimeline = getTimeline(locale);
   const localizedMembers = getMembers(locale);
   const localizedShows = getShows(locale);
@@ -53,22 +55,27 @@ export function HomeContent({ locale = defaultLocale }: { locale?: Locale }) {
       </section>
       <section className="section-band">
         <div className="page-shell py-0">
-          <SectionHeading eyebrow={copy.home.newsroom} title={copy.home.latestNews} />
+          <SectionHeading eyebrow={newsIsRecent ? copy.home.newsroom : copy.home.newsArchive} title={newsIsRecent ? copy.home.latestNews : copy.home.newsArchiveTitle} />
           <div className="mt-8">
             {localizedNews.slice(0, 3).map((item) => <NewsCard key={item.slug} item={item} locale={locale} />)}
           </div>
         </div>
       </section>
       <section className="page-shell">
-        <SectionHeading eyebrow={copy.home.media} title={copy.home.featuredVideos} body={copy.home.mediaBody} />
-        <div className="mt-10 grid gap-7 md:grid-cols-3">
-          {localizedVideos.map((video) => <VideoCard key={video.slug} video={video} locale={locale} />)}
+        <SectionHeading eyebrow={copy.home.media} title={copy.home.featuredVideos} body={embeddedVideos.length > 0 ? copy.home.mediaBody : copy.media.body} />
+        {embeddedVideos.length > 0 && (
+          <div className="mt-10 grid gap-7 md:grid-cols-3">
+            {embeddedVideos.slice(0, 3).map((video) => <VideoCard key={video.slug} video={video} />)}
+          </div>
+        )}
+        <div className="mt-8">
+          <a href={youtubeChannelUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary">{copy.media.button}</a>
         </div>
       </section>
       <section className="section-band">
         <div className="page-shell grid gap-10 py-0 lg:grid-cols-[0.75fr_1.25fr]">
           <SectionHeading eyebrow={copy.home.milestones} title={copy.home.bandHistory} body={copy.home.bandHistoryBody} />
-          <Timeline events={localizedTimeline.slice(0, 5)} />
+          <Timeline events={localizedTimeline.slice(-5).reverse()} />
         </div>
       </section>
       <section className="page-shell">

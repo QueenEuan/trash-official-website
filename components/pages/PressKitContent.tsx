@@ -50,7 +50,7 @@ export function PressKitContent({ locale = defaultLocale }: { locale?: Locale })
                     {link.label}
                   </span>
                 )}
-                {isPublicSafe(link.note) && <p className="mt-2 text-xs leading-5 text-zinc-600">{link.note}</p>}
+                {isPublicSafe(link.note) && <p className="mt-2 text-xs leading-5 text-zinc-400">{link.note}</p>}
               </div>
             ))}
           </div>

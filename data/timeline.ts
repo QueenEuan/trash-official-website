@@ -3,91 +3,27 @@ export type TimelineEvent = {
   title: string;
   description: string;
   tag: string;
-  todo?: string;
 };
 
+// Facts checked against press coverage and award records on 2026-11-13.
 export const timeline: TimelineEvent[] = [
-  {
-    year: "2009",
-    title: "Formation",
-    description: "TRASH forms in Taipei in December 2009, setting the starting point for a band story built through rehearsals, live rooms, and a long independent-stage foundation.",
-    tag: "Origin",
-    todo: "TODO: confirm official source for exact formation date and original lineup details.",
-  },
-  {
-    year: "2012",
-    title: "First Album / Gongliao Ocean Music Festival",
-    description: "TRASH releases its self-titled first album and moves through the Gongliao Ocean Music Festival recognition phase, marking the early archive with the pressure and visibility of Taiwan’s live circuit.",
-    tag: "Early Archive",
-    todo: "TODO: confirm official source for award wording, album release date, and album credits.",
-  },
-  {
-    year: "2013",
-    title: "Euan Joins",
-    description: "頤原 / Euan joined TRASH in 2013 as guitarist.",
-    tag: "Member",
-  },
-  {
-    year: "2014/2015",
-    title: "Reset / 歸零 and Golden Melody Awards Nomination",
-    description: "歸零 / Reset becomes an important early release in the band’s catalog, carrying TRASH into Golden Melody Awards Best Band nomination recognition and a wider public conversation.",
-    tag: "Award Context",
-    todo: "TODO: confirm official source for release date, official English title, nomination year, and category text.",
-  },
-  {
-    year: "2017",
-    title: "11:11 / Japan Recording Period",
-    description: "11:11 marks another major creative phase, expanding the band’s record-making language and connecting the archive to the Japan recording period noted in the launch content package.",
-    tag: "Recording",
-    todo: "TODO: confirm official source for Japan recording details, studio, dates, and release credits.",
-  },
-  {
-    year: "2019",
-    title: "Warner Music Phase",
-    description: "TRASH enters its Warner Music Taiwan phase in 2019, opening a broader release platform while keeping the band’s identity rooted in guitars, collective force, and live impact.",
-    tag: "Label",
-    todo: "TODO: confirm official source for exact signing announcement date and approved wording.",
-  },
-  {
-    year: "2020",
-    title: "Never Die",
-    description: "Never Die represents a compact release chapter in the discography, carrying the band’s forward motion into the next phase of the archive.",
-    tag: "Album",
-    todo: "TODO: confirm official source for release date, tracklist, credits, and award context.",
-  },
-  {
-    year: "2021",
-    title: "Holy Trip!",
-    description: "Holy Trip! expands TRASH’s album narrative with another full-length chapter, placing the band’s melodic weight and distortion-driven identity in a larger official archive.",
-    tag: "Album",
-    todo: "TODO: confirm official source for release date, tracklist, credits, and award context.",
-  },
-  {
-    year: "2024",
-    title: "The Last Train of Happiness / 幸福的末班車",
-    description: "幸福的末班車 / The Last Train of Happiness becomes the core 15th-anniversary album era, connecting the band’s long road with a new chapter of memory, movement, and recognition.",
-    tag: "Album",
-    todo: "TODO: confirm official source for final English title, release date, credits, and tracklist.",
-  },
-  {
-    year: "2024",
-    title: "Taipei Arena",
-    description: "TRASH brings its 15th-anniversary concert era to Taipei Arena, turning the anniversary chapter into a major arena milestone.",
-    tag: "Arena",
-    todo: "TODO: confirm official source for exact date, event title, promoter, ticket link, and imagery.",
-  },
-  {
-    year: "2025",
-    title: "Kaohsiung Arena",
-    description: "TRASH carries the 15th-anniversary concert era to Kaohsiung Arena, extending the arena chapter beyond Taipei and into southern Taiwan.",
-    tag: "Arena",
-    todo: "TODO: confirm official source for exact date, event title, promoter, ticket link, and imagery.",
-  },
-  {
-    year: "2025",
-    title: "Golden Melody Awards Best Band",
-    description: "TRASH wins Best Band at the 2025 Golden Melody Awards, a major recognition point for the band’s long-running catalog and live-driven story.",
-    tag: "Award",
-    todo: "TODO: confirm official source for final category wording and award citation link.",
-  },
+  { year: "2009", title: "Formation", description: "TRASH forms in Taipei in December 2009. Vocalist Marz23 and drummer Kuei gun, who met in high school, have been in the band from the start.", tag: "Origin" },
+  { year: "2012", title: "Debut Album", description: "The self-titled debut album TRASH is released.", tag: "Album" },
+  { year: "2013", title: "Ocean Independent Music Award", description: "In July, TRASH wins the Ocean Independent Music Award at the 14th Gongliao Ho-Hai-Yan Rock Festival.", tag: "Award" },
+  { year: "2013", title: "Euan Joins", description: "Guitarist Euan joins TRASH in September.", tag: "Member" },
+  { year: "2014", title: "Reset / 歸零", description: "The second album, 歸零 (Reset), is released.", tag: "Album" },
+  { year: "2015", title: "First Golden Melody Nomination", description: "歸零 earns nominations for Best Band at the 26th Golden Melody Awards and Best Live Performance at the 6th Golden Indie Music Awards.", tag: "Nomination" },
+  { year: "2015", title: "TTeng Joins", description: "Bassist TTeng, who first filled in on an Asia tour, becomes a full member and completes the current lineup.", tag: "Member" },
+  { year: "2016", title: "CPBL Theme Song", description: "TRASH writes and performs 我們的歌, the annual theme song of Taiwan’s professional baseball league (CPBL).", tag: "Song" },
+  { year: "2017", title: "11:11", description: "TRASH travels to Japan to record, and the sessions become the third album, 11:11, released three years after 歸零. The same year TRASH performs at the Taipei Summer Universiade closing ceremony and opens the Golden Indie Music Awards.", tag: "Album" },
+  { year: "2018", title: "Hiatus", description: "After selling out the 火星的班機 show at Legacy, the band — struggling to make ends meet — decides to go on a one-year hiatus.", tag: "Hiatus" },
+  { year: "2019", title: "Return with Warner Music", description: "TRASH signs with Warner Music Taiwan and returns in July with the single 重感情的廢物 (Heavyhearted Loser), followed by the EP Never Die in November.", tag: "Comeback" },
+  { year: "2020", title: "Second Golden Melody Nomination", description: "Never Die is nominated for Best Band at the 31st Golden Melody Awards. With touring cancelled by the pandemic, the four members retreat to a mountain cabin to write.", tag: "Nomination" },
+  { year: "2021", title: "Holy Trip!", description: "The album Holy Trip!, written during the cabin retreat, is released in September.", tag: "Album" },
+  { year: "2022", title: "Third Golden Melody Nomination", description: "Holy Trip! is nominated for Best Band at the 33rd Golden Melody Awards, and the Holy Trip! concert takes place in Taipei.", tag: "Nomination" },
+  { year: "2024", title: "The Last Train of Happiness / 幸福的末班車", description: "The fifth album, 幸福的末班車 (The Last Train of Happiness), is released on September 13 to mark the band’s 15th anniversary, alongside the documentary TRASH CAN!.", tag: "Album" },
+  { year: "2024", title: "Taipei Arena", description: "On December 14, TRASH headlines Taipei Arena for the first time.", tag: "Arena" },
+  { year: "2025", title: "Kaohsiung Arena", description: "The 15th-anniversary concert comes to Kaohsiung Arena on May 3 and later travels to Malaysia.", tag: "Arena" },
+  { year: "2025", title: "Golden Melody Awards Best Band", description: "On its fourth nomination, TRASH wins Best Band at the 36th Golden Melody Awards with 幸福的末班車.", tag: "Award" },
+  { year: "2026", title: "New Single: I don’t belong here", description: "TRASH releases 只剩後悔在等待 (I don’t belong here), its first new song since winning Best Band, written during a retreat on Miyako Island, Okinawa.", tag: "Single" },
 ];

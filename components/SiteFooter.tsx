@@ -3,7 +3,7 @@
 import { FallbackImage } from "@/components/FallbackImage";
 import { LocalizedLink } from "@/components/i18n/LocalizedLink";
 import { Mail } from "lucide-react";
-import { siteProfile } from "@/data/site";
+import { pressKit, siteProfile } from "@/data/site";
 import { defaultLocale, getLocale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { getSite } from "@/lib/i18n/content";
@@ -14,6 +14,7 @@ export function SiteFooter() {
   const locale = getLocale(pathname.split("/")[1] || defaultLocale);
   const dictionary = getDictionary(locale);
   const localizedSite = getSite(locale);
+  const socialLinks = pressKit.links.filter((link) => ["YouTube", "Instagram", "Facebook", "Spotify", "Apple Music"].includes(link.label));
   const logoAlt = locale === "zh" ? "TRASH 官方白色 Logo" : "TRASH official white logo";
 
   return (
@@ -28,10 +29,13 @@ export function SiteFooter() {
         </div>
         <div className="flex flex-wrap items-center gap-3">
           <span className="border border-white/10 px-3 py-2 text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">{dictionary.footer.officialLinks}</span>
+          {socialLinks.map((link) => (
+            <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" className="border border-white/10 px-3 py-2 text-xs font-bold uppercase tracking-[0.14em] text-zinc-300 transition hover:border-gold hover:text-gold">{link.label}</a>
+          ))}
           <LocalizedLink className="icon-btn" href="/contact" aria-label={dictionary.nav.contact}><Mail size={18} /></LocalizedLink>
         </div>
       </div>
-      <div className="border-t border-white/10 px-5 py-5 text-center text-xs uppercase tracking-[0.18em] text-zinc-600">
+      <div className="border-t border-white/10 px-5 py-5 text-center text-xs uppercase tracking-[0.18em] text-zinc-400">
         © 2026 TRASH.
       </div>
     </footer>

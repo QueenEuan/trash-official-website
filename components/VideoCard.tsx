@@ -1,34 +1,25 @@
-import { ArrowUpRight } from "lucide-react";
 import type { Video } from "@/data/videos";
-import { defaultLocale, type Locale } from "@/lib/i18n/config";
-import { getPageCopy } from "@/lib/i18n/content";
 
-export function VideoCard({ video, locale = defaultLocale }: { video: Video; locale?: Locale }) {
-  const copy = getPageCopy(locale);
-  const content = (
-    <div className="archive-frame flex min-h-56 flex-col justify-between p-6 transition group-hover:-translate-y-1 group-hover:border-gold">
-      <div>
-        <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">{copy.ui.officialYouTubeHub}</p>
-        <h3 className="mt-4 font-display text-4xl font-black uppercase leading-none text-white">{video.title}</h3>
-        <p className="mt-5 text-sm leading-6 text-zinc-400">{video.description}</p>
-      </div>
-      <span className="mt-8 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.18em] text-zinc-500 transition group-hover:text-gold">
-        {copy.ui.openChannel} <ArrowUpRight size={16} />
-      </span>
-    </div>
-  );
-
-  if (video.href) {
-    return (
-      <a href={video.href} target="_blank" rel="noopener noreferrer" className="group block">
-        {content}
-      </a>
-    );
-  }
+/** Embedded YouTube video. Only rendered for videos that have a `youtubeId`. */
+export function VideoCard({ video }: { video: Video }) {
+  if (!video.youtubeId) return null;
 
   return (
-    <article className="group block">
-      {content}
+    <article className="archive-frame overflow-hidden">
+      <div className="relative aspect-video bg-zinc-900">
+        <iframe
+          src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}`}
+          title={video.title}
+          loading="lazy"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+          className="absolute inset-0 h-full w-full border-0"
+        />
+      </div>
+      <div className="p-5">
+        <h3 className="font-display text-2xl font-black leading-tight text-white">{video.title}</h3>
+        {video.description && <p className="mt-3 text-sm leading-6 text-zinc-400">{video.description}</p>}
+      </div>
     </article>
   );
 }

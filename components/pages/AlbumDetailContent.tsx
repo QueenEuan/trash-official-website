@@ -76,7 +76,7 @@ export async function AlbumDetailContent({ params, locale = defaultLocale }: { p
         <ol className="mt-5 border-t border-white/10">
           {tracks.map((track, index) => (
             <li key={`${track.title}-${index}`} className="grid gap-2 border-b border-white/10 py-5 text-zinc-200 md:grid-cols-[80px_1fr_auto] md:items-center">
-              <span className="font-display text-2xl text-zinc-600">{String(index + 1).padStart(2, "0")}</span>
+              <span className="font-display text-2xl text-zinc-400">{String(index + 1).padStart(2, "0")}</span>
               <span className="text-lg font-bold">{track.title}</span>
               <span className="text-sm text-zinc-500">{publicText(track.duration || track.note || "")}</span>
             </li>
