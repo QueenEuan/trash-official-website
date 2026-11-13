@@ -16,8 +16,22 @@ export type Video = {
 
 export const youtubeChannelUrl = "https://www.youtube.com/channel/UCuAzL0PsEngYktHkjNtJKgg";
 
-// Most-viewed videos on the official YouTube channel (checked 2026-11-13), in display order.
+// Newest release first, then the most-viewed videos on the official YouTube channel (checked 2026-11-13).
 export const videos: Video[] = [
+  {
+    slug: "i-dont-belong-here",
+    title: "TRASH《只剩後悔在等待 I don’t belong here》Official Music Video",
+    category: "Official Music Videos",
+    description: "",
+    date: "2026-11-06",
+    dateLabel: "2026-11-06",
+    thumbnail: "https://i.ytimg.com/vi/K6HPUjne_SY/hqdefault.jpg",
+    thumbnailTodo: "",
+    duration: "4:49",
+    href: "https://www.youtube.com/watch?v=K6HPUjne_SY",
+    hrefTodo: "",
+    youtubeId: "K6HPUjne_SY",
+  },
   {
     slug: "love",
     title: "TRASH《終究還是因為愛 LOVE》Official Music Video",
@@ -75,31 +89,17 @@ export const videos: Video[] = [
     youtubeId: "T_AFMCpQgkI",
   },
   {
-    slug: "goodbye",
-    title: "TRASH《Goodbye》Official Music Video",
-    category: "Official Music Videos",
-    description: "",
-    date: "",
-    dateLabel: "",
-    thumbnail: "https://i.ytimg.com/vi/4MNsJnTdEgo/hqdefault.jpg",
-    thumbnailTodo: "",
-    duration: "4:45",
-    href: "https://www.youtube.com/watch?v=4MNsJnTdEgo",
-    hrefTodo: "",
-    youtubeId: "4MNsJnTdEgo",
-  },
-  {
-    slug: "love-holy-trip-taipei-live",
-    title: "TRASH《終究還是因爲愛》2022 Holy Trip! 台北演唱會 (Official Live Video)",
+    slug: "the-last-train-of-happiness-arena-live",
+    title: "TRASH《幸福的末班車》2024幸福的末班車15週年演唱會（Official Live Video）",
     category: "Live Sessions",
     description: "",
     date: "",
     dateLabel: "",
-    thumbnail: "https://i.ytimg.com/vi/JLmPL924IsY/hqdefault.jpg",
+    thumbnail: "https://i.ytimg.com/vi/0PFDfrdckEA/hqdefault.jpg",
     thumbnailTodo: "",
-    duration: "7:30",
-    href: "https://www.youtube.com/watch?v=JLmPL924IsY",
+    duration: "5:52",
+    href: "https://www.youtube.com/watch?v=0PFDfrdckEA",
     hrefTodo: "",
-    youtubeId: "JLmPL924IsY",
+    youtubeId: "0PFDfrdckEA",
   },
 ];

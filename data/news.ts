@@ -15,6 +15,22 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    slug: "i-dont-belong-here-single",
+    title: "TRASH 全新單曲〈只剩後悔在等待〉MV 上線",
+    category: "Release",
+    date: "2026-11-06",
+    dateLabel: "2026-11-06",
+    excerpt: "金曲獎最佳樂團之後的第一首新作，TRASH 少見的抒情搖滾。",
+    image: "/images/news/i-dont-belong-here.jpg",
+    fallbackImage: "/images/news/press-kit.svg",
+    imageTodo: "Missing approved image: `/images/news/i-dont-belong-here.jpg`.",
+    sourceUrl: "https://www.youtube.com/watch?v=K6HPUjne_SY",
+    body: [
+      "TRASH 推出全新單曲〈只剩後悔在等待 I don’t belong here〉，官方 MV 已於 YouTube 上線。",
+      "這是樂團獲得第 36 屆金曲獎最佳樂團後的第一首新作，四位成員前往沖繩宮古島創作，交出一首少見的抒情作品。",
+    ],
+  },
+  {
     slug: "golden-melody-best-band",
     title: "TRASH 以《幸福的末班車》獲第 36 屆金曲獎最佳樂團",
     category: "Awards",
