@@ -60,7 +60,7 @@ export function HeroSection({ locale = defaultLocale }: { locale?: Locale }) {
         sizes="100vw"
         className="absolute inset-0 object-cover object-[50%_30%] sm:object-[52%_32%] md:object-[center_26%] lg:object-[center_26%]"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_30%,rgba(5,5,5,0.82)_72%,#050505_100%),linear-gradient(90deg,rgba(0,0,0,0.78)_0%,rgba(0,0,0,0.3)_55%,rgba(0,0,0,0.1)_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,5,5,0.25)_0%,rgba(5,5,5,0.86)_38%,#050505_78%)] md:bg-[linear-gradient(180deg,transparent_30%,rgba(5,5,5,0.82)_72%,#050505_100%),linear-gradient(90deg,rgba(0,0,0,0.78)_0%,rgba(0,0,0,0.3)_55%,rgba(0,0,0,0.1)_100%)]" />
       <div className="relative mx-auto grid min-h-[90vh] max-w-7xl content-end gap-10 px-4 pb-12 pt-28 md:px-5 md:pb-16 lg:grid-cols-[1fr_380px] lg:items-end">
         <div className="max-w-5xl">
           <p className="kicker">{siteProfile.heroEyebrow}</p>
